@@ -1,0 +1,158 @@
+NOTE: We will not integrate this - need changes to protein chains.
+ID Proteome on in vivo protein Nalpha-acetylation.
+AC MDATA_XXXX
+DM GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL GLOBAL. Hela CVCL_0030 .
+SP GLOBAL. Protein reduction, alkylation, followed by digestion with
+SP trypsin and N-terminal pyroglutamate removal. Peptide fractionation by
+SP CNBr-activated Sepharose 4B twice at pH6.0. Nalpha-acetylated peptides
+SP enrichment by simple filtration.
+IP GLOBAL. Nanoscale C18 HPLC coupled online to a LTQ-Orbitrap XL mass
+IP spectrometer(Thermo Fisher Scientific).
+DA GLOBAL. Protein database: human IPI release 20081209 concatenated with
+DA known contaminants and reversed sequences of all entries.
+DA Software: Mascot version 2.2.04.
+DA Maximum missed cleavages: 1.
+DA Mass tolerance for parent ion: 5 ppm.
+DA Mass tolerance for fragment ion: 0.6 Da.
+DA Fixed modification: Cys propionamidation.
+DA Variable modifications: Met oxidation; N-acetylation; pyro-Glu.
+DA Peptide FDR < 0.001.
+
+DA Minimum peptide length: Not available.
+DA Ion mode: Positive.
+DA Spectra acquisition: Not available.
+DA Spectra recalibration: Not available.
+
+DP Peptides that match more than one entry are tagged 'non-proteotypic'
+DP and displayed on each relevant entry.
+DC LOCAL. GOLD: Mascot score >= 30; Expectation value <0.01; Present in
+DC both experiments.
+DC SILVER: Mascot score >= 20; Expectation value <0.01; Manual validation.
+DR PubMed; 21182196.
+CC Supplementary_Table 2_Nalpha-acetyl-proteome.xls; sheet Experi 1
+CC (Trypsin) and Experi 2 (Trypsin) (Trypsin; column R and S).
+//
+ID   Lysine ubiquitination sites in Jurkat E6-1 cells.
+AC   MDATA_xxxx
+DM   GLOBAL. Mass spectrometry nano LC-MS/MS.
+CL   GLOBAL. Jurkat E6.1 [CVCL_0367].
+SP   GLOBAL. Cells SILAC triple encoding and treatment with either 
+SP   proteasome inhibitor MG-132 or de-ubiquitinase inhibitor PR-169. Two
+SP   biological replicates. Protein denaturation and in-solution trypsin 
+SP   digestion resulting in diglycine remnant of ubiquitin attached to Lys. 
+SP   Peptides fractionation by strong cation exchange (SCX). Ubiquitinated
+SP   peptide enriched by K-epsilon-GG antibody beads and desalted by C18
+SP   StageTips.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to LTQ Orbitrap Velos mass
+IP   spectrometer equipped with a nanoelectrospray source (Thermo Fisher
+IP   Scientific).
+DA   GLOBAL. Protein database: human IPI release 3.68 concatenated with
+DA   common contaminants and reversed sequences of all entries. 
+DA   Software: MaxQuant version 1.2.2.5.
+DA   Maximum missed cleavages: 2.
+DA   Mass tolerance for parent ion: 6 ppm.
+DA   Mass tolerance for fragment ion: 0.5 Da.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   ariable modifications: Met oxidation; N-terminal acetylation; Asn
+DA   deamidation; presence of GlyGly on the side chains of lysine residues.
+DA   Peptide FDR < 0.01. Protein FDR < 0.01.
+DA   Minimum peptide length: not available.
+DA   Ion mode: positive.
+DA   Spectra acquisition: top 16 most intense ions.
+DA   Spectra calibration: not available.
+DA   The C-terminal di-glycine site identifications were removed.
+DP   Alignment of peptides on the human proteome for exact matches. 
+DP   Peptides that match more than one entry are tagged 'non-proteotypic' and
+DP   displayed on each relevant entry.
+DC   Ubiquitination: a small fraction of K-epsilon-GG sites is likely to originate 
+DC   from modification by ISG15 or NEDD8 and is filtered according to 
+DC   neXtprot sequence annotation. 
+DC   Peptide identification: GOLD: Andromeda score >=100. 
+DC   Ubiquitination identification: GOLD: K-epsilon-GG localisation score = ?; 
+DC   SILVER: K-epsilon-GG localisation score = ?.
+DR   PubMed; 22505724.
+CC   Supplemental table S1 (mcp.M111.016857-2). Peptide identification. 
+CC   Sheet Proteome_Peptides_Expt1Rep1; column B, sequence; M, score. 
+CC   Sheet Proteome_Peptides_Expt1Rep2; column B, sequence; M, score. 
+CC   Sheet Proteome_Peptides_Expt2Rep1; column B, sequence; M, score. 
+CC   Sheet Proteome_Peptides_Expt2Rep2; column B, sequence; M, score. 
+CC   Ubiquitination identification. Sheet All K-GG Peptides, column A, K-GG 
+CC   peptide sequence and ubiquitination sites; H, Andromeda score. PTM localization probability?
+CC   REJECTED: Original PTM probability is not available.
+CC   Authors processed the data as the following:
+CC   If original PTM score >= 0.75, the corrected score is 1;
+CC   If original PTM score<0.75, >= 0.5, the corrected score is 0.5. 
+CC   Emailec to the author for the original score but no reply until now. 
+//
+ID   Synthetic human N-glycopetides.
+AC   MDATA_00XX
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+TP   GLOBAL. Synthetic human N-glycopeptides.
+SP   GLOBAL. Chemical synthesis of N-glycopeptides. Pools of all peptides. 
+SP   Vacuum evaporation and resolubilization before LC-MS/MS analysis.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to either QTrap 4000 (AB Sciex),
+IP   6520 Qtof (Agilent), or LTQ Orbitrap XL (Thermo) mass spectrometer  
+IP   equipped with a nanoelectrospray source.
+DA   GLOBAL. Protein database: Synthetic peptide/protein database (release not available).
+DA   Software: X!tandem CYCLONE version 2010.10.01.1; Trans-Proteomics Pipeline version 4.5 RAPTURE Revision 2.
+DA   Maximum missed cleavages: 2.
+DA   Mass tolerance for parent ion: - 2.0 to + 4.0.
+DA   Mass tolerance for fragment ion: Not available.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation.
+DA   Peptide FDR:  QTrap 0.6 %; Qtop 0.45 %; LTQ Orbitrap XL: 2 %. 
+DA   Protein FDR not available.
+DA   Minimum peptide length: 6.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: For QTrap 4000, precursor ions exceeding a threshold of
+DA   400 ion counts. For 6520 Qtof, two most intense precursor ions exceeding a 
+DA   threshold of 1000 ion counts. For LTQ Orbitrap XL, 5 most intense precursor 
+DA   ions exceeding a threshold of 150 ion counts.
+DA   Spectra recalibration: Not available .
+DP   Alignment of peptides on the human proteome for exact matches. 
+DP   Peptides matching more than one entry are labeled 'found in other entries'.
+DC   GLOBAL. Peptide identification. GOLD: All peptides.
+DC   GLOBAL. N-glycosylation. GOLD: All peptides.
+DR   PubMed; 23408683.
+CC   All peptides listed in Table S1 are selected based on previous MS evidence with
+CC   PeptideProphet value of 0.99 and have been detected with iProphet >= 0.90 in 
+CC   this study.
+CC   Peptides and N-glycosites: Table S1 (mcp.O112.026617-2(TabS1).xls). 
+CC   Column A, peptide sequence; Column C, N-glycosites; 
+CC   Column F, human peptides successfully detected in SRM-based LC-MS/MS 
+CC   analysis.
+CC   Please note that Table S1 is a peptide list of mixed human and murine peptides. 
+CC   Only human peptides with successful detection by LC-MS/MS should be 
+CC   annotated.
+//
+ID   Lysine acetylation targets and regulation by lysine deacetylases.
+AC   MDATA_0011
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   GLOBAL. MV4-11 [CVCL_0064]; Jurkat [CVCL_0065]; A-549 [CVCL_0023].
+TP   LOCAL. Inhibition of Lys deacetylases by SAHA (suberoylanilide hydroxamic acid) and
+TP   MS-275, and SILAC labeling.
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion with Lys-C and trypsin.
+SP   Acetylated peptides enrichment by anti-acetyl-Lys immunoprecipitation and
+SP   fractionation by isoelectric focusing (IEF).
+IP   GLOBAL. Nanoscale C18 HPLC coupled to a LTQ Orbitrap XL mass spectrometer equipped
+IP   with a nanoelectrospray source (Proxeon).
+DA   GLOBAL. Protein database: Human IPI release 3.37 concatenated with a target-decoy database.
+DA   Software: MaxQuant; Mascot version 2.2.04.
+DA   Maximum missed cleavages: 4.
+DA   Mass tolerance for parent ion: 7 ppm.
+DA   Mass tolerance for fragment ion: 0.5 Da.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation; N-terminal acetylation; pyro-Glu; Lys
+DA   acetylation.
+DA   Peptide FDR < 0.01. Protein FDR < 0.01.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching 
+DP   more than one entry are labeled 'found in other entries'.
+DC   LOCAL. Peptide identification: GOLD: Mascot score >= 30.
+DC   Lys acetylation: GOLD: Mascot score >= 30; PTM score >= 30; Delta PTM score >= 30;
+DC   PTM localization probability > 0.99.
+DC   SILVER: Mascot score >= 20; PTM score >= 20; Delta PTM score >= 20; PTM localization
+DC   probability > 0.90.
+DR   PubMed; 19608861.
+CC   Already annotated in SP. 
+//

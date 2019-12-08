@@ -1,0 +1,6 @@
+FILE_NAME: metadata.txt
+STATUS: VALID
+DOMAIN: nextprot data
+DESCRIPTION: "A list of metadata describing the data integrated in the neXtProt database"
+//
+

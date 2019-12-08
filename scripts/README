@@ -1,0 +1,54 @@
+This directory contains scripts for updating the metadata.txt records related to PeptideAtlas sets
+
+The process will update 
+- DR lines : update the pubmed list of every PeptideAtlas set
+- CC lines : update CC lines dediated to the sample list of every PeptideAtlas set
+
+The input files to be copied in this directory are:
+
+- metadata.txt           
+  the latest version of metatdata to be found at /share/sib/common/Calipho/np/metadata_files/
+
+- cv_datasources.txt
+  the latest version of cv_datasources to be found at https://github.com/calipho-sib/controlled-vocabulary
+
+- Hs_All_sample_2019.tsv
+  the latest version of samples provided byPeptideAtlas at 
+  ftp://pa10:paISB2xx%23@ftp.peptideatlas.org/HumanAll/Hs_All_sample_2019.tsv
+
+The procedure has 3 steps
+
+Step 1
+------
+
+./mapCvdatasourceForPeptideAtlas.sh
+
+Generates a file containing a mapping between MDATA ids and Peptide Atlas set names based 
+on the content of cv_datasources.txt
+
+=> output : PeptideAtlas.mapinfo
+
+Step 2
+------
+
+./mapPeptideAtlasSamplesAndPubmedToMDATA.sh
+
+Generates 2 files containing a mapping of MDATA ids and pubmed ids / sample ids based 
+on the content of Hs_All_sample_2019.tsv
+
+=> output : mdata_pmid.tsv
+=> output : mdata_spl.tsv
+
+Step 3
+------
+
+perl ./rewrite_metadata.pl
+
+Generates a new metadata file based on the content of the current one (metadata.txt) 
+and on the new MDATA, pmids, samples associations stored in mdata_pmid.tsv and mdata_spl.tsv.
+
+=> output : metadata.txt.new
+
+
+
+

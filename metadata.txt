@@ -1,0 +1,3364 @@
+----------------------------------------------------------------------------
+        neXtProt - a comprehensive human-centric discovery platform
+        Swiss Institute of Bioinformatics (SIB); Geneva, Switzerland
+----------------------------------------------------------------------------
+
+Description: List of metadata
+Name:        METADATA.TXT
+Release:     06-Dec-2019
+
+----------------------------------------------------------------------------
+
+This document lists the metadata describing the data integrated in the neXtProt knowledgebase.
+Metadata descriptions are provided in the following format:
+
+-----------   ----------------------------------       -----------------------------
+Topic code     Content                                  Occurrence in an entry
+-----------   ----------------------------------       -----------------------------
+ID            Unique identifier                         Once; starts a metadata entry
+AC            Unique accession (MDATA_xxxx)             Once
+DE            Definition                                Optional; Once
+DM            Detection method                          Optional; Once
+BS            Biological standards                      Optional; Once
+TS            Tissue/cell type                          Optional; Once
+CL            Cell line                                 Optional; Once
+DI            Disease                                   Optional; Once
+OG            Organelle/subcellular location            Optional; Once
+TP            Treatment/physiological state             Optional; Once
+SP            Sample preparation                        Optional; Once or more
+IP            Instrument/platform                       Optional; Once
+DA            Data analysis procedure                   Optional; Once or more
+DP            Data processing by neXtProt               Optional; Once or more
+DC            Data confidence documentation             Optional; Once or more
+DR            X-Ref(s) to other database (PubMed, ...)  Optional; Once or more
+              Format: databasename; accession DOI; 10.1016/j.trprot.2013.03.002
+CC            Comments or notes				Optional; Once; private
+//            Terminator                                Once; ends an entry
+
+
+----------------------------------------------------------------------------
+        TEMPLATE
+----------------------------------------------------------------------------
+ID   Unique identifier
+AC   MDATA_xxxx
+DE   Definition
+DM   Detection method
+BS   Biological standards
+TS   Tissue/cell type
+CL   Cell line
+OG   Organelle
+TP   Treatment/physiological state
+SP   Sample preparation
+IP   Instrument/platform
+DA   Data analysis procedure
+DP   Data processing by neXtProt
+DC   Data confidence documentation
+DR   X-reference(s) to other database (PubMed, ...)
+CC   Comments
+//
+
+AN   Next free AC: MDATA_0401
+__________________________________________________________________________________________
+//
+ID   DKFZ GFP-cDNA localisation project.
+AC   MDATA_0001
+DE   Transient overexpression of human open reading frames as N- and C-terminal fusions with CFP and YFP in monkey cells.
+DM   GLOBAL. Fluorescence microscopy.
+CL   GLOBAL. Vero [CVCL_0059].
+TP   GLOBAL. Overexpression of cDNA clones under the CMV promoter.
+SP   GLOBAL. Live cells.
+IP   GLOBAL. Leica DM/IRBE microscope with 63x NA 1.4PL objective and custom designed CFP or YFP filters.
+DP   Exclusion of partial cDNAs (236 clones).
+DP   Clones are aligned to neXtProt protein sequences for assignment to entries.
+DC   GLOBAL. SILVER. Full length clones (680 isoforms for 667 proteins).
+DR   PubMed; 11256614.
+DR   PubMed; 14623100.
+CC   Need to integrate data from Starkuviene et al separately (GFP-cDNA.pdf).
+//
+ID   Glycosylation of cell surface proteins in myeloid leukemia cell lines.
+AC   MDATA_0002
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   LOCAL. HL-60 [CVCL_0002]; NB4 [CVCL_0005].
+OG   GLOBAL. Cell surface [SL-0310].
+SP   LOCAL. Biotinylation of cell surface glycoproteins (Glyco-CSC and Cys-Glyco-CSC) and
+SP   Lys-containing (Lys-CSC) cell surface proteins.
+SP   Digestion with trypsin. Deglycosylation by PGNase.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to a LTQ Orbitrap mass spectrometer equipped with a nanoelectrospray ion source (Thermo Scientific).
+DA   GLOBAL. Protein database: UniProtKB/Swiss-Prot release 56.9 concatenated with common
+DA   contaminants and reversed sequences of all entries.
+DA   Software: Sorcerer-SEQUEST; Statistical analysis: Trans-Proteomic Pipeline TPP
+DA   version 4.0 JETSTREAM rev 2
+DA   including PeptideProphet and ProteinProphet.
+DA   Maximum missed cleavages: 2; Semitryptic peptides.
+DA   Mass tolerance for parent ion: 40 ppm.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation; Asn (representing formerly N-glycosylated Asp
+DA   after deamidation).
+DA   Peptide FDR < 0.01. Protein FDR < 0.01 (estimated by MAYU with ProteinProphet
+DA   probability score: 0.9).
+DA   Exclusion of single peptide identification.
+DA   Minimum peptide length: Not available.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: One high resolution MS scan followed by four collision induced
+DA   dissociation MS/MS scans in the linear ion trap.
+DA   Spectra recalibration: Not available.
+DP   GLOBAL. Glycosylation sites: Peptides from proteins pulled down by Glyco-CSC having
+DP   deamidations and a consensus  NXS/T glycosylation site. Exclusion of peptides containing
+DP   more NXS/T sites than deamidations observed.
+DP   Peptide identification. Exclusion of peptides with ProteinProphet initial
+DP   probability < 0.9.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   LOCAL. Peptide identification: GOLD: ProteinProphet initial probability > 0.9.
+DC   Glycosylation. GOLD: For Glyco-CSC method: Sites from peptides where the number of
+DC   deamidation events >= number of NXS/T motifs;
+DC   SILVER: Lys-CSC: Sites from proteins having proteins purified by Glyco-CSC,
+DC   where number of deamidation events >= NXS/T motifs and not containing additional Asn residues.
+DR   PubMed; 20570859.
+CC   TO DO: Check with Alain what was loaded (Table S3 et/ou S7: presumably semi-tryptic peptides????)
+//
+ID   Identification and phosphorylation of embryonic stem cell proteins.
+AC   MDATA_0003
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   GLOBAL. HUES 9 [CVCL_0057].
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion with endoproteinase
+SP   Lys-C and trypsin.
+SP   Peptide fractionation by Strong Cation eXchange column (SCX) and phosphopeptides
+SP   enrichment by titanium dioxide (TiO2) chromatography.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to a LTQ FT Ultra, LTQ Orbitrap or LTQ Orbitrap mass spectrometer equipped with a nanoelectrospray source (Proxeon).
+DA   GLOBAL. Protein database: Human IPI release 3.37 concatenated with known contaminants
+DA   and reversed sequences of all entries.
+DA   Software: MaxQuant version 1.0.12.25; Mascot version 2.2.
+DA   Maximum missed cleavages: 3.
+DA   Mass tolerance for fragment ion: 0.5 Da.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation; N-terminal acetylation; pyro-Glu;
+DA   Ser phosphorylation; Thr phosphorylation; Tyr phosphorylation.
+DA   Peptide FDR < 0.01. Protein FDR < 0.01.
+DA   Minimum peptide length: 6
+DA   Ion mode: Positive.
+DA   Spectra acquisition: 10 most intense precursor ions, multistage activation enabled with a
+DA   neutral loss [32.66, 48.99, and 97.97 atomic mass units].
+DA   Spectra recalibration: Lock mass.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides that
+DP   match more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   LOCAL. Peptide identification: GOLD: Mascot score >= 30;
+DC   Phosphorylation: GOLD: Mascot score >= 30; PTM score >= 30; PTM localization
+DC   probability > 0.99.
+DC   SILVER: Mascot score >= 20; PTM score >= 20; PTM localization probability > 0.90.
+DR   PubMed; 21406692.
+CC   For the phosphorylation data:
+CC   Table S2. Phosphorylation site identifications: Column D (Localization Prob),
+CC   J (Best Mascot Score), K (PTM Score),
+CC   S (Phosphopeptide (STY) Probabilities).
+CC   Quantification data: Not annotated. N-acetylation not annotated.
+//
+ID   Mitochondria-enriched N-terminome and proteome of myelomonocytic histiocytic lymphoma cells.
+AC   MDATA_0004
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   GLOBAL. U-937 [CVCL_0007].
+OG   GLOBAL. Mitochondrion [SL-0173].
+TP   GLOBAL. Growing undifferentiated culture.
+SP   GLOBAL. Mitochondria preparation by standard hypotonic swelling-mechanical breakage
+SP   techniques, followed by removal of nuclei and gross debris.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to a Q-TOF MS/MS (MaXis, Bruker Daltonics).
+DA   GLOBAL. Protein database: UniProtKB/Swiss-Prot release 2010_06 restricted to human,
+DA   concatenated with a target-decoy database.
+DA   Software: Mascot version 2.3; OMSSA version 2.1.7.
+DA   Maximum missed cleavages: 1.
+DA   Mass tolerance for parent ion: 10 ppm.
+DA   Mass tolerance for fragment ion: 0.02 Da.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxydation; N-terminal acetylation.
+DA   Peptide FDR < 0.01. Protein FDR < 0.01.
+DA   Peptide identification has to be confirmed by Mascot and OMSSA.
+DA   Validation criteria for peptide identification with > 1 peptide: Mascot Ion score >
+DA   Mascot Identity score and OMSSA > 1.
+DA   Validation criteria for single peptide identification: OMSSA > 6.8; Mascot Ion score
+DA   >25; and Mascot Ion score - Mascot Identity score > 4.4.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DC   LOCAL. GOLD: Mascot score >= 30.
+DC   SILVER: Mascot score < 30.
+CC   Carapito C, Schaeffer-Reiss C, Ayoub D, Bairoch A, Lane L, Van Dorsselaer A, CC   Rabilloud T (2011).
+CC   Submission to neXtProt.
+//
+ID   HPA Tissue expression.
+AC   MDATA_0005
+DE   Protein expression profiles based on immunohistochemistry.
+DM   GLOBAL. Fluorescence microscopy.
+BS   GLOBAL. Antibody specificity is tested using Protein Array (PA), Western blot (WB), immunohistochemistry (IHC), and immunofluorescence (IF), and compared with published data.
+TS   LOCAL. 66 normal cell types from 46 tissues and organs.
+TP   Human breast cancer tissue.
+SP   GLOBAL. Tissue microarrays (TMAs) from multiple biopsies combined into single
+SP   paraffin blocks.
+SP   Slides are deparaffinized in xylene, hydrated in graded alcohols, and blocked for
+SP   endogenous peroxidase in 0.3% hydrogen peroxide diluted in 80% ethanol. Slides are
+SP   immersed and boiled in Target Retrieval Solution, pH 6.0 (Dakocytomation)
+SP   for 4 min at 125 degrees C. Automated immunohistochemistry is done using an
+SP   Autostainer Plus instrument (Dakocytomation).
+IP   GLOBAL. Slides scanned using an automated slide-scanning system, ScanScope T2 (Aperio Technologies, Vista, CA) at 20 Angstrom magnification. For each antibody 576 digital images are generated to represent the total content of the eight TMAs.
+DA   GLOBAL. Images are manually annotated.
+DR   PubMed; 21139605.
+DR   PubMed; 18669619.
+DR   PubMed; 16127175.
+//
+ID   HPA Subcellular localization.
+AC   MDATA_0006
+DE   Protein subcellular localization based on immunofluorescence.
+DM   GLOBAL. Confocal fluorescence microscopy.
+BS   GLOBAL. DAPI for the nucleus; anti-tubulin antibody for microtubules; calreticulin for the endoplasmic reticulum (ER).
+CL   GLOBAL. A-431 [CVCL_0037]; U2OS [CVCL_0042]; U-251MG [CVCL_0021].
+DA   GLOBAL. Images are manually annotated.
+DR   PubMed; 21139605.
+DR   PubMed; 18669619.
+//
+ID   Subcellular localisation from the Kahn Dynamic Proteomics Database (DyP).
+AC   MDATA_0007
+DE   Stable cell clones created using CD tagging (Central Dogma), in which eYFP is inserted as an additional exon of a protein-coding gene and the fusion gene expressed from its endogenous chromosomal location.
+DM   GLOBAL. Fluorescence microscopy.
+CL   GLOBAL. NCI-H1299 [CVCL_0060] stably transfected with XRCC5-mCherry and DAP1-mCherry.
+DA   GLOBAL. Images are analyzed using an automated in-house image analysis software (ScanPlate macro).
+DC   GLOBAL. SILVER: All data.
+DR   PubMed; 17571059.
+//
+ID   Protein S-nitrosylation in prostate epithelial cells.
+AC   MDATA_0009
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   GLOBAL. NPrEC [CVCL_0061].
+TP   GLOBAL. Treatment of cells with CysNO to nitrosylate proteins.
+SP   GLOBAL. Biotin switch technique (BST) coupled to either (1) neutravidin
+SP   pull-down of nitrosylated proteins followed by SDS-PAGE and trypsin
+SP   digestion, or (2) trypsin digestion followed by neutravidin pull-down.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to a LTQ Orbitrap XL mass spectrometer.
+DA   GLOBAL. Protein database: Human IPI release 3.56 concatenated with
+DA   common contaminants and reverse sequences of all entries.
+DA   Software: SEQUEST in Bioworks version 3.3.
+DA   Maximum missed cleavages: 2.
+DA   Mass tolerance for parent ion: 15 ppm.
+DA   Mass tolerance for fragment ion: 1 Da.
+DA   Post-translational modifications per peptide: 3
+DA   Variable modifications: Met oxidation; Cys S-methylthiolation;
+DA   peptide biotinylation.
+DA   Peptide FDR < 0.01. Protein FDR < 0.01.
+DA   Minimum peptide length: Not available.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: Survey Orbi, 5 most intense precursor ions.
+DA   Spectra recalibration: Not available.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   LOCAL. Posterior Error Probability (PEP) < 0.01. GOLD: Peptides from nitrosylated
+DC   proteins pulled down in two different experiments.
+DC   SILVER: Peptides from nitrosylated proteins pulled down in one experiment.
+DR   PubMed; 20140087.
+CC   Table S1A. nitrosylated peptides in both independent protein pull-down experiments.
+CC   Columns Biotinylated peptide and Prob (pep).
+CC   Table S1B. nitrosylated peptides in one of the two protein pull-down experiments.
+CC   Columns Biotinylated peptide and Prob (pep).
+//
+ID   Protein S-nitrosylation in breast cancer cell line.
+AC   MDATA_0010
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   GLOBAL. MDA-MB-231 [CVCL_0062].
+TP   GLOBAL. Treatment with Angeli's salt to nitrosylate proteins.
+SP   GLOBAL. Detection of S-nitrosylated proteins by Biotin Switch Method.
+SP   Reduction of disulfide bonds with DTT. Alkylation of free thiols with
+SP   acrylamide followed by digestion with trypsin. Reduction of S-nitrosylated peptides
+SP   with ascorbate. Capture of free cysteine-containing peptides by TS6B resin and
+SP   elution with DTT. Second alkylation with iodoacetamide.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to a LTQ Orbitrap XL mass spectrometer equipped with a nanoelectrospray source (Thermo Scientific).
+DA   GLOBAL. Protein database: Human IPI release 3.52 concatenated with common
+DA   contaminants and reverse sequences of all entries.
+DA   Software: MaxQuant; Mascot version 2.1.04.
+DA   Maximum missed cleavages: Not available.
+DA   Mass tolerance for parent ion: 5 ppm.
+DA   Mass tolerance for fragment ion: 0.6 Da.
+DA   Variable modifications: Met oxidation; Cys carbamidomethylation; Cys
+DA   propionamidation.
+DA   Peptide FDR < 0.01. Protein FDR < 0.01.
+DA   Minimum peptide length: Not available.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: Survey Orbi, 5 most intense precursor ions.
+DA   Spectra recalibration: Not available.
+DP   Exclusion of ambiguous S-nitrosylation sites.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. GOLD: Mascot score >= 30. SILVER: Mascot score >= 20.
+DR   PubMed; 20687582.
+CC   Table S1. Column: Peptide sequences (colonne 3); Mascot Score (colonne 5); S-NO sites (colonne 6).
+CC   Check that we only loaded non ambiguous sites.
+//
+ID   Endogenous protein ubiquitination sites.
+AC   MDATA_0012
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   GLOBAL. HEK293T [CVCL_0063].
+SP   GLOBAL. Pull down of endogenous ubiquitinated substrates with recombinant GST-qUBA.
+SP   Protein separation either by SDS-PAGE followed by in-gel-digestion with trypsin or
+SP   in-solution-digestion followed by separation by isoelectric focusing (IEF).
+IP   GLOBAL. Nanoscale C18 HPLC coupled to a LTQ Orbitrap Velos mass spectrometer equipped with a nanoelectrospray source.
+DA   GLOBAL. Protein database: Human RefSeq release June 27 2009 concatenated with a
+DA   target-decoy database.
+DA   Software: Mascot version 2.2; SEQUEST (version not available).
+DA   Validation: Manual validation of all MS-MS spectra.
+DA   Maximum missed cleavages: 2.
+DA   Mass tolerance for parent ion: 10 ppm.
+DA   Mass tolerance for fragment ion: 0.5 Da.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation; Lys ubiquitination.
+DA   Peptide FDR < 0.05. Protein FDR not available.
+DA   Minimum peptide length: Not available.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: 20 most intense precursor ions.
+DA   Spectra recalibration: Not available.
+DA   Manual validation of all MS-MS spectra.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   LOCAL. Ubiquinated peptides: GOLD: Mascot score >= 20.
+DC   SILVER: Mascot score between 10 and 20 and peptides identified by SEQUEST.
+DR   PubMed; 20972266.
+CC   Supplemental Data 3: Column E (IonScore); Column D (Peptide_sequence source).
+CC   Probability for GOLD: 234; Probability for SILVER:56
+//
+ID   Cytoplasmic proteome of human healthy erythrocytes.
+AC   MDATA_0013
+DE   Extensive analysis of the cytoplasmic proteome of human erythrocytes using the peptide ligand library technology and advanced mass spectrometry.
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+TS   GLOBAL. Erythrocyte [TS-0290].
+OG   GLOBAL. Cytoplasm [SL-0086].
+SP   GLOBAL. Blood collected from healthy donors. Sample centrifugation to eliminate
+SP   plasma. Filtration of erythrocytes using an alpha-methylcellulose column.
+SP   Lysis by hypotonic shock. Hemolysate mixed with protease inhibitors.
+SP   Protein solution loaded on a column with Proteominer Library (Bio-Rad). Column
+SP   effluent continuously injected in a second column
+SP   connected in series, and packed with a carboxylated version of the Proteominer
+SP   Library. Eluate desalted by dialysis followed by lyophilization.
+SP   Fractionation of each eluate or initial RBC lysate by SDS-PAGE.
+SP   Trypsin digestion.
+IP   GLOBAL. Ultimate3000 system (Dionex, Amsterdam, The Netherlands) coupled to a LTQ-Orbitrap XL mass spectrometer (Thermo Fisher Scientific, Bremen, Germany).
+DA   GLOBAL. Protein database: UniProtKB/Swiss-Prot release 2010_11 restricted to human.
+DA   Software: Mascot version 2.3.
+DA   Maximum missed cleavages: 1.
+DA   Mass tolerance for parent ion: 10 ppm.
+DA   Mass tolerance for fragment ion: 0.6 Da.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation; N-terminal acetylation.
+DA   Peptide FDR < 0.05 computed as described in [PubMed; 19714873].
+DA   Validation criteria for peptide peptide identification: Mascot rank = 1 and delta
+DA   score > 0. The p-value used to compute the thresholds was adjusted automatically to
+DA   obtain the wanted FDR.
+DA   Protein FDR < 0.01.
+DA   Minimum peptide length: Not available.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: Survey orbi, 5 most intense precursor ions.
+DA   Spectra recalibration: Not available.
+DP   Validation criteria for protein set identification: sum of peptide delta scores >
+DP   value automatically determined to reach the wanted FDR.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are tagged 'found in other entries'.
+DC   LOCAL. GOLD: Mascot delta score >= 20.
+DC   SILVER: Mascot delta score >= 10 and < 20.
+DR   PubMed; 18614565.
+CC   TO DO PG : revoir les tables
+//
+ID   Sumoylation sites of SUMO2 targets in HeLa cells.
+AC   MDATA_0014
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   GLOBAL. HeLa [CVCL_0030].
+SP   GLOBAL. SUMO2 targets pull-down using a His6-SUMO2 mutant in which all Lys are
+SP   replaced by Arg, thus sensitive to trypsin but not to Lys-C, and containing Tyr90Arg and Gln87Arg
+SP   mutations to allow tryptic digestion.
+SP   Protein reduction, alkylation, followed by digestion with Lys-C. His6-SUMO2
+SP   conjugates purification by immobilized metal affinity chromatograpy (IMAC) or
+SP   separation by SDS-PAGE (in-gel digested samples), followed by trypsin digestion.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to a LTQ Orbitrap mass spectrometer equipped with a nanoelectrospray source (Proxeon). Multiple analysis of samples using either LTQ Orbitrap-XL and fragmentation by CID (IMAC samples) or LTQ Orbitrap Velos and fragmentation by HCD (in-gel digested samples).
+DA   GLOBAL. Protein database: Human IPI release 3.37.
+DA   Software: MaxQuant version 1.0.14.3; Mascot version 2.1.04.
+DA   Maximum missed cleavages: 4.
+DA   Mass tolerance for parent ion: 7 ppm.
+DA   Mass tolerance for fragment ion: 0.5 Da for CID fragment ions and 0.02 Da for
+DA   HCD fragment ions.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation; N-terminal acetylation; Ser phosphorylation;
+DA   Thr phosphorylation;
+DA   Tyr phosphorylation; mass addition on Lys for GG signature tag derived from
+DA   SUMO2-T90R and for QQTGG signature tag from SUMO2-Q87R.
+DA   Minimum peptide length: Not available.
+DA   Ion mode: Profile for fragmentation by HCD and centroid for fragmentation by CID.
+DA   Spectra acquisition: Survey Orbi, 10 most intense precursor ions for fragmentation by HCD and CID.
+DA   Spectra recalibration: Lock mass.
+DA   Manual validation of MS-MS spectra of identified SUMOylated peptides, especially for
+DA   the Q87R experiments where fragmentation of QQTGG tag produced peaks that are not
+DA   assigned by the search engine.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   LOCAL. GOLD: PTM localization probability > 0.99; Posterior Error Probability (PEP) < 0.01.
+DC   SILVER: PTM localization probability > 0.90; Posterior Error Probability (PEP) < 0.01.
+DR   PubMed; 20797634.
+CC   Table S1. Tab: SUMOylated peptides. Column E (Modified Sequence), G (PEP), I (Localization Prob).
+//
+ID   Lysine ubiquitination sites in U2OS and HEK293T cells.
+AC   MDATA_0015
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   GLOBAL. HEK293T [CVCL_0063]; U2OS [CVCL_0042].
+SP   GLOBAL. Strep-HA-tagged ubiquitin conjugated proteins pull down with Strep-Tactin
+SP   Sepharose. Separation by SDS-PAGE, reduction and alkylation. Trypsin digestion,
+SP   resulting in diglycine remnant of ubiquitin attached to Lys.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to a LTQ Orbitrap Velos (fragmentation by HCD) mass spectrometer equipped with a nanoelectrospray source (Proxeon).
+DA   GLOBAL. Protein database: Human IPI release 3.37 concatenated with a target/reversed decoy database.
+DA   Software: MaxQuant version 1.0.14.7; Mascot version 2.2.04.
+DA   Maximum missed cleavages: 2.
+DA   Mass tolerance for parent ion: 7 ppm.
+DA   Mass tolerance for fragment ion: 0.02 Da.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation; N-terminal acetylation; Gly-Gly addition to Lys.
+DA   Peptide FDR < 0.01. Protein FDR < 0.01.
+DA   Minimum peptide length: Not available.
+DA   Ion mode: Data-dependent mode.
+DA   Spectra acquisition: Survey Orbi, 10 most intense precursor ions.
+DA   Spectra recalibration: Lock mass.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   LOCAL. Peptide identification: GOLD: Mascot score >= 30.
+DC   Ubiquitination: GOLD: Mascot score >= 30; PTM localization probability > 0.99.
+DC   SILVER: Mascot score >= 20; PTM localization probability > 0.90.
+DR   PubMed; 21139048.
+CC   Supplemental table 1 (mcp.M110.003590-1): List of all lysine ubiquitylation sites: Column G (Localization Prob), K (Mascot Score), L (Modified Sequence).
+CC   Supplemental table 3 (mcp.M110.003590-3): 54,846 peptides identified (of which 753
+CC   ubiquitylated peptides) on ubiquitinated proteins:
+CC   Column B (peptide sequence), K (mascot score).
+CC   Quantification data: Not annotated. Cell line data pooled into the same table (GLOBAL).
+CC   NOTE there were 5113 silver peptides from this paper. Asked to remove Oct 2013.
+//
+ID   Phosphorylation site occupancy during mitosis.
+AC   MDATA_0016
+DM   GLOBAL. Mass spectrometry Nano LC/MS/MS.
+CL   GLOBAL. HeLa S3 [CVCL_0058].
+TP   GLOBAL. Thymidine block to synchronize cells in G1-S. SILAC labeling.
+SP   GLOBAL. Protein reduction, alkylation, followed
+SP   by digestion with endoproteinase Lys-C and trypsin.
+SP   Peptide fractionation by Strong Cation eXchange column (SCX) and phosphopeptide
+SP   enrichment by Strong Cation eXchange column (SCX)
+SP   and phosphopeptides enrichment by titanium dioxide (TiO2) chromatography.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to a LTQ-Orbitrap mass spectrometer equipped with a nanoelectrospray source (Proxeon).
+DA   GLOBAL. Protein database: Human IPI release 3.37 concatenated with known contaminants
+DA   and reversed sequences of all entries.
+DA   Software: MaxQuant version 1.0.12.0; Mascot version 2.2.04. Enzyme specificity was
+DA   set to trypsin,
+DA   allowing for cleavage of N-terminus to Pro and between Asp and Pro.
+DA   Maximum missed cleavages: 3.
+DA   Mass tolerance for the parent ion: 7 ppm.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation; N-terminal acetylation; Ser phosphorylation;
+DA   Thr phosphorylation; Tyr phosphorylation; loss of ammonia from N-terminal Glu.
+DA   Peptide FDR < 0.01. Protein FDR < 0.01.
+DA   Minimum peptide length: 6
+DA   Ion mode: Positive.
+DA   Spectra acquisition: One orbitrap full-scan and five ion trap tandem mass spectra,
+DA   multistage activation enabled for neutral loss of phosphoric acid
+DA   [32.66, 48.99, and 97.97 atomic mass units].
+DA   Spectra recalibration: Lock mass.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   LOCAL. GOLD: Mascot score >= 30; PTM score >= 30; PTM localization probability > 0.99.
+DC   SILVER: Mascot score >= 20; PTM score >= 20; PTM localization probability > 0.90.
+DR   PubMed; 20068231.
+CC   For the phosphorylation data:
+CC   Table S2. List of all identified phosphopeptides: Column N (P-site Loc. Prob.),
+CC   U (Best Mascot Score), V (PTM Score), AB
+CC   (Phosphopeptide (STY) Probabilities).
+CC   For the mitotic data:
+CC   Table S7. List of regulated mitotic phosphorylation sites with high occupancy:
+CC   Column AH/AK = ratio of mitosis phosphosite
+CC   occupancy compared to S phase.
+CC   Take all values greater than 10 (ie, phosphosite occupancy site > 10-fold).
+CC   LOCAL. Sentence: Highly increased during mitosis.
+CC   TO DO: Review SP - phosphopeptide enrichment description confused.
+//
+ID   Glycosylation of cell surface proteins in HEK293T cell line.
+AC   MDATA_0018
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   GLOBAL. HEK293T [CVCL_0063].
+OG   GLOBAL. Cell surface [SL-0310].
+SP   GLOBAL. Reduction by DTT and alkylation of protein disulfide bonds by IAA.
+SP   First protease digestion by Lys-C. Oxidization of cis-diol groups on
+SP   glycans to aldehydes by sodium periodate. Coupling reaction by
+SP   introducing hydrazide resin. Second protease digestion by trypsin.
+SP   Collection of LT-peptides (peptides produced first by Lys-C then by trypsin).
+SP   De-glycosylation by PNGase F. Collection of DG-peptides (formerly
+SP   glycosylated peptides released by PNGase F, namely deglycopeptides).
+IP   GLOBAL. Nanoscale C18 HPLC coupled to a LTQ Orbitrap XL (fragmentation by CID) mass spectrometer equipped with a nanoelectrospray ion source (Thermo Fisher Scientific).
+DA   GLOBAL. Protein database: UniProtKB/Swiss-Prot (release number not available)
+DA   concatenated with common contaminants and reversed sequences of all
+DA   entries.
+DA   Software: SEQUEST (version not available).
+DA   Statistical analysis: Trans-Proteomic Pipeline TPP including PeptideProphet.
+DA   Maximum missed cleavages: 2.
+DA   Mass tolerance for parent ion: 10 ppm.
+DA   Mass tolerance for fragment ion: 1 Da.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation; Asn (representing formerly
+DA   N-glycosylated Asp after deamidation).
+DA   Peptide FDR < 0.01. Protein FDR < 0.01.
+DA   Minimum peptide length: Not available.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: 8 most intense precursor ions.
+DA   Spectra recalibration: Not available.
+DP   GLOBAL. Glycosylation sites: Peptides from DG collection. Exclusion
+DP   of peptides containing more than one NXS/T site.
+DP   Peptide identification: Peptides from DG and LT collections.
+DP   Exclusion of peptides with PeptideProphet initial probability < 0.9.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   LOCAL. Peptide identification and glycosylation sites.
+DC   GOLD: PeptideProphet initial probability > 0.99.
+DR   PubMed; 21645671.
+CC   Glycosylation sites: Table 1 sheet B1; probability column A; modified peptide
+CC   sequence column G.
+CC   Peptides: Table 1 sheet B2; probability column A; peptide sequence column G.
+CC   Note: there were 67 silver peptides loaded from this paper. Asked to remove Oct 2013.
+//
+ID   Proteins detected in human cell lines.
+AC   MDATA_0019
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   LOCAL. HeLa [CVCL_0030]; K-562 [CVCL_0004]; HEK293 [CVCL_0045]; Namalwa [CVCL_0067]; HaCaT [CVCL_0038]; Hep-G2 [CVCL_0027]; U-937 [CVCL_0007].
+SP   GLOBAL. Protein reduction, alkylation, and separation by SDS-PAGE, followed by
+SP   in situ digestion by trypsin. Each tryptically-digested sample analyzed as replicates.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to LTQ-Orbitrap XL mass spectrometer (ThermoFisher Scientific, Waltham, MA).
+DA   GLOBAL. Protein database: UniProtKB/Swiss-Prot release 56.1 including isoforms,
+DA   concatenated with reversed sequences.
+DA   Software: Mascot version 2.2.03; Phoenix version 2.5.14. Peptide samples duplicates
+DA   are identified separately by
+DA   Mascot and Phenyx then combined. Spectra assigned to different peptides by the two
+DA   search engines during the merge of the results are discarded.
+DA   Maximum missed cleavages: 1.
+DA   Mass tolerance for the parent ion: 4 ppm.
+DA   Mass tolerance for fragment ion: 0.3 Da.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation.
+DA   Protein FDR < 0.0025; Peptide FDR < 0.001.
+DA   Minimum peptide length: 6.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: Not available.
+DA   Spectra recalibration: Not available.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 21269460.
+CC   Files for peptide of each cell line: M:\Calipho\Proteomic data\J. Colinge data
+CC   (note that some cell lines have more than one file).
+CC   From Jacques's paper:  A minimum of 2 distinct peptides above a score threshold of
+CC   18 for Mascot and 4.5 for Phenix are required for protein identifications.
+CC   Single peptide hits are accepted but above a score threshold of 50 for Mascot and
+CC   6.0 for Phenix, and provided the protein sequence coverage was 2.5% or more.
+CC   ALAIN: CAN WE DO THAT ???
+CC   For the 1124 proteins of the 'central proteome', add a comment 'According to Colinge et al, this protein is part of the human central proteome
+CC   of proteins detected in all cells. (Note that this belongs at the protein level, not at the peptide level).
+//
+ID   Lysine ubiquitination sites in MV4-11 and HEK293T cells.
+AC   MDATA_0020
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   GLOBAL. HEK293T [CVCL_0063]; MV4-11 [CVCL_0064].
+SP   GLOBAL. Lysates treatment with protease inhibitors and N-ethylmaleimide
+SP   to inhibit cysteine-based proteases such as deubiquitylases. Protein
+SP   reduction, alkylation, followed by digestion with Lys-C and trypsin,
+SP   resulting in diglycine remnant of ubiquitin attached to Lys.
+SP   Immunoprecipitation of modified peptides with
+SP   diglycine-specific monoclonal antibody and fractionation by isoelectric
+SP   focusing (IEF) or by Strong Cation eXchange (SCX).
+IP   GLOBAL. Nanoscale C18 HPLC coupled to LTQ Orbitrap Velos mass spectrometer equipped with a nanoelectrospray source. Peptides with unassigned charge states or with charge state less than +3 excluded from fragmentation.
+DA   GLOBAL. Protein database: Human IPI release 3.68 concatenated with
+DA   common contaminants and reversed sequences of all entries.
+DA   Software: MaxQuant version 1.1.1.17; Andromeda search engine.
+DA   Maximum missed cleavages: 2.
+DA   Mass tolerance for parent ion: 6 ppm.
+DA   Mass tolerance for fragment ion: 20 ppm (HCD MS2 mode).
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation; N-terminal acetylation; mass
+DA   addition on Lys for GG signature tag derived from ubiquitin remnant
+DA   attached to Lys.
+DA   Peptide FDR < 0.01. Protein FDR < 0.01.
+DA   Minimum peptide length: Not available.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: Survey Orbi, 10 most intense ions.
+DA   Spectra recalibration: Lock mass.
+DA   The C-terminal diglycine site identifications were removed.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DP   GLOBAL. Ubiquitination: a small fraction of ubiquitinated sites is
+DP   likely to originate from modification by ISG15 or NEDD8 and is
+DP   filtered according to neXtProt sequence annotation.
+DC   LOCAL. Peptide identification: GOLD: Andromeda score >= 100.
+DC   Ubiquitination: GOLD: Andromeda score >= 100; PTM localization probability > 0.99.
+DC   SILVER: Andromeda score >= 100; PTM localization probability > 0.90.
+DR   PubMed; 21890473.
+CC   Supplemental table 1 (mcp.M111.013284-2), localization probability (column J),
+CC   score (column L) and peptide sequence (column M).
+CC   Modified Lys are shown as "K(gl)".
+//
+ID   Pancreatic islets proteome.
+AC   MDATA_0023
+DM   GLOBAL. Mass spectrometry Nano LC/MS/MS.
+TS   GLOBAL. Pancreatic islet [TS-0741].
+SP   GLOBAL. Solubilization of the lyophilized islets in Rapigest, ultrasonication
+SP   and protein denaturation. Reduction at 60 degrees C and alkylation of protein
+SP   disulfide bonds by IAA. Protein denaturation and trypsin digestion. Peptide
+SP   separation by Off-gel electrophoresis.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to LTQ-Orbitrap velos mass spectrometer (fragmentation by CID, gas phase fractionnation with four m/z windows: 400-520, 515-690, 685-979, 974-2000) equipped with a nanoelectrospray ion source (home-made).
+DA   GLOBAL. Protein database: UniProtKB/Swiss-Prot release 2011_02 plus reversed
+DA   sequences of all entries.
+DA   Software: EasyProt version 2.2, build 568.
+DA   Maximum missed cleavages: 1.
+DA   Mass tolerance for parent ion: 10 ppm.
+DA   Mass tolerance for fragment ion: scoring dependent (same algorithm as Phenyx).
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation.
+DA   Peptide FDR < 0.01. Protein FDR not available.
+DA   Minimum peptide length: 6.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: One orbitrap full-scan, 3 CID ion trap tandem
+DA   mass spectra and 3 HCD ion trap tandem mass spectra. Z score > 4.5.
+DA   DOI; 10.1016/j.trprot.2013.03.002
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DC   GLOBAL. GOLD: All peptides.
+CC   Authors (2012): Domitille Schvartz, Alexandre Hainard, Nadia Walter, Ernest Sargsyan,
+CC   Peter Bergsten, Jean-Charles Sanchez.
+CC   Submission to neXtProt.
+CC   File ProteinExport of GPF4+H1744+HP121166.xlsx, worksheet Protein Details'.
+CC   Peptide Sequence (Column P).
+//
+ID   Arginine and lysine methylation sites.
+AC   MDATA_0024
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   GLOBAL. Jurkat [CVCL_0065].
+TS   GLOBAL. T-cell [TS-1001].
+TP   GLOBAL. SILAC labeling.
+SP   GLOBAL. Cell lysate in non-denaturing buffer for immunoenrichment of
+SP   Arg methylated peptides using
+SP   anti-dimethylarginine mAb. Bis-Tris NuPAGE followed by in-gel digestion. Cell
+SP   lysate in denatured buffer for in-solution digestion with trypsin or
+SP   chymotrypsin. Peptides fractionation by either Strong Cation eXchange (SCX),
+SP   Hydrophilic Interaction Liquid Chromatography (HILIC) or Isoelectric Focusing
+SP   (IEF) to collect Arg methylated peptides in fractions of charge >=+3 and most
+SP   hydrophilic fractions.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to LTQ Orbitrap XL or Q Exactive mass spectrometer equipped with a nano electrospray source (Thermo Electron). Peptides with charge state +1 were excluded from fragmentation.
+DA   GLOBAL. Protein database: Human IPI release 3.78 and 3.79 concatenated with
+DA   the reversed decoy version.
+DA   Software: Mascot version 2.3.01, X!TANDEM version 2008.12.01.1, OMSSA
+DA   version 2.1.8.
+DA   Maximum missed cleavages: 3.
+DA   Mass tolerance for parent ion: 10 ppm for LTQ-Orbitrap XL, 20 ppm for Q Exactive.
+DA   Mass tolerance for fragment ion: 0.5 Da for LTQ-Orbitrap XL, 0.1 Da for Q Exactive.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation; Met heavy oxidation;
+DA   Arg monomethylation; Arg heavy monomethylation; Arg dimethylation;
+DA   Arg heavy dimethylation.
+DA   Assignment of a methylation site required the identification at 1 % FDR and a
+DA   confirming peptide with the precursor spectrum of equal intensity
+DA   separated by a mass difference introduced by the light/heavy methyl groups.
+DA   Peptide FDR approx. 0.01, Meth-R peptide FDR approx. 0.01.
+DA   Protein FDR not available.
+DA   Minimum peptide length: Not available.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: For LTQ-Orbitrap XL: 5 most intense parent ions.
+DA   For Q Exactive: 10 most intense parent ions.
+DA   Spectra recalibration: not available.
+DP   Peptides with InterProphet probability < 0.95 are excluded.
+DP   Methylated peptides containing uncertain methylation sites are removed.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD: InterProphet probability score >= 0.99.
+DC   GLOBAL. Methylation sites. GOLD: All sites.
+DR   PubMed; 22865923.
+CC   Supplemental table S4 (mcp.M112.020743-5). Column “peptide”, sequence;
+CC   “InterProphet probability”, probability score of peptides. Converted to xls
+CC   Table-S4.xlsx: One peptide has been deleted from sheet Table S4 due to the
+CC   unclear information on the number of methylated sites.
+//
+ID   Peptides and phosphorylation sites in HEK293 cells.
+AC   MDATA_0025
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   GLOBAL. HEK293 [CVCL_0045].
+SP   GLOBAL. In-solution digestion of cell lysates by Lys-N, Lys-C and trypsin
+SP   separately. Peptide desalting using Sep-Pak 50 mL C18 cartridges and
+SP   Strong Cation eXchange (SCX) fractionation.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to LTQ-Orbitrap mass spectrometer equipped with a nanoelectrospray source (Thermo Scientific).
+DA   GLOBAL. Protein database: UniProtKB/SwissProt human release 56.2.
+DA   Software: Mascot version 2.2.01.
+DA   Maximum missed cleavages: 1.
+DA   Mass tolerance for parent ion: 5 ppm.
+DA   Mass tolerance for fragment ion: 0.6 Da.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation; N-terminal acetylation; Ser phosphorylation;
+DA   Thr phosphorylation; Tyr phosphorylation.
+DA   Peptide FDR < 0.01. Protein FDR not available.
+DA   Minimum peptide length: Not available.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: 5 most intense precursor ions.
+DA   Spectra recalibration: Not available.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD: Mascot score >= 30;
+DC   Phosphorylation. GOLD: Mascot score >= 30; PTM score >= 30;
+DC   phosphorylation sites with same number of possible phosphorylation sites as number of (T+Y+S).
+DR   PubMed; 19413330.
+CC   Peptide identification.
+CC   ac9004309_si_001. Datasheet LysNnonmodifiedpeptides: Peptide sequence (Column A), mascot score (Column B).
+CC   ac9004309_si_002. Datasheet LysCnonmodifiedpeptides: Peptide sequence (Column A), mascot score (Column B).
+CC   ac9004309_si_003. Datasheet Trypsinnonmodifiedpeptides: Peptide sequence (Column A), mascot score (Column B).
+CC   ac9004309_si_004. Datasheet TrypsinSCXreplicatenonmodified: Peptide sequence (Column A), mascot score (Column B).
+CC   Phosphorylation.
+CC   ac9004309_si_001. Datasheet LysNphophopeptides: Peptide sequence (Column A), mascot score (Column C), PTM score (Column G), PTM info (phosphosite) (Column H).
+CC   ac9004309_si_002. Datasheet LysCphosphopeptides: Peptide sequence(Column A), mascot score (Column C), PTM score (Column G), PTM info (phosphosite) (Column H).
+CC   ac9004309_si_003. Datasheet Trypsinphosphopeptides: Peptide sequence(Column A), mascot score (Column C), PTM score (Column G), PTM info (phosphosite) (Column H).
+CC   ac9004309_si_004. Datasheet TrypsinSCXreplicatephospho: Peptide sequence(Column A), mascot score (Column C), PTM score (Column G), PTM info (phosphosite) (Column H).
+CC   Only load phosphorylation sites with same number of possible phosphorylation sites as number of (T +Y+S), which is about 500 sites (out of >2000).
+CC   PG Checked May 28-2013.
+CC   Acetylation sites re-integrated by SP.
+CC   YZ revised May 29 2013.
+//
+ID   Glycosylation of whole cell proteins in human pancreatic islets.
+AC   MDATA_0026
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+TS   GLOBAL. Pancreatic islet [TS-0741].
+SP   LOCAL. Ultrasonication and protein denaturation. Reduction at 60 degrees C and
+SP   alkylation of protein disulfide bonds by IAA. Protein denaturation and
+SP   trypsin digestion. Acidification and peptide extraction by
+SP   RP-HPLC. Oxidization by sodium periodate/sodium acetate. Coupling
+SP   reaction by introducing hydrazide beads. De-glycosylation by PNGase F.
+SP   N-glycosites peptides collection and RP-LC purification.
+IP   GLOBAL. Nanoscale C18 HPLC coupled online to a LTQ FTICR (fragmentation by CID) mass spectrometer equipped with a nanoelectrospray ion source (Thermo Fisher Scientific).
+DA   GLOBAL. Protein database: Human IPI release 3.26 concatenated with common
+DA   contaminants and reversed sequences of all entries.
+DA   Software: SORCERER-SEQUEST version 4.0.3; statistical analysis:
+DA   Trans-Proteomic Pipeline 3.5 TPP including PeptideProphet and
+DA   ProteinProphet software.
+DA   Maximum missed cleavages: 2.
+DA   Mass tolerance for parent ion: 15 ppm.
+DA   Mass tolerance for fragment ion: 0.8 Da.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation; Asn deamidation.
+DA   Peptide FDR < 0.01. Protein FDR < 0.01.
+DA   Minimum peptide length: 6.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: 5 most intense precursor ions.
+DA   Spectra recalibration: Not available.
+DP   Glycosylation sites: Peptides having a consensus glycosylation
+DP   site. Exclusion of peptides containing more NXS/T sites.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide. GOLD: Peptides for which protein probability >= 0.99.
+DC   Glycosylation. GOLD: All sites on peptides having a consensus glycosylation site.
+DC   Exclusion of peptides containing more NXS/T sites.
+DR   PubMed; 22148984.
+CC   Peptides and glycosylation sites: Table S3 (pr2007895_si_012.xls). Column F, peptide
+CC   sequence with glycosylation site; column H, proteinprobability.
+CC   All peptides in Table S3 have a PeptideProphet score >= 0.99 as described in paper.
+CC   Checked by Ying Sept 26 2012. Checked by PG May 27 2013.
+//
+ID   Phosphorylation sites in telomerase-expressing human retinal epithelial (hTERT-RPE) cells.
+AC   MDATA_0027
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   GLOBAL. hTERT-RPE1 [CVCL_4388].
+SP   GLOBAL. Protein denaturation. In-solution digestion with Lys-C and
+SP   trypsin. Strong Cation eXchange column (SCX) fractionation of peptides.
+SP   Phosphopeptide enrichment by PHOS-Select iron affinity gel.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to LTQ Orbitrap mass spectrometer equipped with a nanoelectrospray source (Thermo Scientific).
+DA   GLOBAL. Protein database: Human IPI release 3.37 concatenated with
+DA   reversed sequences of all entries.
+DA   Software: MaxQuant version 1.0.13.12; Mascot version 2.2.04.
+DA   Maximum missed cleavages: 3.
+DA   Mass tolerance for parent ion: 7 ppm.
+DA   Mass tolerance for fragment ion: 0.5 Da.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation; N-terminal acetylation; ammonia
+DA   loss from N-terminal of Gln and Cys; Ser phosphorylation; Thr phosphorylation;
+DA   Tyr phosphorylation.
+DA   Peptide FDR < 0.01. Protein FDR < 0.01.
+DA   Minimum peptide length: 6.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: 10 most intense precursor ions.
+DA   Spectra recalibration: Lock mass.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches.
+DP   Peptides that match more than one entry are tagged 'found in other entries' and
+DP   displayed on each relevant entry.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD: Mascot score >= 30; PEP <= 0.01.
+DC   LOCAL. Phosphosites. GOLD: Mascot score >= 30; PEP <= 0.01;
+DC   PTM localization probability >= 0.99; Delta PTM score >= 10.
+DC   SILVER. Mascot score >= 30; PEP <= 0.01; PTM localization probability >= 0.95.
+DR   PubMed; 22199227.
+CC   Supplemental Table S3 (mcp.O111.012351-4).
+CC   Peptide identification. Peptide sequence (Column K),
+CC   Posterior Error Probability (PEP) (Column V), Mascot score (Column Z).
+CC   Phosphorylation. Peptide sequence (Column K), phosphosites and PTM localization
+CC   probability (Column V), Posterior Error Probability (PEP) (Column Z),
+CC   Mascot score (Column AC), PTM Delta (Column AE).
+CC   GLOBAL. Note: authors detected PLK1 substrates with the following procedure
+CC   (data not integrated):
+CC   SILAC labeled cells expressing the protein kinase PLK1 either
+CC   in wild-type or in an analog-sensitive mutant. Cells treatment with DNA
+CC   polymerase inhibitor aphidicolin followed by anti-neoplastic agent
+CC   nocodazole to arrest cells in the M phase. Wash-out of 3-MB-PP1 from the
+CC   cell medium to induce the activity of mutant protein kinase PLK1.
+CC   For data confidence, did not take PTM score into account because it does not seem to make difference.
+//
+ID   Phosphorylation sites in HeLa cells.
+AC   MDATA_0028
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   GLOBAL. HeLa [CVCL_0030].
+SP   GLOBAL. Cells lysed with denatured buffer containing phosphatase
+SP   inhibitors. In-solution digestion with either Glu-C, trypsin, or 1st Glu-C 2nd
+SP   trypsin. Phosphopeptides enrichment using Ti4+-IMAC microspheres.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to LTQ Orbitrap XL mass spectrometer equipped with a nanoelectrospray source (Thermo Scientific).
+DA   GLOBAL. Protein database: Human IPI release 3.17 concatenated with
+DA   reversed sequences of all entries.
+DA   Software: SEQUEST (version not available).
+DA   Maximum missed cleavages: 2 for trypsin, 3 for Glu-C and 4 for second
+DA   trypsin digestion.
+DA   Mass tolerance for parent ion: 10 ppm.
+DA   Mass tolerance for fragment ion: 1 Da.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation; Ser phosphorylation; Thr phosphorylation;
+DA   Tyr phosphorylation.
+DA   Peptide FDR < 0.01. Protein FDR not available.
+DA   Minimum peptide length: Not available.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: 3 most intense precursor ions.
+DA   Spectra recalibration: Not available.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches.
+DP   Peptides that match more than one entry are tagged 'found in other entries' and
+DP   displayed on each relevant entry.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD. Charge 2+: Xcorr score >= 2.0; deltaCn >= 0.1.
+DC   Charge 3+: Xcorr score >= 2.5; deltaCn >= 0.1.
+DC   LOCAL. Phosphorylation. GOLD. Charge 2+: Xcorr score >= 2.0; deltaCn >= 0.1.
+DC   Charge 3+: Xcorr score >= 2.5; deltaCn >= 0.1. Ascore >= 19.
+DC   SILVER. Charge 2+: Xcorr score >= 2.0; deltaCn >= 0.1.
+DC   Charge 3+: Xcorr score >= 2.5; deltaCn >= 0.1. Ascore >= 15.
+DR   PubMed; 22468782.
+CC   Supplemental Table S1 (pr300242w_si_002).
+CC   Peptide identification. Datasheet Trypsin digestion: Sequence (column A),
+CC   charge (column F), Xcorr score (column G), deltaCn (column H).
+CC   Datasheet Glu-C digestion: Sequence (column A), charge (column F),
+CC   Xcorr score (column G), deltaCn (column H).
+CC   Datasheet Second trypsin digestion: Sequence (column A), charge (column F),
+CC   Xcorr score (column G), deltaCn (column H).
+CC   Phosphorylation. Datasheet Trypsin digestion:  Sequence (column A),
+CC   Ascore (column O, S, W).
+CC   Datasheet Glu-C digestion: Sequence (column A), Ascore (column O, S, W).
+CC   Datasheet Second trypsin digestion: Sequence (column A), Ascore (column O, S, W).
+CC   Merge all the three datasheets and select the phosphopeptides with best scores for
+CC   the duplicates.
+//
+ID   Peptides and phosphorylation sites from normal and cancer colorectal tissue and cell lines.
+AC   MDATA_0029
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   LOCAL. HCT 116 [CVCL_0291]; SW480 [CVCL_0546]; SW620 [CVCL_0547].
+TP   Human colorectal cancer and tumor-adjacent normal tissue.
+SP   GLOBAL. Protein extraction and trypsin digestion by a filter-assisted sample
+SP   preparation (FASP) protocol.
+SP   Phosphopeptides enrichment by Fe (III) affinity chromatography (Fe-IMAC).
+SP   Peptides and Phosphopeptides fractionation by Strong Cation eXchange column (SCX) and
+SP   desalted with C18 StageTips.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to LTQ-Orbitrap Velos mass spectrometer equipped with a nanoelectrospray source (Thermo Scientific).
+DA   GLOBAL. Protein database: UniProtKB/SwissProt release 2010_05.
+DA   Software: Proteome discoverer version 1.3; Mascot version 2.3.
+DA   Maximum missed cleavages: 2.
+DA   Mass tolerance for parent ion: 7 ppm.
+DA   Mass tolerance for fragment ion: 0.5 Da for CID and 0.01 Da for HCD.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation; Ser phosphorylation; Thr phosphorylation;
+DA   Tyr phosphorylation.
+DA   Peptide FDR < 0.01. Protein FDR not available.
+DA   Minimum peptide length: Not available.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: 10 most intense precursor ions.
+DA   Spectra recalibration: Not available
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches.
+DP   Peptides that match more than one entry are tagged 'found in other entries'
+DP   and displayed on each relevant entry.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD: Mascot CID score >= 30 or HCD score >= 30.
+DC   LOCAL. Phosphorylation. GOLD: Mascot CID score >= 30 or HCD score >= 30;
+DC   PTM localization probability >= 0.99;
+DC   SILVER. PTM localization probability >= 0.95.
+DR   PubMed; 23312004.
+CC   Peptide identification. Supplemental Table S3 (pr300825_si_003).
+CC   For every datasheet:  Peptide sequence (Column B), ionscore for CID (Column I),
+CC   ionscore for HCD (Column J).
+CC   Phosphorylation sites. Supplemental Table S4 (pr300825_si_004).
+CC   Datasheet SW480+SW620: Sequence (column B), ionscore CID (column I), ionscore HCD
+CC   (column J), PTM localization probability (column L).
+CC   Datasheet CRC_tissue2_non-tumor: Sequence (column B), ionscore CID (column G),
+CC   PTM localization probability (column I).
+CC   Datasheet CRC_tissue2_ tumor: Sequence (column B),ionscore CID (column G),
+CC   PTM localization probability (column I).
+//
+ID   Cellular O-GalNAc glycoproteome.
+AC   MDATA_0030
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   LOCAL. Capan-1 [CVCL_0237]; COLO 205 [CVCL_0218]; Hep-G2 [CVCL_0027]; K-562 [CVCL_0004]; OVCAR-3 [CVCL_0465]; T-47D [CVCL_0553]; MCF-7 [CVCL_0031]; HeLa [CVCL_0030]; HaCaT [CVCL_0038]; MDA-MB-231 [CVCL_0062]; IMR-32 [CVCL_0346]; HEK293 [CVCL_0045].
+SP   GLOBAL. Enrichment of glycoproteins from total cell lysates and secreted media of 12
+SP   human SimpleCell lines by short VVA (Vicia villosa agglutimin) agarose column.
+SP   Glycoprotein digestion with trypsin or chymotrypsin. Peptide purification by C18 solid
+SP   phase, neuraminidase treatment to remove sialic acids. O-glycopeptides enrichment by
+SP   LWAC-VVA column (lectin weak affinity chromatography with immobilized Vicia villosa
+SP   agglutimin), fractionation by isoelectric focusing (IEF).
+IP   GLOBAL. Nanoscale C18 HPLC coupled online to a LTQ-Orbitrap XL HCD/ETD spectrometer (Thermo Fisher Scientific) equipped with a nanoelectrospray ion source.
+DA   GLOBAL. Protein database: Human UniProt KB/SwissProt release 2010_07
+DA   Software: Proteome Discoverer version 1.2, SEQUEST (version not available), ZCore (version not available).
+DA   Maximum missed cleavages: Not available.
+DA   Mass tolerance for parent ion: 10 ppm.
+DA   Mass tolerance for fragment ion: 50 mmu.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation; HexNAc attachment to Ser, Thr, and Tyr.
+DA   Peptide FDR < 0.05. Protein FDR not available.
+DA   Minimum peptide length: Not available.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: 3 most intense precursor ions.
+DA   Spectra recalibration: Lock mass.
+DP   GLOBAL. Glycosylation : Removal of ambiguously identified glycosites.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides that match
+DP   more than one entry are tagged 'found in other entries' and displayed on each relevant entry.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Glycosylation. SILVER: All sites.
+DR   PubMed; 23584533.
+CC   Glycosylation. Table emboj201379s2 (Table S2).
+CC   Datasheet Suppl. Table S2(H): Glycopeptide sequeces (Column F), O-glycosites with unamibuguous assignments (column H).
+CC   Datasheet Suppl. Table S2(B): Glycosylated sites (column B), cell lines (columns C to AB).
+CC   Do not load peptides because no peptide scores available and they would be SILVER.
+CC   Revised by Ying 29 May 2013 .
+//
+ID   Peptides in breast cancer tissues.
+AC   MDATA_0031
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+TP   Human breast cancer tissue.
+SP   GLOBAL. Enrichment of membrane proteins by sequential centrifugation. In-solution
+SP   digestion by Lys-C followed by trypsin. Peptides fractionation by Strong Cation
+SP   eXchange (SCX) and desaltification with C18 StageTips.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to LTQ-Orbitrap Velos mass spectrometer equipped with a nanoelectrospray source (Thermo Scientific).
+DA   GLOBAL. Protein database: UniProtKB/SwissProt release 2010_05.
+DA   Software: Proteome Discoverer beta version 1.3; Mascot version 2.3.1.
+DA   Maximum missed cleavages: 1.
+DA   Mass tolerance for parent ion: 7 ppm.
+DA   Mass tolerance for fragment ion: 0.6 Da for CID and 0.01 Da for HCD.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation.
+DA   Peptide FDR <= 0.01. Protein FDR not available.
+DA   Minimum peptide length: Not available.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: 10 most intense precursor ions.
+DA   Spectra recalibration: Not available.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches.
+DP   Peptides that match more than one entry are tagged 'found in other entries'
+DP   and displayed on each relevant entry.
+DC   GLOBAL. Peptide identification. GOLD: Mascot CID score >= 30 or HCD score >= 30.
+DR   PubMed; 23153008.
+CC   Peptide identification. Supplemental Table S2.
+CC   Peptide sequence (Column A), ionscore for CID (Column G), ionscore for HCD (Column K).
+CC   In Table S2: 39611 peptides having CID score >= 30,
+CC   6580 peptides having CID score < 30 and HCD >= 30.
+//
+ID   Lysine ubiquitination and N-acetylation sites in Jurkat E6.1 cells.
+AC   MDATA_0032
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   GLOBAL. Jurkat E6.1 [CVCL_0367].
+SP   GLOBAL. Lysate denaturation and treatment with either proteasome inhibitor MG132 or
+SP   deubiquitinase inhibitor PR-619. Lysate in-solution digestion with trypsin.
+SP   Peptides desaltification and off-line basic RP fractionation. Enrichment of Lys
+SP   ubiquitinated sites by immunoprecipitation with anti-Lys-epsilon-GlyGly
+SP   antibody followed by desaltification.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to Q Exactive mass spectrometer equipped with a nanoelectrospray source (Thermo Scientific).
+DA   GLOBAL. Protein database: UniProtKB/SwissProt (release number not available).
+DA   Software: MaxQuant version 1.3.0.5.
+DA   Maximum missed cleavages: 2.
+DA   Mass tolerance for parent ion: 6 ppm.
+DA   Mass tolerance for fragment ion: Not available.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation; Gly-Gly addition to Lys;
+DA   N-terminal protein acetylation.
+DA   Peptide FDR < 0.01. Protein FDR < 0.01.
+DA   Minimum peptide length: 6.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: 12 most intense precursor ions.
+DA   Lys-epsilon-GlyGly sites localized to a peptide C-terminal Lys residue were
+DA   removed.
+DA   Spectra recalibration: Not available
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DP   GLOBAL. Ubiquitination: a small fraction of ubiquitinated sites is
+DP   likely to originate from modification by ISG15 or NEDD8 and is
+DP   filtered according to neXtProt sequence annotation.
+DC   GLOBAL. Peptide identification. GOLD: Andromeda score >= 100.
+DC   LOCAL. Ubiquitination. GOLD: Andromeda score >= 100; PTM localization probability >= 0.99.
+DC   SILVER: Andromeda score >= 100; PTM localization probability >= 0.95.
+DC   N-terminal protein acetylation: GOLD.
+DR   PubMed; 23266961.
+CC   Peptide identification. Supplemental Table S1.
+CC   Four datasheets GlyGly noXlinkMG-132, GlyGly XlinkMG-132,
+CC   GlyGly XlinknoMG-132, GlyGly Protein Input Curve: Peptide sequence (Column A),
+CC   Score (Column S).
+CC   Supplemental Table S2.
+CC   Datasheet K-GG Sites: Peptide sequence (Column T), Score (Columns M, N, O).
+CC   Lys ubiquitination. Supplemental Table S1.
+CC   Four datasheets GlyGly noXlinkMG-132, GlyGly XlinkMG-132,
+CC   GlyGly XlinknoMG-132, GlyGly Protein Input Curve: Peptide sequence (Column A),
+CC   Score (Column S), PTM localization probability (Column B).
+CC   Supplemental Table S2. Datasheet K-GG Sites: Peptide sequence (Column T),
+CC   Score (Columns M, N, O), PTM localization probability (Column U).
+CC   In Table S2, there could be 3 peptide scores for one peptide due to 3 biological replicate
+CC   experiments. Peptide with either score >= 30 is selected as GOLD peptide.
+CC   Modified Lys is shown as "K(gl)". N-acetylation is known as "(ac)".
+//
+ID   Peptides in substantia nigra tissue.
+AC   MDATA_0033
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+TS   GLOBAL. Substantia nigra [TS-0990].
+SP   GLOBAL. Tissue homogenization and denaturation. Protein reduction, alkylation and digestion.
+SP   Peptide fractionation by Agilent 3100 OFFGEL fractionator.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to LTQ-Orbitrap XL mass spectrometer equipped with a nanoelectrospray source (Thermo Scientific).
+DA   GLOBAL. Protein database: UniProtKB/SwissProt release 2011_02.
+DA   Software: EasyProt version 2.2.
+DA   Maximum missed cleavages: 1.
+DA   Mass tolerance for parent ion: 10 ppm.
+DA   Mass tolerance for fragment ion: Not available.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation.
+DA   Peptide FDR < 0.01. Protein FDR not available.
+DA   Minimum peptide length: Not available.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: 3 most intense precursor ions.
+DA   Spectra recalibration: None.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches.
+DP   Peptides that match more than one entry are tagged 'found in other entries'
+DP   and displayed on each relevant entry.
+DC   GLOBAL. Peptide identification. GOLD: All.
+CC   Peptide identification. File name (new version with Ile/Leu corrected): Nextprot_ID_corrected_IsoLeu_.xls.
+CC   Peptide sequence (Column E).
+CC   Licker V, Kovari E,  Lobrinus E, Cote M, Surini-Demiri M,  Hochstrasser DF, Turck N, Sanchez JC,
+CC   Burkhard PR.
+CC   Geneva University Hospitals, Geneva, Switzerland.
+CC   Submission to neXtProt.
+CC   Revised by Ying on 31 July, according to Virginie's additional information emailed to Pascale. - Alain July 15, 2013: Found a systematic problem in the data: systematic assignment of isobaric Leu and Ile to L. Result: 5852 unmatched/5595 matched. We asked Virginie to submit a new file, which she did on Aug 6th 2013 (Nextprot_ID_corrected_IsoLeu_.xls).
+//
+ID   Lysine acetylation sites in human U2OS cells.
+AC   MDATA_0034
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   GLOBAL. U2OS [CVCL_0042].
+SP   GLOBAL. Cell lysate protein denaturation. In-solution subsequent digestion with Lys-C and
+SP   trypsin. Lys acetylated sites enrichment by immunoprecipitation with anti-acetyl-Lys
+SP   antibody. Peptide fractionation by either isoelectric focusing (IEF) or Strong Cation eXchange
+SP   column (SCX) followed by peptide purification.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to LTQ-Orbitrap Velos or Q Exactive mass spectrometer equipped with a nanoelectrospray source (Thermo Scientific).
+DA   GLOBAL. Protein database: Human IPI release 3.68 combined with 248 common contaminants.
+DA   Software: MaxQuant version 1.2.2.9; Andromeda search engine.
+DA   Maximum missed cleavages: 2.
+DA   Mass tolerance for parent ion: 6 ppm.
+DA   Mass tolerance for fragment ion: 20 ppm.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation; N-terminal acetylation; Lys acetylation.
+DA   Peptide FDR <= 0.01. Protein FDR not available.
+DA   Minimum peptide length: 6.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: 10 most intense precursor ions.
+DA   Spectra recalibration: Lock mass.
+DA   C-teminal acetyl-Lys have been filtered out.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches.
+DP   Peptides that match more than one entry are tagged 'found in other entries'
+DP   and displayed on each relevant entry.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD: Andromeda score >= 100; PEP <= 0.01.
+DC   LOCAL. Lys acetylation. GOLD: PTM localization probability >= 0.99.
+DC   SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 23236377.
+CC   Peptide identification. Table S2 (pone.0050545.s002.xlsx).
+CC   Column M, peptide sequence; Column L, Andromeda score; Column K, PEP.
+CC   Lys acetylated sites. Table S2 (pone.0050545.s002.xlsx).
+CC   Column M, modified peptide sequence; Column L, Andromeda score; Column K, PEP;
+CC   Column I, PTM localization probability.
+//
+ID   Bgee Tissue expression.
+AC   MDATA_0038
+DE   Gene expression profiles based in cDNA detection and microarray.
+DM   LOCAL. Microarray RNA expression level evidence [ECO_0000104]; Sequencing assay evidence [ECO_0000220].
+DC   GOLD: If one experiment is Gold (i.e. High quality Bgee score). SILVER: All experiments
+DC   are Silver (i.e. Low quality Bgee score), as described in DOI; 10.1007/978-3-540-69828-9_12.
+DR   DOI; 10.1007/978-3-540-69828-9_12
+//
+ID   Lysine and arginine methylation sites in human HCT 116 cells.
+AC   MDATA_0039
+DM   GLOBAL. Mass spectrometry nano LC-MS/MS.
+CL   GLOBAL. HCT 116 [CVCL_0291].
+SP   GLOBAL. Cells treated with methyltransferase inhibitor AdOx, (adenosine-2',
+SP   3'-dialdehyde) and lysed in 8 M urea lysis buffer followed by in-solution trypsin digestion.
+SP   Peptides desaltification and immunoprecipitation with 5 methylation specific motif
+SP   antibodies including two monoclonal antibodies for monomethylarginine (MMA), asymmetric
+SP   dimethylarginine (ADMA), and three polyclonal antibodies for monomethyllysine (K-Me),
+SP   dimethyllysine (K-2Me), trimethyllysine (K-3Me).
+IP   GLOBAL. Nanoscale C18 HPLC coupled to Orbitrap Elite or Q Exactive mass spectrometer equipped with a nano electrospray source (Thermo Electron). Peptide precursors with charge state +1 and unassigned were excluded from fragmentation.
+DA   GLOBAL. Protein database: human NCBI release 20110802_REV_20110627 concatenated with
+DA   the reversed decoy version.
+DA   Software: SEQUEST version 28.
+DA   Maximum missed cleavages: 4.
+DA   Mass tolerance for parent ion: 50 ppm.
+DA   Mass tolerance for fragment ion: 1.0 Da for Orbitrap Elite, 0.02 Da for Q Exactive.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Lys monomethyl and dimethyl; Arg monomethyl and dimethyl; Met
+DA   oxidation.
+DA   A maximum of four modifications of one type per peptide was allowed.
+DA   Peptide FDR < 0.01. Protein FDR not available.
+DA   Minimum peptide length: not available.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: Orbitrap Elite; 20 most intense parent ions. Q Exactive; 10 most intense
+DA   parent ions.
+DA   Spectra calibration: Lock mass.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches.
+DP   Peptides that match more than one entry are tagged 'found in other entries' and
+DP   displayed on each relevant entry.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD. Charge 2+: Xcorr score >= 2.0; deltaCn >= 0.1.
+DC   Charge n+: Xcorr score >= 2.0 + (n-2)*0.5; deltaCn >= 0.1.
+DC   LOCAL. Methylation. GOLD. Ascore >= 19. SILVER. Ascore >= 17.
+DR   PubMed; 24129315.
+CC   Supplemental Table S2 (mcp.O113.027870-3).
+CC   Methylation. Sample (Column B), Peptide charge (Column J), Xcorr (Column L);
+CC   delta cn (Column M), Peptide sequence and methylation site (Column P), methylation type
+CC   (Column C), Nr of methylation sites per peptide (Column R), Ascore for 4 potentially methylated
+CC   sites per peptide (Column U, W, Y, and AA).
+CC   Select human data (HCT116) from ìSampleî in Column B. Each methylation site has one
+CC   localization Ascore shown respectively in Columns U, W, Y, and AA.
+//
+ID   COSMIC: Catalogue of Somatic Mutations in Cancer.
+AC   MDATA_0040
+DE   COSMIC curates comprehensive information on somatic mutations in human cancer from the literature and from patient samples analyzed at the Sanger Center.
+DI   LOCAL. Neoplasm [NCIt; C3262].
+DC   GLOBAL. SILVER: All variants.
+DR   PubMed; 20952405.
+CC   http://cancer.sanger.ac.uk/cancergenome/projects/cosmic/
+//
+ID   ClinVar.
+AC   MDATA_0041
+DE   ClinVar aggregates information about sequence variation and its relationship to human health.
+DC   GOLD. Annotations "classified by multiple submitters" or "reviewed by expert panels" or
+DC   "reviewed by professional society" and that are not conflicting. SILVER. All others.
+DR   PubMed; 24234437.
+//
+ID   Global sumoylation in HeLa cells.
+AC   MDATA_0053
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   GLOBAL. HeLa [CVCL_0030].
+TP   GLOBAL. Cells were either left untreated or submitted to heat shock, proteasome-inhibitor treatment and/or SUMO protease-inhibitor treatment.
+SP   GLOBAL. Cells stably express a His10-SUMO2 mutant in which all Lys are replaced by Arg, thus sensitive to trypsin but not to Lys-C,
+SP   with the Gln87Arg mutation to allow tryptic digestion.
+SP   First round of purification of His10-SUMO2 conjugates by immobilized metal affinity chromatograpy (IMAC),
+SP   followed by a filter step to remove free His-10-SUMO2. After digestion with Lys-C, second round of
+SP   purification of His10-SUMO2 conjugates by IMAC, followed by trypsin digestion.
+IP   GLOBAL. Nanoscale C18 HPLC coupled to a Q-Exactive mass spectrometer (Thermo) with higher collisional dissociation (HCD) fragmentation.
+DA   GLOBAL. Protein database: UniProtKB.
+DA   Software: MaxQuant version 1.4.1.2.
+DA   Maximum missed cleavages: 3.
+DA   Mass tolerance for parent ion: 6 ppm.
+DA   Mass tolerance for fragment ion: 20 ppm.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Met oxidation; N-terminal acetylation; N-terminal carbamylation; Lys acetylation; Ser phosphorylation; Thr
+DA   phosphorylation; Tyr phosphorylation; 471.20776 and 454.18121 mass addition on Lys for QQTGG and pyro-QQTGG signature tags from SUMO2-Q87R.
+DA   Minimum peptide length: 6 aa.
+DA   Peptide FDR < 0.01. Protein FDR < 0.01.
+DA   Andromeda score >= 100, PTM localization probability > 0.90.
+DA   Additional validation of MS-MS spectra by checking the presence of >=1 diagnostic peak corresponding in m/z to fragmentation of the tryptic
+DA   QQTGG or pQQTGG remnant.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   LOCAL. GOLD: PTM localization probability > 0.99;
+DC   LOCAL. SILVER: PTM localization probability > 0.90 < 0.99;
+DR   PubMed; 25218447.
+CC   Table S1. Tab: SUMO sites. Column AA (Modified sequence), H (Localization Prob).
+//
+ID   Asp- and Glu-ADP-ribosylation in human colorectal carcinoma cells.
+AC   MDATA_0054
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   GLOBAL. HCT 116 [CVCL_0291].
+TP   GLOBAL. Cells were transfected with shPARG plasmid to obtain shPARG knockdown (to facilitate the characterization of low-abundance PARylated proteins).
+SP   GLOBAL. Cells were stimulated with 0.2 mM or 2 mM H2O2 to enable the poly-ADP-ribosylation (PAR) by the PAR polymerases (PARP).
+SP   Cell lysates were reduced with DTT, alkylated with iodoacetamide and digested with Trypsin.
+SP   ADP-ribosylated peptides were purified by boronate-affinity chromatography and eluted with NH2OH which leave a hydroxamic acid derivative on Asp- and Glu-residues.
+SP   Released peptides were desalted on C18 columns prior to MS analysis.
+IP   GLOBAL. LC system (not available) coupled to LTQ Velos Pro Orbitrap (Thermo)(fragmentation type: not available).
+DA   GLOBAL. Protein database: composite human IPI.
+DA   Maximum missed cleavages: not available.
+DA   Software: Sequest.
+DA   Mass tolerance for parent ion: not available.
+DA   Mass tolerance for fragment ion: not available.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: hydroxamic acid derivative (+15.0109Da) on Asp and Glu.
+DA   Minimum peptide length: 6.
+DA   Charge state +1 peptides excluded.
+DA   ModScore >= 13 (P<=0.05).
+DP   GLOBAL. Asp- and Glu-ADP-ribosylation sites on peptides purified by boronate-affinity chromatography
+DP   from HCT-116 0.2 mM or 2 mM H2O2 stimulated cell lysates leaving hydroxamic acid derivative on Asp- and Glu-residues.
+DP   Exclusion of peptides with ppm < +-8, Xcorr <2 (for m/z=2), Xcorr <2.5 (for m/z>=3), dCn <0.1, PTM site score <15.
+DP   Exclusion of peptides if Sequest peptide sequence different from Modscore peptide sequence.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   LOCAL. GOLD: Peptide identification: ppm <=+-8.
+DC   LOCAL. GOLD: Peptide identification: Charge 2+: Xcorr >= 2.0; dCn >= 0.1.
+DC   LOCAL. GOLD: Peptide identification: Charge 3+: Xcorr >= 2.5; dCn >= 0.1.
+DC   LOCAL. GOLD: PTM localization: Ascore >= 19.
+DC   LOCAL. SILVER: PTM localization: Ascore >= 15.
+DR   PubMed; 23955771.
+CC   MS/MS spectra are not available, nor deposited.
+CC   Supplementary Table 1 and 2 must be used only, "peptides" sheet only. ppm = column C, Xcorr = column D, dCn = column E, charge = column B,
+CC   Sequest peptide = column I, Modscore peptide = column K, Ascore = "Site N score" columns (N, P, R, etc).
+CC   Remove entries that match on the decoy or contaminant dataset, in column G sarting with ##IPI or UPSP.
+CC   Remove PTM localization duplicates in Supplementary Table 1 and 2, and between Supplementary Table 1 and 2.
+CC   Originally, Supplementary Table 1 and 2 contain respectively 883 and 1129 entries, 2012 entries in total.
+CC   After filtration (without region coverage check), 202 PTM sites remain, 182 GOLD, 20 SILVER).
+CC   Asp- and Glu-ADP-ribosylated residues cannot be in a region covered by: SIGNAL / TRANSIT / TRANSMEM / INTRAMEM.
+//
+ID   Lys-acetylation in human capacitated sperm.
+AC   MDATA_0055
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+TS   GLOBAL. Sperm cells [TS-0949].
+SP   GLOBAL. Sperm cells were incubated 2.5h to capacitation. Cells were then lysed and, after centrifugation, the supernatant kept.
+SP   The extracted proteins were separated by SDS-PAGE and transferred to PVDF membrane. Membrane was first incubated with anti-acetyllysine antibody,
+SP   then with horseradish peroxidase-conjugated secondary antibody and proteins detected using an ECL reagent.
+SP   Protein mixtures were reduced with DTT, alkylated with iodoacetamide and digested with Trypsin. Peptides were desalted on C18 SPE cartridges.
+SP   Peptides were then separated by SCX chromatography, each fraction was desalted again and then lysine-acetylated peptides were enriched by affinity beads.
+SP   Eluted enriched peptide fractions were then desalted using C18 tips prior to LC-MS/MS.
+IP   GLOBAL. Nanoscale C18 HPLC (Dionex) coupled to LTQ Orbitrap Velos (Thermo) with fragmentation by CID.
+DA   GLOBAL. Protein database: human protein sequences in UniprotKB (May 2012; 87187 sequences),
+DA   combined with reverse amino acid sequences and standard MaxQuant contaminants database.
+DA   Software: MaxQuant (version 1.3.0.5).
+DA   Maximum missed cleavages: 2.
+DA   Mass tolerance for parent ion: 20 ppm.
+DA   Mass tolerance for fragment ion: 0.5 Da.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Lys acetylation, Met oxidation and N-terminal acetylation.
+DA   Minimum peptide length: 6.
+DA   Site, peptide and protein FDR were all set to 0.01.
+DP   GLOBAL. Lys-acetylation sites on peptides purified by affinity beads from sperm cell lysates.
+DP   Exclusion of peptides with peptide score < 100, PTM localization probability < 0.95.
+DP   Exclusion of peptides with N-terminal acetylation.
+DP   Exclusion of peptides of less than 7 amino acids.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   LOCAL. GOLD: MaxQuant (Andromeda) score >= 100.
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 25038526.
+CC   Some MS/MS spectra are available in supplementary files, but not deposited.
+CC   Data available in supplementary file "mmc3.xlsx", sheet "site".
+CC   Peptide score (MaxQuant) = column X, PTM localization probability = column J, Sequence = column Z.
+CC   Remove PTM localization duplicates.
+CC   Originally, data file contains 1206 entries.
+CC   After filtration (without region coverage check), 798 entries remain (PTM localization: 795 GOLD, 3 SILVER).
+CC   Lys-acetylation cannot be in a region covered by: SIGNAL / TRANSIT / TRANSMEM / INTRAMEM.
+CC   Regarding "Exclusion of peptides with N-terminal acetylation.": Alain checked the XML, and there are only 5  N-terminal acetylations in the xml, for which there is other evidence (P36873 A-2, Q96KP4 A-2, Q9Y277 C-2, Q8N4T8 M-1), and that don't change the mature chain (Q96E40 M-1).
+//
+ID   Phosphoproteome of HeLa cells at mitosis and early mitotic exit.
+AC   MDATA_0056
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. HeLa [CVCL_0030].
+TP   GLOBAL. SILAC labeling. Thymidine and nocodazol treatment to synchronize and arrest cells in prometaphase. Mitotic cells enriched by shake-off. MG132 to minimize protein degradation. Heavy labeled cells were treated with RO3306, the specific CDK1 inhibitor, to trigger mitotic exit (early mitotic exit). Cells at mitosis were light SILAC labeled.
+SP   GLOBAL. Protein alkylation, followed by digestion with trypsin. Peptides desalted by C18 solid phase extraction (SPE). Peptide fractionation by strong cation exchange (SCX chromatography). Phosphopeptide enrichment by TiO2-MOAC (metal oxide affinity chromatography).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap Velos. Ionization: Nanoelectrospray ion source. Fragmentation: Collision-induced dissociation (CID) or High energy collision dissociation (HCD).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 26055452.
+CC   PeptideAtlas Phosphoset sampleID(s): 6526; 6526-heavy; 6566; 6566-heavy.
+//
+ID   Phosphoproteome of HeLa cells from de Graaf et al.
+AC   MDATA_0057
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. HeLa [CVCL_0030].
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion with endoproteinase Lys-C and trypsin. Digested peptides desalted by C18 solid phase extraction (SPE). Phosphopeptide enrichment by Ti(IV)-IMAC (immobilized metal affinity chromatography).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap Elite. Ionization: Nanoelectrospray ion source. Fragmentation: Collision-induced dissociation (CID) or Electron transfer dissociation (ETD).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 24850871.
+CC   PeptideAtlas Phosphoset sampleID(s): 6402; 6403.
+//
+ID   Phosphoproteome of Jurkat cells treated with prostaglandin E2 from de Graaf et al.
+AC   MDATA_0058
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. Jurkat [CVCL_0065].
+TP   GLOBAL. Cells were incubated with prostaglandin E2 (PGE2) to induce protein kinase A (PKA) activation.
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion with endoproteinase Lys-C and trypsin. Digested peptides desalted by C18 solid phase extraction (SPE). Phosphopeptide enrichment by Ti(IV)-IMAC (immobilized metal affinity chromatography).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap Elite. Ionization: Nanoelectrospray ion source. Fragmentation: Collision-induced dissociation (CID) or Electron transfer dissociation (ETD).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 24850871.
+CC   PeptideAtlas Phosphoset sampleID(s): 6392; 6401.
+//
+ID   Phosphoproteome of Jurkat cells treated with prostaglandin E2 from Giasanti et al.
+AC   MDATA_0059
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. Jurkat [CVCL_0065].
+TP   GLOBAL. Cells were incubated with prostaglandin E2 (PGE2) to induce protein kinase A (PKA) activation.
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion with AspN, or chymotrypsin, or GluC, or LysC, or trypsin. Digested peptides desalted by C18 solid phase extraction (SPE). Phosphopeptide enrichment by Ti(IV)-IMAC (immobilized metal affinity chromatography).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap Elite. Ionization: Nanoelectrospray ion source. Fragmentation: Collision-induced dissociation (CID) or Electron transfer dissociation (ETD).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 26074081.
+CC   PeptideAtlas Phosphoset sampleID(s): 6513; 6521; 6522; 6530; 6533; 6537; 6543; 6546; 6548; 6573.
+//
+ID   Spindle phosphoproteome of HeLa S3 cells with reduced activity of PLK1 or KIF11/EG5.
+AC   MDATA_0060
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. HeLa S3 [CVCL_0058].
+TP   GLOBAL. SILAC labeling. Tetracycline-inducible stable cell lines for shRNA-mediated knockdown of PLK1 (SILAC light). Tetracycline-inducible stable cell lines for shRNA-mediated knockdown of  KIF11/EG5 (SILAC heavy). Cell lines treated with the small molecule inhibitor ZK-thiazolidinone (TAL) to disrupt PLK1 kinase activity (SILAC light) or with the small molecule inhibitor MA that specifically inhibits KIF11/EG5-driven microtubule motility (SILAC heavy). Thymidine treatment to synchronize and arrest cells. Taxol to stabilize mitotic spindles. Treatment results in prometaphase arrest.
+SP   GLOBAL. In-gel trypsin digestion. Phosphopeptide enrichment by TiO2-MOAC (metal oxide affinity chromatography) with lactic acid as a modifier. Phosphopeptides desalted by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap. Ionization: Nanoelectrospray ion source Fragmentation: Collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 20860994.
+CC   PeptideAtlas Phosphoset sampleID(s): 6551; 6551-heavy.
+//
+ID   Phosphoproteome of hESC HUES 9 cells during differentiation initiated by phorbol 12-myristate 13-acetate (PMA) or by transfer to nonconditioned medium (NCM).
+AC   MDATA_0061
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. HUES 9 [CVCL_0057].
+TP   GLOBAL. SILAC labeling.  Differentiation was induced by incubation during different times (30 min., 1h, 6h, or 24h) with phorbol 12-myristate 13-acetate (PMA) or with nonconditioned medium (NCM).
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion LysC and trypsin. Peptide fractionation by strong cation exchange (SCX chromatography). Phosphopeptide enrichment by TiO2-MOAC (metal oxide affinity chromatography).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-FT Ultra, LTQ-Orbitrap or LTQ-Orbitrap XL. Ionization: Nanoelectrospray ion source. Fragmentation: not specified.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 21406692.
+CC   PeptideAtlas Phosphoset sampleID(s): 6507; 6507-heavy; 6507-medium; 6510; 6510-heavy; 6510-medium; 6516; 6516-heavy; 6516-medium; 6527; 6527-heavy; 6527-medium; 6540; 6540-heavy; 6540-medium; 6541; 6541-heavy; 6541-medium; 6554; 6554-heavy; 6554-medium; 6570; 6570-heavy; 6570-medium.
+//
+ID   Phosphoproteome of nocodazole-arrested HeLa cells.
+AC   MDATA_0062
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. HeLa [CVCL_0030].
+TP   GLOBAL. Nocodazole treatment to synchronize and arrest cells.
+SP   GLOBAL. In-gel trypsin digestion. Peptide fractionation and enrichement by strong cation exchange chromatography (SCX). Early-eluting SCX fractions were desalted using C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ FT. Ionization: not specified. Fragmentation: high resolution collision-induced dissociation (HR IT CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 16964243.
+CC   PeptideAtlas Phosphoset sampleID(s): 6595.
+//
+ID   Phosphoproteome of non-small cell lung cancer cell lines and tumors.
+AC   MDATA_0063
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Lung [TS-0568].
+CL   GLOBAL. A-549 [CVCL_0023]; CAL-12T [CVCL_1105]; Calu-3 [CVCL_0609]; HCC15 [CVCL_2057]; HCC44 [CVCL_2060]; HCC78 [CVCL_2061]; HCC366 [CVCL_2059]; HCC827 [CVCL_2063]; NCI-H520 [CVCL_1566]; NCI-H838 [CVCL_1594]; NCI-H1437 [CVCL_1472]; NCI-H1563 [CVCL_1475]; NCI-H1568 [CVCL_1476]; NCI-H1792 [CVCL_1495]; NCI-H1944 [CVCL_1508]; NCI-H2170 [CVCL_1535]; NCI-H2172 [CVCL_1537]; NCI-H2228 [CVCL_1543]; NCI-H2347 [CVCL_1550]; NCI-H441 [CVCL_1561]; NCI-H1703 [CVCL_1490]; NCI-H1373 [CVCL_1465]; NCI-H358 [CVCL_1559]; NCI-H1993 [CVCL_1512]; NCI-H1648 [CVCL_1482]; NCI-H1975 [CVCL_1511]; NCI-H1666 [CVCL_1485]; NCI-H1869 [CVCL_1500]; NCI-H1650 [CVCL_1483]; NCI-H1734 [CVCL_1491]; NCI-H1793 [CVCL_1496]; NCI-H2023 [CVCL_1515]; NCI-H661 [CVCL_1577]; NCI-H2444 [CVCL_1552]; NCI-H1299 [CVCL_0060]; NCI-H1693 [CVCL_1488]; NCI-H226 [CVCL_1544]; NCI-H1623 [CVCL_1481]; NCI-H1651 [CVCL_1484]; NCI-H460 [CVCL_0459]; NCI-H2122 [CVCL_1531]; LOU-NH91 [CVCL_2104]; SK-MES-1 [CVCL_0630].
+DI   GLOBAL. Non-Small Cell Lung Carcinoma [NCIt; C2926].
+SP   GLOBAL. Protein reduction, alkylation, followed by trypsin digestion. Digested peptides desalted by C18 solid phase extraction (SPE). Phospho-tyrosine peptides were enriched by immunoprecipitation with anti-phosphotyrosine antibody. Phospho-tyrosine peptides purified by C18 solid phase extraction (SPE). The cell line NCI-H1703 [CVCL_1490] was SILAC labeled.
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap. LTQ FT-ICR (for SILAC labeled samples). Ionization: Nanoelectrospray ion source. Fragmentation: Collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 18083107.
+CC   PeptideAtlas Phosphoset sampleID(s): 6594.
+//
+ID   Phosphoproteome of A-204 cells.
+AC   MDATA_0064
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. A-204 [CVCL_1058].
+SP   GLOBAL. Trypsin digestion.
+IP   GLOBAL. MS Instrument: Qexactive. Fragmentation: HR IT HCD.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 24870543.
+CC   PeptideAtlas Phosphoset sampleID(s): 6321.
+//
+ID   Phosphoproteome of MCF-7 cells.
+AC   MDATA_0065
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. MCF-7 [CVCL_0031].
+SP   GLOBAL. Trypsin digestion.
+IP   GLOBAL. MS Instrument: Qexactive. Fragmentation: HR IT HCD.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 24870543.
+CC   PeptideAtlas Phosphoset sampleID(s): 6252.
+//
+ID   Phosphoproteome of platelets.
+AC   MDATA_0066
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Platelet [TS-0803].
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion with trypsin. Digested peptides desalted by C18 solid phase extraction (SPE). Phospho-tyrosine peptides were enriched from tryptic peptides by immunoprecipitation with anti-phosphotyrosine antibody followed by Fe(III)-IMAC (immobilized metal affinity chromatography). Phospho-tyrosine peptides were concentrated and desalted by C18 solid phase extraction (SPE). Phospho-serine/threonine peptides were enriched from unphosphorylated peptides in the supernatant of the anti-phosphotyrosine immunoprecipitation by C18 solid phase extraction (SPE) followed by strong cation exchange (SCX) fractionation. Fractions collected by SCX were further enriched for phosphopeptides using TiO2-MOAC (metal oxide affinity chromatography). Phospho-serine/threonine peptides were concentrated and desalted by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap. Ionization: Nanoelectrospray ion source. Fragmentation: collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 24400094.
+CC   PeptideAtlas Phosphoset sampleID(s): 6559.
+//
+ID   Phosphoproteome of platelets activated with the oxidized phospholipid KODA-PC.
+AC   MDATA_0067
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Platelet [TS-0803].
+TP   GLOBAL. Platelets were incubated with the oxidized phospholipid KODA-PC (9-keto-12-oxo-10-dodecenoic acid ester of 2-lyso-phosphocholine).
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion with trypsin. Digested peptides desalted by C18 solid phase extraction (SPE). Phospho-tyrosine peptides were enriched from tryptic peptides by immunoprecipitation with anti-phosphotyrosine antibody followed by Fe(III)-IMAC (immobilized metal affinity chromatography). Phospho-tyrosine peptides were concentrated and desalted by C18 solid phase extraction (SPE). Phospho-serine/threonine peptides were enriched from unphosphorylated peptides in the supernatant of the anti-phosphotyrosine immunoprecipitation by C18 solid phase extraction (SPE) followed by strong cation exchange (SCX) fractionation. Fractions collected by SCX were further enriched for phosphopeptides using TiO2-MOAC (metal oxide affinity chromatography). Phospho-serine/threonine peptides were concentrated and desalted by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap. Ionization: Nanoelectrospray ion source. Fragmentation: collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 24400094.
+CC   PeptideAtlas Phosphoset sampleID(s): 6528.
+//
+ID   Phosphoproteome of platelets treated with the phospholipid PLPC.
+AC   MDATA_0068
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Platelet [TS-0803].
+TP   GLOBAL. Platelets were incubated with the phospholipid PLPC (1-palmitoyl-2-linoleoyl-sn-glycero-3-phosphocholine).
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion with trypsin. Digested peptides desalted by C18 solid phase extraction (SPE). Phospho-tyrosine peptides were enriched from tryptic peptides by immunoprecipitation with anti-phosphotyrosine antibody followed by Fe(III)-IMAC (immobilized metal affinity chromatography). Phospho-tyrosine peptides were concentrated and desalted by C18 solid phase extraction (SPE). Phospho-serine/threonine peptides were enriched from unphosphorylated peptides in the supernatant of the anti-phosphotyrosine immunoprecipitation by C18 solid phase extraction (SPE) followed by strong cation exchange (SCX) fractionation. Fractions collected by SCX were further enriched for phosphopeptides using TiO2-MOAC (metal oxide affinity chromatography). Phospho-serine/threonine peptides were concentrated and desalted by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap. Ionization: Nanoelectrospray ion source. Fragmentation: collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 24400094.
+CC   PeptideAtlas Phosphoset sampleID(s): 6511.
+//
+ID   Phosphoproteome of platelets activated with thrombin.
+AC   MDATA_0069
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Platelet [TS-0803].
+TP   GLOBAL. Platelets were incubated with thrombin.
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion with trypsin. Digested peptides desalted by C18 solid phase extraction (SPE). Phospho-tyrosine peptides were enriched from tryptic peptides by immunoprecipitation with anti-phosphotyrosine antibody followed by Fe(III)-IMAC (immobilized metal affinity chromatography). Phospho-tyrosine peptides were concentrated and desalted by C18 solid phase extraction (SPE). Phospho-serine/threonine peptides were enriched from unphosphorylated peptides in the supernatant of the anti-phosphotyrosine immunoprecipitation by C18 solid phase extraction (SPE) followed by strong cation exchange (SCX) fractionation. Fractions collected by SCX were further enriched for phosphopeptides using TiO2-MOAC (metal oxide affinity chromatography). Phospho-serine/threonine peptides were concentrated and desalted by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap. Ionization: Nanoelectrospray ion source. Fragmentation: collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 24400094.
+CC   PeptideAtlas Phosphoset sampleID(s): 6563.
+//
+ID   Phosphoproteome of 11 cell lines derived from Burkitt, follicular and Mantle cell lymphomas.
+AC   MDATA_0070
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. BJAB [CVCL_5711]; Raji [CVCL_0511]; Ramos [CVCL_0597]; FL-18 [CVCL_8093]; FL-318 [CVCL_8095]; OCI-Ly-1 [CVCL_1879]; SU-DHL-4 [CVCL_0539]; JeKo-1 [CVCL_1865]; NCEB-1 [CVCL_1875]; REC-1 [CVCL_1884]; UPN1 [CVCL_A795].
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion with trypsin. Peptides desalted by C18 solid phase extraction (SPE). Phosphopeptide enrichment by TiO2-MOAC (metal oxide affinity chromatography) followed by tyrosine-phosphorylated peptide immunoprecipitation. Eluents from TiO2-MOAC and phosphotyrosine immunoprecipitation were analyzed.
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap XL and LTQ FT Ultra. Ionization: Nanoelectrospray ion source. Fragmentation: Collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 24667141.
+CC   PeptideAtlas Phosphoset sampleID(s): 6508; 6552.
+//
+ID   Phosphoproteome of K-562 cells from ABRF.
+AC   MDATA_0071
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. K-562 [CVCL_0004].
+SP   GLOBAL. Protein reduction, alkylation, and trypsin digestion. Peptide fractionation by strong cation exchange chromatography (SCX). Phosphopeptide enrichment by Fe(III)-IMAC (immobilized metal affinity chromatography). Concentration and purification of digested peptides by C18 solid phase extraction (SPE).
+IP   GLOBAL. MS Instrument: LTQ-Orbitrap XL. Fragmentation: Collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+CC   Association of Biomolecular Resources Facilities (ABRF) Proteome Informatics Research Group (iPRG) (2010).
+CC   Submission to PeptideAtlas.
+CC   PeptideAtlas Phosphoset sampleID(s): 2859.
+//
+ID   Phosphoproteome of hTERT-RPE1 cells expressing wild-type or mutant PLK1.
+AC   MDATA_0072
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. hTERT-RPE1 [CVCL_4388].
+TP   GLOBAL. SILAC labeling. Cells expressed wild-type PLK1 or PLK1 mutant (C67V/L130G, an analog-sensitive mutant) as EGFP fusions in a genomic background in which both PLK1 loci were disrupted. Cells were synchronized in the early S phase with aphidicoline and then arrested in mitosis by either nocodazole treatment or nocodazole plus 3-MB-PP1 inhibitor treatment.
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion LysC and trypsin. Peptides desalted by C18 solid phase extraction (SPE). Peptide fractionation by strong cation exchange (SCX chromatography). Phosphopeptide enrichment by Fe(III)-IMAC (immobilized metal affinity chromatography). Phosphopeptides were concentrated and desalted by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap. Ionization: Nanoelectrospray ion source. Fragmentation: not specified.
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 22199227.
+CC   PeptideAtlas Phosphoset sampleID(s): 6535; 6535-heavy; 6571; 6571-heavy.
+//
+ID   Phosphoproteome of ovarian serous cystadenocarcinoma tumors.
+AC   MDATA_0073
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Ovary [TS-0730].
+DI   GLOBAL. Serous Cystadenocarcinoma [NCIt; C3778].
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion with trypsin. Peptides desalted by strong cation exchange chromatography (SCX) and C18 solid phase extraction (SPE). Desalted peptides were labeled with 4-plex iTRAQ. Labeled peptides desalted and fractionated by C18 solid phase extraction (SPE). Phosphopeptide enrichment by Fe(III)-IMAC (immobilized metal affinity chromatography).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap Velos and Q Exactive Quadrupole-Orbitrap. Ionization: Nanoelectrospray ion source. Fragmentation: High Energy Collision Dissociation (HCD).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 21720365.
+CC   PeptideAtlas Phosphoset sampleID(s): 6390; 6576.
+//
+ID   Phosphoproteome of HeLa cells from Bian et al.
+AC   MDATA_0074
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. HeLa [CVCL_0030].
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion with Glu-C, or trypsin, or Glu-C and trypsin. Phosphopeptide enrichment by Ti(IV)-IMAC (immobilized metal affinity chromatography).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC (one dimension reverse phase LCñMS/MS). Reverse phase strong cation exchange (RP-SCX) biphasic column followed by nanoscale C18 HPLC (two dimension reverse phase LCñMS/MS). MS Instrument: LTQ-Orbitrap XL. Ionization: Nanoelectrospray ion source. Fragmentation: Collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 22468782.
+CC   PeptideAtlas Phosphoset sampleID(s): 6547; 6523.
+//
+ID   Phosphoproteome of Raji cells.
+AC   MDATA_0075
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. Raji [CVCL_0511].
+SP   GLOBAL. Cell lysates were subjected to gel-assisted digestion with trypsin. Peptides desalted by poly(styrenedivinylbenzene) solid phase extraction (SPE). Phosphopeptide enrichment by sequential Ga(III)-IMAC (immobilized metal affinity chromatography) and Fe(III)-IMAC.
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: Triple quadrupole time-of-flight. Ionization: atmospheric pressure chemical ionization. Fragmentation: Collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 24313913.
+CC   PeptideAtlas Phosphoset sampleID(s): 6593.
+//
+ID   Phosphoproteome of non-small-cell lung cancer tumors.
+AC   MDATA_0076
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Lung [TS-0568].
+DI   GLOBAL. Non-Small Cell Lung Carcinoma [NCIt; C2926].
+SP   GLOBAL. Tumor tissue lysates were subjected to gel-assisted digestion with trypsin. Peptides desalted by poly(styrenedivinylbenzene) solid phase extraction (SPE). Phosphopeptide enrichment by sequential Ga(III)-IMAC (immobilized metal affinity chromatography) and Fe(III)-IMAC.
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: Triple quadrupole time-of-flight. Ionization: atmospheric pressure chemical ionization. Fragmentation: Collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 24313913.
+CC   PeptideAtlas Phosphoset sampleID(s): 6596.
+//
+ID   Phosphoproteome of embryonic stem cells, induced pluripotent stem cells and newborn foreskin fibroblasts.
+AC   MDATA_0077
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. BJ [Human fibroblast] [CVCL_3653]; WA01 [CVCL_9771]; WA07 [CVCL_9772]; WA09 [CVCL_9773]; WA14 [CVCL_9775]; iPS-DF19-9-7T [CVCL_K055]; iPS-DF19-9-11T.H [CVCL_K054]; iPS-DF4-3-7T.A [CVCL_K056]; iPS-DF6-9-9T.B [CVCL_K057].
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion with endoproteinase Lys-C and trypsin. Concentration and purification of digested peptides by C18 solid phase extraction (SPE). Labeling of peptides with (4-plex or 8-plex) iTRAQ. Purification of labeled peptides by C18 solid phase extraction (SPE). Peptide fractionation by strong cation exchange chromatography (SCX). Phosphopeptide enrichment by magnetic Fe(III)-IMAC (immobilized-metal affinity chromatography).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ Orbitrap Velos. Ionization: Nanoelectrospray ion source. Fragmentation: High Energy Collision Dissociation (HCD) or Electron transfer dissociation (ETD).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 21983960.
+CC   PeptideAtlas Phosphoset sampleID(s): 5017; 5020; 5060; 5062; 5345; 5352; 6509; 6553.
+//
+ID   Phosphoproteome of Alzheimer's disease brain.
+AC   MDATA_0078
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Prefrontal cortex [TS-2424].
+DI   GLOBAL. Alzheimer's Disease [NCIt; C2866].
+SP   GLOBAL. Lys-C and Trypsin digestion. Digested peptides desalted by C18 solid phase extraction (SPE). Phosphopeptide enrichment by TiO2-MOAC (metal oxide affinity chromatography) in the presence of 1 mM KH2PO4 used as a nonphosphopeptide competitor to reduce background. Purification of enriched phosphopeptides by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. Long gradient. MS Instrument: LTQ-Orbitrap Elite. Ionization: Nanoelectrospray ion source. Fragmentation: Collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 25307156.
+CC   PeptideAtlas Phosphoset sampleID(s): 6519.
+//
+ID   Phosphoproteome of HEK293 cells treated or not with noncodazol and expressing or not a constitutively active or a kinase dead PRKD1/PKD1.
+AC   MDATA_0079
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. HEK293 [CVCL_0045].
+TP   GLOBAL. SILAC labeling. Cells stably expressing constitutively active PRKD1/PKD1 (PKD1?PH) (SILAC heavy). Cells stably expressing kinase dead PRKD1/PKD1 (PKD1K612W) (SILAC light). Parental cell lines (SILAC medium-heavy). Nocodazole treatment, a microtubule-depolymerizing reagent, which disrupts the Golgi complex to generate Golgi mini-stacks, and activates Protein Kinase D.
+SP   GLOBAL. Trypsin digestion. Fractionation by strong cation exchange (SCX) chromatography. Phosphopeptide enrichment by TiO2-MOAC (metal oxide affinity chromatography).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale HPLC. MS Instrument: LTQ-Orbitrap XL. Ionization: Nanoelectrospray ion source. Fragmentation: Collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 22496350.
+CC   PeptideAtlas Phosphoset sampleID(s): 5307; 5307-medium; 5309; 5309-heavy; 5312; 5312-medium; 5333; 5333-medium; 5348; 5348-medium.
+//
+ID   Phosphoproteome of HeLa cells treated with the Hsp90 inhibitor 17-DMAG.
+AC   MDATA_0080
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. HeLa [CVCL_0030].
+TP   GLOBAL. SILAC labeling. Cells treated with the Hsp90 inhibitor 17-DMAG (17-(dimethylaminoethylamino)-17-demethoxygeldanamycin) (SILAC heavy). Untreated control cells (SILAC light).
+SP   GLOBAL. Protein extraction and trypsin digestion by filter-assisted sample preparation (FASP) protocol. Fractionation of digested peptides by strong anion exchange chromatography (SAX). Purification of digested peptides by C18 solid phase extraction (SPE). Phosphopeptide enrichment by TiO2-MOAC (metal oxide affinity chromatography). Purification of phopeptides by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap Velos. Ionization: Nanoelectrospray ion source (Proxeon Biosystems). Fragmentation: High Energy Collision Dissociation (HCD).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 22167270.
+CC   PeptideAtlas Phosphoset sampleID(s): 4920.
+//
+ID   Phosphoproteome of HeLa S3 cells at different mitotic stages.
+AC   MDATA_0081
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. HeLa S3 [CVCL_0058].
+TP   GLOBAL. SILAC labeling. Cells at six different stages of the cell cycle were heavy and light SILAC labeled and peptide abundance were estimated relative to the medium SILAC peptide derived from the asynchronously growing cells. Cells were synchronized in G1-S overnight by thymidine block, released from thymidine and collected at 0 hours (G1-S phase), 2.5 hours (S phase early release), 5.5 hours (S phase late release), and 7.5 hours (S-G2 phase). After the 7.5-hour release from thymidine block, two sets of cells were arrested overnight with nocodazole and then released for either 0.5 hour (M phase) or 3 hours (G1 phase).
+SP   GLOBAL. One protein population mix was subjected to protein reduction, alkylation, followed by digestion with endoproteinase Lys-C and trypsin. Phosphopeptide enrichment by TiO2-MOAC (metal oxide affinity chromatography) or by strong cation exchange (SCX chromatography) followed by TiO2-MOAC (metal oxide affinity chromatography). Another protein population mix was separated by one-dimensional gel electrophoresis and digested with trypsin in-gel. Phosphopeptide enrichment by TiO2-MOAC (metal oxide affinity chromatography) with 2,5-dihydroxybenzoic acid (DHB).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap. Ionization: Nanoelectrospray ion source (Proxeon Biosystems). Fragmentation: Collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 20068231.
+CC   PeptideAtlas Phosphoset sampleID(s): 6524; 6524-heavy; 6524-medium.
+//
+ID   Phosphoproteome of HeLa cells stimulated with EGF.
+AC   MDATA_0082
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. HeLa S3 [CVCL_0058].
+TP   GLOBAL. Cells were stimulated with epidermal growth factor (EGF) for 5 or 15 min
+SP   GLOBAL. Protein extraction and trypsin digestion by filter-assisted sample preparation (FASP) protocol. Digested peptides fractionated by strong cation exchange (SCX) chromatography. Phosphopeptide enrichment by TiO2-MOAC (metal oxide affinity chromatography). Part of the cells were enriched for phospho-Tyr by immunoprecipitation with a mix of anti-phospho-Tyr antibodies. Phosphopeptides desalted by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: Q Exactive Quadrupole-Orbitrap. Ionization: Nanoelectrospray ion source. Fragmentation: High Energy Collision Dissociation (HCD).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 25159151.
+CC   PeptideAtlas Phosphoset sampleID(s): 6512; 6536.
+//
+ID   Phosphoproteome of HeLa cells mitotically arrested.
+AC   MDATA_0083
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. HeLa S3 [CVCL_0058].
+TP   GLOBAL. Cells were mitotically arrested with thymidine and nocodazole and released for  30 min.
+SP   GLOBAL. Protein extraction and trypsin digestion by filter-assisted sample preparation (FASP) protocol. Digested peptides fractionated by strong cation exchange (SCX) chromatography. Phosphopeptide enrichment by TiO2-MOAC (metal oxide affinity chromatography). Part of the cells were enriched for phospho-Tyr by immunoprecipitation with a mix of anti-phospho-Tyr antibodies. Phosphopeptides desalted by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: Q Exactive Quadrupole-Orbitrap. Ionization: Nanoelectrospray ion source. Fragmentation: High Energy Collision Dissociation (HCD).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 25159151.
+CC   PeptideAtlas Phosphoset sampleID(s): 6542; 6561.
+//
+ID   Phosphoproteome of HeLa cells treated with pervanadate.
+AC   MDATA_0084
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. HeLa S3 [CVCL_0058].
+TP   GLOBAL. Cells were treated with sodium pervanadate and calyculin for in vivo inhibition of Tyr phosphatases
+SP   GLOBAL. Protein extraction and trypsin digestion by filter-assisted sample preparation (FASP) protocol. Digested peptides fractionated by strong cation exchange (SCX) chromatography. Phosphopeptide enrichment by TiO2-MOAC (metal oxide affinity chromatography). Part of the cells were enriched for phospho-Tyr by immunoprecipitation with a mix of anti-phospho-Tyr antibodies. Phosphopeptides desalted by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: Q Exactive Quadrupole-Orbitrap. Ionization: Nanoelectrospray ion source. Fragmentation: High Energy Collision Dissociation (HCD).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 25159151.
+CC   PeptideAtlas Phosphoset sampleID(s): 6572.
+//
+ID   Phosphoproteome of HeLa cells from Sharma et al.
+AC   MDATA_0085
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. HeLa S3 [CVCL_0058].
+SP   GLOBAL. Protein extraction and trypsin digestion by filter-assisted sample preparation (FASP) protocol. Digested peptides fractionated by strong cation exchange (SCX) chromatography. Phosphopeptide enrichment by TiO2-MOAC (metal oxide affinity chromatography). Part of the cells were enriched for phospho-Tyr by immunoprecipitation with a mix of anti-phospho-Tyr antibodies. Phosphopeptides desalted by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: Q Exactive Quadrupole-Orbitrap. Ionization: Nanoelectrospray ion source. Fragmentation: High Energy Collision Dissociation (HCD).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 25159151.
+CC   PeptideAtlas Phosphoset sampleID(s): 6544; 6550.
+//
+ID   Phosphoproteome of A-549, HCT 116, HeLa, Jurkat, MKN-45, NCI-H1299, NCI-H1703 and NCI-H3255 cells immunoprecipitated for specific proteins.
+AC   MDATA_0086
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. A-549 [CVCL_0023]; HCT 116 [CVCL_0291]; HeLa [CVCL_0030]; NCI-H1703 [CVCL_1490]; NCI-H1299 [CVCL_0060]; NCI-H3255 [CVCL_6831]; Jurkat [CVCL_0065]; MKN45 [CVCL_0434].
+TP   GLOBAL. A mixture of cell line lysates (HCT-116, NCI-H1299, HeLa, A549, Jurkat, and MKN-45) was treated with pervanadate to inhibit tyrosine phosphatase activity.
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion with trypsin. Peptides desalted by C18 solid phase extraction (SPE). Immunoprecipitation with PTMScan Direct reagents that immunoprecipitate specific peptides. Peptides desalted by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap Velos. Ionization: Nanospray ionization. Fragmentation: Collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 22322096.
+CC   PeptideAtlas Phosphoset sampleID(s): 5058.
+//
+ID   Spindle phosphoproteome of HeLa S3 cells at three distinct mitotic stages.
+AC   MDATA_0087
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. HeLa S3 [CVCL_0058].
+TP   GLOBAL. SILAC labeling. Thymidine to pre-synchronize cells. Noscapine to arrest cells in prometaphase. SILAC light for time 0 min after noscapine release (late prometaphase). SILAC medium for 15 min. after noscapine release (stage close to metaphase). SILAC heavy for 60 min. after noscapine release (late mitotic stages, i.e. anaphase and telophase).
+SP   GLOBAL. Mitotic spindle isolation by centrifugation (mitotic shake-off). Buffers contained: taxol to stabilize mitotic spindles, okadaic acid to prevent dephosphorylation of proteins, DNases to partially remove chromosomes, Latrunculin B to depolymerize the actin cytoskeleton, low-ionic-strength buffer to depolymerize intermediate filaments. Spindle proteins recovered by acidification and ultrasonication. Protein reduction with DTT. In-gel trypsin digestion. Phosphopeptide enrichment by TiO2-MOAC (metal oxide affinity chromatography). Purification of phosphopeptides by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: Orbitrap. Ionization: Nanoelectrospray ion source (Proxeon). Fragmentation: Collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 19691289.
+CC   PeptideAtlas Phosphoset sampleID(s): 5019; 5019-heavy; 5019-medium.
+//
+ID   Phosphoproteome of high-grade serous ovarian carcinoma tumors.
+AC   MDATA_0088
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Ovary [TS-0730].
+DI   GLOBAL. High Grade Ovarian Serous Adenocarcinoma [NCIt; C105555].
+SP   GLOBAL. Protein reduction, alkylation, and trypsin digestion. Labeling of peptides with 4-plex iTRAQ. Peptide fractionation by concatenated high pH reversed-phase liquid chromatography (RPLC). Phosphopeptide enrichment by Fe(III)-IMAC (immobilized metal affinity chromatography).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap Velos. Ionization: Nanoelectrospray ion source. Fragmentation: High Energy Collision Dissociation (HCD).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 24719451.
+CC   PeptideAtlas Phosphoset sampleID(s): 6219.
+//
+ID   Phosphoproteome of breast carcinoma tumors.
+AC   MDATA_0089
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Breast [TS-2083].
+DI   GLOBAL. Breast Carcinoma [NCIt; C4872].
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion with endoproteinase Lys-C and trypsin. Labeling of peptides with 4-plex iTRAQ. Phosphopeptide enrichment by magnetic Fe(III)-IMAC (immobilized-metal affinity chromatography). Fractionation by high pH reversed-phase liquid chromatography (RPLC).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: Q Exactive Quadrupole-Orbitrap. Ionization: Nanoelectrospray ion source. Fragmentation: high-energy collision-induced dissociation (HCD).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 23000897.
+CC   PeptideAtlas Phosphoset sampleID(s): 6019; 6021; 6023; 6025; 6026; 6027; 6029; 6030; 6031; 6033; 6035; 6036; 6038; 6040; 6042; 6046; 6049; 6050; 6051; 6053; 6056; 6060; 6062; 6066; 6068; 6070; 6071; 6072; 6073; 6074; 6077; 6080; 6082; 6083; 6086; 6089.
+//
+ID   Phosphoproteome of HeLa cells from Zhou et al.
+AC   MDATA_0090
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. HeLa [CVCL_0030].
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion with endoproteinase Lys-C and trypsin. Digested peptides desalted by C18 solid phase extraction (SPE). After digestion and desalting of peptides three strategies were followed:
+SP   1) Phosphopeptide enrichment by Ti(IV)-IMAC (immobilized metal affinity chromatography).
+SP   2) Phosphopeptide enrichment by Ti(IV)-IMAC (immobilized metal affinity chromatography). Desalting by solid phase extraction (SPE). Fractionation by HILIC (hydrophilic interaction liquid chromatography).
+SP   3) Fractionation by strong cation exchange chromatography (SCX). Desalting by C18 solid phase extraction (SPE). Phosphopeptide enrichment by Ti(IV)-IMAC (immobilized metal affinity chromatography). Desalting by solid phase extraction (SPE). Fractionation by HILIC (hydrophilic interaction liquid chromatography).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap Velos. Ionization: Nanoelectrospray ion source. Fragmentation: Electron transfer dissociation (ETD) or High Energy Collision Dissociation (HCD).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 23186163.
+CC   PeptideAtlas Phosphoset sampleID(s): 5218; 5222; 5229; 6532; 6538; 6558; 6562; 6564; 6567.
+//
+ID   Phosphoproteome of K-562 cells from Zhou et al.
+AC   MDATA_0091
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. K-562 [CVCL_0004].
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion with endoproteinase Lys-C and trypsin. Digested peptides desalted by C18 solid phase extraction (SPE). After digestion and desalting of peptides three strategies were followed:
+SP   1) Phosphopeptide enrichment by Ti(IV)-IMAC (immobilized metal affinity chromatography).
+SP   2) Phosphopeptide enrichment by Ti(IV)-IMAC (immobilized metal affinity chromatography). Desalting by solid phase extraction (SPE). Fractionation by HILIC (hydrophilic interaction liquid chromatography).
+SP   3) Fractionation by strong cation exchange chromatography (SCX). Desalting by C18 solid phase extraction (SPE). Phosphopeptide enrichment by Ti(IV)-IMAC (immobilized metal affinity chromatography). Desalting by solid phase extraction (SPE). Fractionation by HILIC (hydrophilic interaction liquid chromatography).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap Velos. Ionization: Nanoelectrospray ion source. Fragmentation: Electron transfer dissociation (ETD) or High Energy Collision Dissociation (HCD).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 23186163.
+CC   PeptideAtlas Phosphoset sampleID(s): 5220; 5228; 5223; 6520; 6529; 6534; 6556; 6557; 6560.
+//
+ID   Phosphoproteome of HEK293 cells.
+AC   MDATA_0092
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. HEK293 [CVCL_0045].
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion with Lys-N, or  Lys-C or trypsin. Digested peptides desalted by C18 solid phase extraction (SPE). Peptide fractionation by strong cation exchange (SCX chromatography).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap. Ionization: Nanoelectrospray ion source. Fragmentation: Collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 19413330.
+CC   PeptideAtlas Phosphoset sampleID(s): 6578; 6579; 6580; 6581.
+//
+ID   Phosphoproteome of nuclear extracts of HeLa cells expressing a mutated CHEK1.
+AC   MDATA_0093
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. HeLa [CVCL_0030].
+TP   GLOBAL. Nuclear extracts of an in vitro kinase assay with a mutant version of CHEK1 (SBP-Chk1L84G) or control cells were incubated with N-6-benzyladenosine-5'-O-(3-thiotriphosphate) (N6B-ATP?S).  Mutant CHEK1 (SBP-Chk1L84G) is an activated form that can use the ATP analogue N6B-ATP?S, and was used to identify proteins that are direct substrates of CHEK1.
+SP   GLOBAL. Trypsin digestion. Phosphopeptide enrichment by an affinity column derivatized with iodoacetyl. Purification of phosphopeptides by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap XL. Ionization: Nanoelectrospray ion source (Proxeon Biosystems). Fragmentation: Collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 21851590.
+CC   PeptideAtlas Phosphoset sampleID(s): 3212.
+//
+ID   Phosphoproteome of colorectal normal tissues adjacent to colorectal cancer sites.
+AC   MDATA_0094
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Large intestine [TS-1306].
+SP   GLOBAL. Protein extraction and trypsin digestion by filter-assisted sample preparation (FASP) protocol. Concentration and purification of digested peptides by C18 solid phase extraction (SPE). Phosphopeptide enrichment by Fe(III)-IMAC (immobilized metal affinity chromatography). Peptide fractionation by strong cation exchange chromatography (SCX). Peptides desalted by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap Velos. Ionization: Nanoelectrospray ion source (nano LC interface (AMR)). Fragmentation: Collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 23312004.
+CC   PeptideAtlas Phosphoset sampleID(s): 5304.
+//
+ID   Phosphoproteome of colorectal cancer tumors.
+AC   MDATA_0095
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Large intestine [TS-1306].
+DI   GLOBAL. Colorectal Carcinoma [NCIt; C2955].
+SP   GLOBAL. Protein extraction and trypsin digestion by filter-assisted sample preparation (FASP) protocol. Concentration and purification of digested peptides by C18 solid phase extraction (SPE). Phosphopeptide enrichment by Fe(III)-IMAC (immobilized metal affinity chromatography) (some of the samples). Some of the phospho-enriched peptides iTRAQ labeled. Peptide fractionation by strong cation exchange chromatography (SCX). Peptides desalted by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap Velos. Ionization: Nanoelectrospray ion source (nano LC interface (AMR)). Fragmentation: Collision-induced dissociation (CID) and High Energy Collision Dissociation (HCD).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 23312004.
+CC   PeptideAtlas Phosphoset sampleID(s): 5305; 6517; 6531; 6545; 6565.
+//
+ID   Phosphoproteome of HCT 116 cells.
+AC   MDATA_0096
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. HCT 116 [CVCL_0291].
+SP   GLOBAL. Protein extraction and trypsin digestion by filter-assisted sample preparation (FASP) protocol. Concentration and purification of digested peptides by C18 solid phase extraction (SPE). Phosphopeptide enrichment by Fe(III)-IMAC (immobilized metal affinity chromatography) (some of the samples). iTRAQ labeling of phospho-enriched peptides. Peptide fractionation by strong cation exchange chromatography (SCX). Peptides desalted by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap Velos. Ionization: Nanoelectrospray ion source (nano LC interface (AMR)). Fragmentation: Collision-induced dissociation (CID) and High Energy Collision Dissociation (HCD).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 23312004.
+CC   PeptideAtlas Phosphoset sampleID(s): 6515; 6518; 6549; 6555.
+//
+ID   Phosphoproteome of SW480 and SW620 cells.
+AC   MDATA_0097
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. SW480 [CVCL_0546]; SW620 [CVCL_0547].
+TP   GLOBAL. SILAC labeling.
+SP   GLOBAL. Protein extraction and trypsin digestion by filter-assisted sample preparation (FASP) protocol. Concentration and purification of digested peptides by C18 solid phase extraction (SPE). Phosphopeptide enrichment by Fe(III)-IMAC (immobilized metal affinity chromatography) (some samples). Peptide fractionation by strong cation exchange chromatography (SCX). Peptides desalted by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap Velos. Ionization: Nanoelectrospray ion source (nano LC interface (AMR)). Fragmentation: Collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 23312004.
+CC   PeptideAtlas Phosphoset sampleID(s): 5308; 5308-heavy; 5310; 5310-heavy; 5350; 5350-heavy; 5351; 5351-heavy.
+//
+ID   Phosphoproteome of SW620 cell lines exosome.
+AC   MDATA_0098
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. SW620 [CVCL_0547].
+TP   GLOBAL. Cells were cultured to 90% confluence, washed with PBS and serum-free DMEM and cultured for 24 h in serum-free DMEM. Supernatants were harvested and floating cells and debris were removed by centrifugation. The supernatant was concentrated, washed and ultracentrifuged to pellet exosomes. The exosome pellet was washed and resuspended in DPBS and subjected to particle size and concentration determination.
+SP   GLOBAL. Protein reduction, alkylation, and trypsin digestion by filter-assisted sample preparation (FASP) protocol. Phosphopeptide enrichment by TiO2-MOAC (metal oxide affinity chromatography). Peptide fractionation. Peptides desalted by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: AB Sciex 5600 Triple quadrupole time-of-flight. Ionization: electrospray ionization . Fragmentation: collision-induced dissociation (CID)
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 27470641.
+CC   PeptideAtlas Phosphoset sampleID(s): 6898; 6901.
+//
+ID   Phosphoproteome of SW620 cell lines.
+AC   MDATA_0099
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. SW620 [CVCL_0547].
+SP   GLOBAL. Protein reduction, alkylation, and trypsin digestion by filter-assisted sample preparation (FASP) protocol. Phosphopeptide enrichment by TiO2-MOAC (metal oxide affinity chromatography). Peptide fractionation. Peptides desalted by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: AB Sciex 5600 Triple quadrupole time-of-flight. Ionization: electrospray ionization . Fragmentation: collision-induced dissociation (CID)
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 27470641.
+CC   PeptideAtlas Phosphoset sampleID(s): 6897.
+//
+ID   Phosphoproteome of LNCaP cell lines treated with beta-ionone.
+AC   MDATA_0100
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. LNCaP [CVCL_0395].
+TP   GLOBAL. SILAC labeling.  Cells were mock-treated with cell culture medium or treated with ?-ionone for 2 min and 10 min.
+SP   GLOBAL. Trypsin digestion. Digested peptides desalted by C18 solid phase extraction (SPE). Peptide fractionation by strong cation exchange (SCX chromatography). Phosphopeptide enrichment by TiO2-MOAC (metal oxide affinity chromatography).
+IP   GLOBAL. Reversed-phase capillary HPLC. MS Instrument: LTQ-Orbitrap XL. Fragmentation: Collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 25219547.
+CC   PeptideAtlas Phosphoset sampleID(s): 6896.
+//
+ID   Phosphoproteome of skeletal muscle before and after excercise.
+AC   MDATA_0101
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Skeletal muscle [TS-0933].
+TP   GLOBAL. Muscle biopsies were extracted from the vastus lateralis before and after exercise.
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion with Lys-C and then trypsin. Digested peptides desalted by hydrophilic lipophilic balance (HLB) solid phase extraction (SPE). Tandem mass tag (TMT) labeling. Phosphopeptide enrichment by sequential TiO2-MOAC (metal oxide affinity chromatography) and Fe(III)-IMAC (immobilized metal affinity chromatography). Mono-phosphorylated peptides were subjected to another TiO2-MOAC (metal oxide affinity chromatography) and fractionated by HILIC (hydrophilic interaction liquid chromatography). Multi-phosphorylated peptides were desalted by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: Q Exactive Quadrupole-Orbitrap. Ionization: Nanoelectrospray ion source. Fragmentation: High-energy collisional dissociation (HCD)
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 26437602.
+CC   PeptideAtlas Phosphoset sampleID(s): 6895.
+//
+ID   Phosphoproteome of MCF-7 cell lines treated with estradiol and the PLK1 inhibitor BI2536.
+AC   MDATA_0102
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. MCF-7 [CVCL_0031].
+TP   GLOBAL. SILAC labeling. Cells were treated with BI2536 or DMSO for 1 hr followed by induction with estradiol or ethanol for 30 min.
+SP   GLOBAL. Protein reduction, alkylation, followed by digestion with Lys-C and trypsin. Desalted peptides were fractionated by strong cation exchange (SCX chromatography). Phosphopeptide enrichment by TiO2-MOAC (metal oxide affinity chromatography). Phosphopeptides desalted by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap Velos. Ionization: Nanoelectrospray ion source. Fragmentation: High energy collision dissociation (HCD).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 23770244.
+CC   PeptideAtlas Phosphoset sampleID(s): 6900.
+//
+ID   Phosphoproteome of Hep-G2 cell lines.
+AC   MDATA_0103
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. Hep-G2 [CVCL_0027].
+SP   GLOBAL. Protein reduction, alkylation, and trypsin digestion. Phosphopeptide enrichment by Ti(IV)-IMAC (immobilized metal affinity chromatography), set up for  for high-specific enrichment of multi-phosphopeptides.
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: Q Exactive Quadrupole-Orbitrap. Ionization: Nanoelectrospray ion source. Fragmentation: High energy collision dissociation (HCD).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 27470094.
+CC   PeptideAtlas Phosphoset sampleID(s): 6894.
+//
+ID   Phosphoproteome of macrophages infected with influenza A virus.
+AC   MDATA_0104
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Macrophage [TS-0587].
+TP   GLOBAL. Monocytes were isolated and differentiated into macrophages with granulocyte-macrophage colony-stimulating factor (GM-CSF). Macrophages were left untreated or were infected with influenza A virus for 6 h.
+SP   GLOBAL. Protein reduction, alkylation, and trypsin digestion. Digested peptides desalted by C18 solid phase extraction (SPE). Peptide fractionation by strong cation exchange (SCX chromatography). Phosphopeptide enrichment by Fe(III)-IMAC (immobilized metal affinity chromatography).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: Q Exactive Quadrupole-Orbitrap. Ionization: Nanoelectrospray ion source. Fragmentation: High energy collision dissociation (HCD).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 27486199.
+CC   PeptideAtlas Phosphoset sampleID(s): 6902.
+//
+ID   Phosphoproteome of metastatic prostate carcinoma tissues.
+AC   MDATA_0105
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Prostate [TS-0828].
+DI   GLOBAL. Metastatic prostate carcinoma [NCIt; C8946].
+SP   GLOBAL. Trypsin digestion. Phospho-tyrosine peptides were enriched by immunoprecipitation with anti-phosphotyrosine antibody followed by Fe(III)-IMAC (immobilized metal affinity chromatography). Phospho-serine/threonine peptides were enriched by strong cation exchange (SCX chromatography) followed by TiO2-MOAC (metal oxide affinity chromatography). Phosphopeptides were concentrated and desalted by C18 solid phase extraction (SPE).
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: Q Exactive Quadrupole-Orbitrap. Ionization: Nanoelectrospray ion source. Fragmentation: High energy collision dissociation (HCD).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 27499020.
+CC   PeptideAtlas Phosphoset sampleID(s): 6899.
+//
+ID   Phosphoproteome of ECV-304 cell lines.
+AC   MDATA_0106
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. ECV-304 [CVCL_2029].
+SP   GLOBAL. Phospho-tyrosine peptides were enriched by immunoprecipitation with anti-phosphotyrosine antibody. In-gel trypsin digestion.
+IP   GLOBAL. Reverse phase nano-LC-MS/MS. Nanoscale C18 HPLC. MS Instrument: LTQ-Orbitrap Elite. Ionization: Nanoelectrospray ion source. Fragmentation: Collision-induced dissociation (CID).
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 27554326.
+CC   PeptideAtlas Phosphoset sampleID(s): 6903.
+//
+ID   Phosphoproteome of human embryonic stem cells (hESCs).
+AC   MDATA_0107
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. WA09 [CVCL_9773].
+TP   GLOBAL. Cells were cultured on Matrigel with MEF-CM and FGF2.
+SP   GLOBAL. Protein reduction, alkylation, and trypsin digestion. Phosphopeptides were enriched by strong cation exchange (SCX chromatography) followed by by TiO2-MOAC (metal oxide affinity chromatography) and Fe(III)-IMAC (immobilized metal affinity chromatography).
+IP   GLOBAL. Paradigm MS2 HPLC. MS Instrument: LTQ-Orbitrap Velos. Ionization: Nanoelectrospray ion source. Fragmentation: Electron-transfer dissociation (ETD) and collision-induced dissociation (CID)
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 27569059.
+CC   PeptideAtlas Phosphoset sampleID(s): 6525.
+//
+ID   Phosphoproteome of human neural stem cells (hNSCs).
+AC   MDATA_0108
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+CL   GLOBAL. WA09 [CVCL_9773].
+TP   GLOBAL. Cells were cultured in unconditioned medium in the presence of Dorsomorphin, A83-01 and PNU-74654.
+SP   GLOBAL. Protein reduction, alkylation, and trypsin digestion. Phosphopeptides were enriched by strong cation exchange (SCX chromatography) followed by by TiO2-MOAC (metal oxide affinity chromatography) and Fe(III)-IMAC (immobilized metal affinity chromatography).
+IP   GLOBAL. Paradigm MS2 HPLC. MS Instrument: LTQ-Orbitrap Velos. Ionization: Nanoelectrospray ion source. Fragmentation: Electron-transfer dissociation (ETD) and collision-induced dissociation (CID)
+DP   Alignment of peptides on the human proteome for exact matches. Peptides matching
+DP   more than one entry are labeled 'found in other entries'.
+DP   Exclusion of modifications found on non-proteotypic peptides.
+DC   GLOBAL. Peptide identification. GOLD
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 27569059.
+CC   PeptideAtlas Phosphoset sampleID(s): 6539.
+//
+ID   PeptideAtlas Adrenal Gland
+AC   MDATA_0109
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Adrenal gland [TS-0016].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24669763.
+DR   PubMed; 24870543.
+CC   PeptideAtlas sampleID(s): 9454; 9455; 9456; 9532.
+CC   File: peptide_list_Adrenal-Gland.tsv
+//
+ID   PeptideAtlas Alimentary System
+AC   MDATA_0137
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Alimentary system [TS-1293].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24669763.
+DR   PubMed; 24870543.
+DR   PubMed; 24889196.
+DR   PubMed; 25977788.
+CC   PeptideAtlas sampleID(s): 8906; 9467; 9468; 9469; 9470; 9471; 9474; 9475; 9506; 9507; 9519; 9520; 9535; 9538; 9540; 9541; 9554; 9567; 9578; 9716.
+CC   File: peptide_list_Digestive_System.tsv
+//
+ID   PeptideAtlas Blood Cells
+AC   MDATA_0110
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Hematopoietic cell [TS-2017].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 22424236.
+DR   PubMed; 24400094.
+DR   PubMed; 24669763.
+DR   PubMed; 24870543.
+DR   PubMed; 25576301.
+DR   PubMed; 25977788.
+DR   PubMed; 27329341.
+DR   PubMed; 27486199.
+DR   PubMed; 27535140.
+DR   PubMed; 27626665.
+DR   PubMed; 27723984.
+DR   PubMed; 28263321.
+DR   PubMed; 28404994.
+CC   PeptideAtlas sampleID(s): 6220; 6222; 6263; 6314; 6315; 6316; 6317; 6318; 6319; 6320; 6321; 6322; 6323; 6324; 6325; 6326; 6327; 6328; 6329; 6330; 6331; 6332; 6333; 6334; 6335; 6336; 6337; 6338; 6339; 6340; 6341; 6342; 6343; 6344; 6345; 6346; 6347; 6348; 6349; 6350; 6351; 6352; 6353; 6354; 6355; 6356; 6357; 6358; 6359; 6360; 6361; 6362; 6363; 6364; 6440; 6441; 6467; 6598; 6599; 6600; 6601; 6602; 6603; 6604; 6605; 6606; 6607; 6608; 6658; 8518; 8519; 8520; 8521; 8913; 9114; 9116; 9123; 9124; 9125; 9126; 9135; 9136; 9137; 9138; 9139; 9140; 9141; 9142; 9143; 9144; 9145; 9146; 9147; 9148; 9149; 9150; 9151; 9152; 9153; 9154; 9155; 9156; 9157; 9158; 9159; 9160; 9161; 9162; 9163; 9164; 9165; 9166; 9167; 9168; 9169; 9172; 9173; 9174; 9175; 9176; 9177; 9178; 9179; 9180; 9182; 9287; 9288; 9298; 9299; 9334; 9335; 9336; 9457; 9458; 9459; 9460; 9461; 9462; 9463; 9464; 9465; 9466; 9490; 9491; 9492; 9493; 9494; 9495; 9496; 9501; 9502; 9503; 9534; 9563; 9719; 9723; 9725.
+CC   File: peptide_list_Blood-Cells.tsv
+//
+ID   PeptideAtlas Blood Plasma
+AC   MDATA_0111
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Plasma [TS-0800].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 15188391.
+DR   PubMed; 16684767.
+DR   PubMed; 17269739.
+DR   PubMed; 19782775.
+DR   PubMed; 22424236.
+DR   PubMed; 23082986.
+DR   PubMed; 23300121.
+DR   PubMed; 23991666.
+DR   PubMed; 25038066.
+DR   PubMed; 25225357.
+DR   PubMed; 25333471.
+DR   PubMed; 25624350.
+DR   PubMed; 25686879.
+DR   PubMed; 25724909.
+DR   PubMed; 25850434.
+DR   PubMed; 25977788.
+DR   PubMed; 26108252.
+DR   PubMed; 26144840.
+DR   PubMed; 26444829.
+DR   PubMed; 27102203.
+DR   PubMed; 27234505.
+DR   PubMed; 27738094.
+DR   PubMed; 28007936.
+DR   PubMed; 28223350.
+DR   PubMed; 28263321.
+DR   PubMed; 29650987.
+DR   PubMed; 29695160.
+CC   PeptideAtlas sampleID(s): 6229; 6230; 6231; 6232; 6233; 6237; 6238; 6239; 6240; 6241; 6242; 6243; 6244; 6245; 6246; 6247; 6248; 6249; 6265; 6269; 6270; 6271; 6272; 6273; 6274; 6275; 6276; 6277; 6278; 6279; 6280; 6285; 6286; 6287; 6288; 6289; 6292; 6293; 6294; 6295; 6296; 6297; 6298; 6299; 6300; 6301; 6302; 6303; 6304; 6305; 6306; 6307; 6366; 6367; 6368; 6369; 6370; 6371; 6372; 6373; 6374; 6375; 6376; 6377; 6378; 6379; 6380; 6381; 6382; 6383; 6384; 6385; 6386; 6387; 6388; 6416; 6417; 6418; 6419; 6420; 6421; 6422; 6423; 6424; 6468; 6469; 6470; 6471; 6472; 6473; 6474; 6475; 6476; 6477; 6478; 6479; 6480; 6481; 6482; 6496; 6609; 6610; 6611; 6624; 6625; 6626; 6642; 7791; 7988; 7989; 7990; 8357; 8370; 8371; 8372; 8373; 8374; 8375; 8573; 8574; 8575; 8576; 8577; 8578; 8579; 8580; 8581; 8582; 9026; 9027; 9028; 9029; 9030; 9031; 9032; 9033; 9034; 9035; 9036; 9037; 9038; 9039; 9040; 9041; 9042; 9043; 9044; 9045; 9046; 9047; 9048; 9049; 9050; 9051; 9052; 9053; 9054; 9055; 9056; 9057; 9058; 9059; 9060; 9061; 9062; 9133; 9181; 9218; 9219; 9220; 9221; 9222; 9318; 9325; 9333; 9724; 9798; 9799; 9800; 9801; 9802; 9803; 9804; 9805; 9806; 9807; 9808; 9809; 9827; 9828; 9829; 9830; 9831; 9832; 9833; 9834; 9835; 9836; 9837; 9838; 9839; 9840; 9841; 9842; 9843; 9844; 9845; 9846; 9847; 9848; 9849; 9850; 9851; 9852; 9853; 9854; 9855; 9856; 9857; 9858; 9859; 9860; 9861; 9862; 9863; 9864; 9865; 9866; 9867; 9868; 9869; 9870; 9871; 9872; 9873; 9874; 9875; 9876; 9877.
+CC   File: peptide_list_Blood-Plasma.tsv
+//
+ID   PeptideAtlas Brain
+AC   MDATA_0112
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Brain [TS-0095].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 22942359.
+DR   PubMed; 24023061.
+DR   PubMed; 24076635.
+DR   PubMed; 24274931.
+DR   PubMed; 24449343.
+DR   PubMed; 24669763.
+DR   PubMed; 24870543.
+DR   PubMed; 24905578.
+DR   PubMed; 25307156.
+DR   PubMed; 26549206.
+DR   PubMed; 26631761.
+DR   PubMed; 26892330.
+DR   PubMed; 26923401.
+DR   PubMed; 27067185.
+DR   PubMed; 28687556.
+DR   PubMed; 28965411.
+CC   PeptideAtlas sampleID(s): 6259; 6260; 6425; 6426; 6427; 6428; 6429; 6430; 6431; 6442; 6443; 6444; 6445; 6446; 6447; 6448; 6449; 6450; 6451; 6452; 6453; 6454; 8359; 8360; 8361; 8363; 8364; 8365; 8366; 8367; 8550; 8887; 8903; 8904; 9120; 9121; 9183; 9184; 9412; 9413; 9414; 9415; 9416; 9417; 9472; 9473; 9517; 9518; 9536.
+CC   File: peptide_list_Brain.tsv
+//
+ID   PeptideAtlas Breast
+AC   MDATA_0113
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Breast [TS-2083].
+DC   GLOBAL. GOLD: All peptides.
+CC   PeptideAtlas sampleID(s): 6434.
+CC   File: peptide_list_Breast.tsv
+//
+ID   PeptideAtlas Cancer Cell Lines, Alimentary System
+AC   MDATA_0117
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 14988394.
+DR   PubMed; 23312004.
+DR   PubMed; 23933261.
+DR   PubMed; 25576301.
+DR   PubMed; 27470641.
+DR   PubMed; 28126900.
+DR   PubMed; 29191878.
+CC   PeptideAtlas sampleID(s): 6223; 6261; 8443; 8445; 8452; 8453; 8510; 8511; 8512; 8513; 8894; 8895; 8896; 9200; 9297; 9386; 9409; 9755; 9757; 9759; 9761; 9763; 9765; 9767.
+CC   File: peptide_list_Cancer_Cell_Lines_Digestive_System.tsv
+//
+ID   PeptideAtlas Cancer Cell Lines, Blood
+AC   MDATA_0114
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 12832459.
+DR   PubMed; 17519225.
+DR   PubMed; 23186163.
+DR   PubMed; 23933261.
+DR   PubMed; 24138474.
+DR   PubMed; 24190977.
+DR   PubMed; 24313913.
+DR   PubMed; 24667141.
+DR   PubMed; 24850871.
+DR   PubMed; 25850434.
+DR   PubMed; 25977788.
+DR   PubMed; 26074081.
+DR   PubMed; 26216070.
+DR   PubMed; 28126900.
+DR   PubMed; 28404994.
+DR   PubMed; 28433889.
+DR   PubMed; 29191878.
+CC   PeptideAtlas sampleID(s): 6195; 6196; 6197; 6235; 6236; 6497; 6498; 6499; 6500; 6501; 6502; 6503; 6504; 6505; 6506; 6507; 6508; 6509; 6510; 6511; 6512; 6513; 6514; 6515; 6516; 6517; 6518; 6519; 6520; 6521; 6522; 6523; 6524; 6525; 6526; 6527; 6528; 6529; 6530; 6531; 6532; 6533; 6534; 6535; 6536; 6537; 6538; 6539; 6540; 6541; 6542; 6543; 6544; 6545; 6546; 6547; 6548; 6549; 6550; 6551; 6552; 6553; 6554; 6555; 6556; 6557; 6558; 6559; 6560; 6561; 6562; 6563; 6564; 6565; 6566; 6567; 6568; 6569; 6570; 6571; 6659; 8438; 8493; 8497; 8498; 8499; 8516; 8517; 8528; 8529; 8532; 8533; 8534; 8535; 8540; 8541; 8542; 8543; 8544; 8545; 8546; 8547; 8548; 8551; 8587; 8592; 8593; 8594; 8595; 9208; 9289; 9291; 9300; 9343; 9359; 9387; 9400; 9406; 9407; 9726; 9771; 9773; 9775; 9777; 9779; 9781; 9824; 9825; 9826.
+CC   File: peptide_list_Cancer-Cell-Lines-Blood.tsv
+//
+ID   PeptideAtlas Cancer Cell Lines, Brain
+AC   MDATA_0115
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 23933261.
+DR   PubMed; 24266786.
+DR   PubMed; 25225357.
+DR   PubMed; 28087597.
+DR   PubMed; 28126900.
+DR   PubMed; 29191878.
+DR   PubMed; 30190555.
+DR   PubMed; 30284448.
+CC   PeptideAtlas sampleID(s): 7264; 9132; 9186; 9187; 9206; 9305; 9307; 9388; 9403; 9743; 9745; 9747; 9749; 9751; 9753.
+CC   File: peptide_list_Cancer-Cell-Lines-Brain.tsv
+//
+ID   PeptideAtlas Cancer Cell Lines, Breast
+AC   MDATA_0116
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 23770244.
+DR   PubMed; 23933261.
+DR   PubMed; 24138474.
+DR   PubMed; 24870543.
+DR   PubMed; 25576301.
+DR   PubMed; 25977788.
+DR   PubMed; 27425180.
+DR   PubMed; 27485413.
+DR   PubMed; 29191878.
+CC   PeptideAtlas sampleID(s): 8491; 8883; 8884; 8885; 8886; 8911; 9202; 9295; 9296; 9326; 9327; 9391; 9550; 9551; 9707; 9729; 9731; 9733; 9735; 9737; 9741; 9817; 9818; 9819; 9820; 9821; 9822; 9823.
+CC   File: peptide_list_Cancer-Cell-Lines-Breast.tsv
+Total time: 7 seconds
+//
+ID   PeptideAtlas Cancer Cell Lines, Kidney
+AC   MDATA_0118
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 23933261.
+DR   PubMed; 23940778.
+CC   PeptideAtlas sampleID(s): 7262; 9204; 9774; 9776; 9778; 9780; 9782; 9784; 9786; 9788.
+CC   File: peptide_list_Cancer-Cell-Lines-Kidney.tsv
+//
+ID   PeptideAtlas Cancer Cell Lines, Liver
+AC   MDATA_0119
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 15269248.
+DR   PubMed; 15287976.
+DR   PubMed; 24256510.
+DR   PubMed; 25225357.
+DR   PubMed; 27470094.
+DR   PubMed; 28126900.
+DR   PubMed; 30284448.
+CC   PeptideAtlas sampleID(s): 6202; 6203; 6204; 6205; 6206; 6207; 8339; 8340; 8341; 8912; 9130; 9304; 9405.
+CC   File: peptide_list_Cancer-Cell-Lines-Liver.tsv
+//
+ID   PeptideAtlas Cancer Cell Lines, Lung
+AC   MDATA_0120
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+CC   PeptideAtlas sampleID(s): 8704; 8705; 8706; 8707; 8708; 8709; 8710; 8711; 8712; 8713; 9129; 9207; 9337; 9338; 9740; 9742; 9744; 9746; 9748; 9750; 9752; 9754; 9756.
+DR   PubMed; 23933261.
+DR   PubMed; 25225357.
+DR   PubMed; 26202522.
+DR   PubMed; 28290473.
+CC   File: peptide_list_Cancer-Cell-Lines-Lung.tsv
+//
+ID   PeptideAtlas Cancer Cell Lines, Other Anatomical Entities
+AC   MDATA_0121
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 22068332.
+DR   PubMed; 22278370.
+DR   PubMed; 23242552.
+DR   PubMed; 23933261.
+DR   PubMed; 24870543.
+DR   PubMed; 25977788.
+DR   PubMed; 28112733.
+DR   PubMed; 28126900.
+DR   PubMed; 29191878.
+DR   PubMed; 29445034.
+DR   PubMed; 30284448.
+CC   PeptideAtlas sampleID(s): 6462; 6463; 6464; 6465; 7258; 8492; 9190; 9201; 9306; 9316; 9339; 9379; 9380; 9381; 9382; 9383; 9384; 9385; 9402; 9411; 9721; 9722; 9727; 9728; 9730; 9732; 9734; 9736; 9738; 9739; 9783; 9785; 9787.
+CC   File: peptide_list_Cancer-Cell-Lines-Other-Anatomical-Entities.tsv
+//
+ID   PeptideAtlas Cancer Cell Lines, Other Female Reproductive Organ
+AC   MDATA_0122
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 16964243.
+DR   PubMed; 18083107.
+DR   PubMed; 20068231.
+DR   PubMed; 20860994.
+DR   PubMed; 21029866.
+DR   PubMed; 21851590.
+DR   PubMed; 22068331.
+DR   PubMed; 22167270.
+DR   PubMed; 22468782.
+DR   PubMed; 23186163.
+DR   PubMed; 24696503.
+DR   PubMed; 24850871.
+DR   PubMed; 25159151.
+DR   PubMed; 25225357.
+DR   PubMed; 25977788.
+DR   PubMed; 26055452.
+DR   PubMed; 26388441.
+DR   PubMed; 27425180.
+DR   PubMed; 27737933.
+DR   PubMed; 28112733.
+DR   PubMed; 28126900.
+DR   PubMed; 28234478.
+CC   PeptideAtlas sampleID(s): 6585; 6586; 6587; 6588; 6589; 6590; 6591; 6592; 6593; 6645; 8429; 8430; 8436; 8437; 8439; 8494; 8495; 8507; 8526; 8527; 8530; 8531; 8536; 8537; 8538; 8539; 8552; 8553; 8554; 8555; 8556; 8557; 8558; 8567; 8568; 8569; 8589; 8590; 8786; 9106; 9107; 9134; 9189; 9290; 9317; 9328; 9329; 9330; 9331; 9332; 9348; 9349; 9350; 9351; 9352; 9353; 9393; 9398; 9399; 9589; 9590; 9591; 9592; 9593; 9689; 9690; 9691; 9692; 9693; 9694; 9695; 9696; 9697; 9698; 9699; 9700; 9701; 9702; 9703; 9704; 9705; 9706; 9713.
+CC   File: peptide_list_Cancer-Cell-Lines-Other-Female-Reproductive-Organ.tsv
+//
+ID   PeptideAtlas Cancer Cell Lines, Other Male Reproductive Organ
+AC   MDATA_0123
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 14709176.
+DR   PubMed; 15833837.
+DR   PubMed; 23933261.
+DR   PubMed; 25219547.
+DR   PubMed; 25225357.
+DR   PubMed; 25977788.
+DR   PubMed; 28126900.
+CC   PeptideAtlas sampleID(s): 6198; 6199; 6200; 6255; 8905; 9131; 9203; 9408; 9717; 9770; 9772.
+CC   File: peptide_list_Cancer-Cell-Lines-Other-Male-Reproductive-Organ.tsv
+//
+ID   PeptideAtlas Cancer Cell Lines, Ovary
+AC   MDATA_0124
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 23933261.
+DR   PubMed; 27569743.
+CC   PeptideAtlas sampleID(s): 8882; 9205; 9758; 9760; 9762; 9764; 9766; 9768.
+CC   File: peptide_list_Cancer-Cell-Lines-Ovary.tsv
+//
+ID   PeptideAtlas Cancer Cell Lines, Urinary Bladder
+AC   MDATA_0125
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 27554326.
+CC   PeptideAtlas sampleID(s): 8915.
+CC   File: peptide_list_Cancer-Cell-Lines-Urinary-Bladder.tsv
+//
+ID   PeptideAtlas Cancer, Alimentary System
+AC   MDATA_0128
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Malignant Digestive System Neoplasm [NCIt; C4890].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 21630462.
+DR   PubMed; 23312004.
+DR   PubMed; 24687888.
+DR   PubMed; 25043054.
+DR   PubMed; 26657352.
+DR   PubMed; 27976366.
+DR   PubMed; 28960076.
+CC   PeptideAtlas sampleID(s): 6648; 8440; 8441; 8508; 8509; 8514; 8515; 8916; 8917; 8918; 8919; 8920; 8921; 8922; 8923; 8924; 8925; 8926; 8927; 9127; 9128; 9236; 9395; 9396; 9397; 9594; 9595; 9596; 9597; 9598; 9599; 9600; 9601; 9602; 9603; 9604; 9605; 9606; 9607; 9608; 9609; 9610; 9611; 9612; 9613; 9614; 9615; 9616; 9617; 9618; 9619; 9620; 9621; 9622; 9623; 9624; 9625; 9626; 9627; 9628; 9629; 9630; 9631; 9632; 9633; 9634; 9635; 9636; 9637; 9638; 9639; 9640; 9641; 9642; 9643; 9644; 9645; 9646; 9647; 9648; 9649; 9650; 9651; 9652; 9653; 9654; 9655; 9656; 9657; 9658; 9659; 9660; 9661; 9662; 9663; 9664; 9665; 9666; 9667; 9668; 9669; 9670; 9671; 9672; 9673; 9674; 9675; 9676; 9677; 9678; 9679; 9680; 9681; 9682; 9683; 9684; 9685; 9686; 9687; 9688.
+CC   File: peptide_list_Cancer_Digestive_System.tsv
+//
+ID   PeptideAtlas Cancer, Brain
+AC   MDATA_0126
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Malignant Brain Neoplasm [NCIt; C3568].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 25325876.
+CC   PeptideAtlas sampleID(s): 8362.
+CC   File; peptide_list_Cancer-Brain.tsv
+//
+ID   PeptideAtlas Cancer, Breast
+AC   MDATA_0127
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Malignant Breast Neoplasm [NCIt; C9335].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 22414580.
+DR   PubMed; 23153008.
+DR   PubMed; 25873244.
+CC   PeptideAtlas sampleID(s): 6743; 6766; 8455; 8456; 8457; 8458; 8459; 8460; 8461; 8462; 8463; 8464; 8465; 8466; 8467; 8468; 8469; 8470; 8471; 8472; 8473; 8474; 8475; 8476; 8477; 8478; 8479; 8480; 8481; 8482; 8483; 8484; 8485; 8486; 8487; 8488; 8489; 8490; 9418; 9419; 9420; 9421; 9422; 9423; 9424; 9425; 9426; 9427; 9428; 9429; 9430; 9431; 9432; 9433; 9434; 9435; 9436; 9437; 9438; 9439; 9440; 9441; 9442; 9443; 9444; 9445; 9446; 9447; 9448; 9449; 9450; 9451; 9452; 9453.
+CC   File: peptide_list_Cancer-Breast.tsv
+//
+ID   PeptideAtlas Cancer, Kidney
+AC   MDATA_0129
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Malignant Kidney Neoplasm [NCIt; C7548].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 28857561.
+DR   PubMed; 28960076.
+CC   PeptideAtlas sampleID(s): 9196; 9197; 9237.
+CC   File: peptide_list_Cancer-Kidney.tsv
+//
+ID   PeptideAtlas Cancer, Liver
+AC   MDATA_0130
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Malignant Hepatobiliary Neoplasm [NCIt; C8609]. 
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 28248240.
+DR   PubMed; 28960076.
+CC   PeptideAtlas sampleID(s): 9188; 9238.
+CC   File: peptide_list_Cancer-Liver.tsv
+//
+ID   PeptideAtlas Cancer, Lung
+AC   MDATA_0131
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Malignant Lung Neoplasm [NCIt; C7377].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24313913.
+DR   PubMed; 27799870.
+DR   PubMed; 29191878.
+CC   PeptideAtlas sampleID(s): 8588; 9198; 9389.
+CC   File: peptide_list_Cancer-Lung.tsv
+//
+ID   PeptideAtlas Cancer, Other Anatomical Entities
+AC   MDATA_0132
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DI   GLOBAL. Malignant Neoplasm [NCIt; C9305].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 23933261.
+DR   PubMed; 27869121.
+CC   PeptideAtlas sampleID(s): 9354; 9355; 9356; 9357; 9358; 9769.
+CC   File: peptide_list_Cancer-Other-Anatomical-Entities.tsv
+//
+ID   PeptideAtlas Cancer, Other Male Reproductive Organ
+AC   MDATA_0133
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DI   GLOBAL. Malignant Neoplasm [NCIt; C9305].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 27499020.
+CC   PeptideAtlas sampleID(s): 8914.
+CC   File: peptide_list_Cancer-Other-Male-Reproductive-Organ.tsv
+//
+ID   PeptideAtlas Cancer, Ovary
+AC   MDATA_0134
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Malignant Ovarian Neoplasm [NCIt; C7431].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 21720365.
+DR   PubMed; 24719451.
+CC   PeptideAtlas sampleID(s): 7622; 8496; 8503; 8572; 9789; 9791; 9792.
+CC   File: peptide_list_Cancer-Ovary.tsv
+//
+ID   PeptideAtlas Cancer, Urinary Bladder
+AC   MDATA_0135
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Malignant Bladder Neoplasm [NCIt; C9334].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 28960076.
+CC   PeptideAtlas sampleID(s): 9235.
+CC   File: peptide_list_Cancer-Urinary-Bladder.tsv
+//
+ID   PeptideAtlas Cerebrospinal Fluid
+AC   MDATA_0136
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Cerebrospinal fluid [TS-0130].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 23300121.
+DR   PubMed; 24769233.
+DR   PubMed; 25038066.
+DR   PubMed; 25775479.
+DR   PubMed; 29695160.
+DR   PubMed; 30124047.
+CC   PeptideAtlas sampleID(s): 6435; 7983; 7984; 7985; 7986; 7987; 7991; 7992; 9324; 9342; 9394.
+CC   File: peptide_list_Cerebrospinal-Fluid.tsv
+//
+ID   PeptideAtlas Eye
+AC   MDATA_0138
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Eye [TS-0309].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24669763.
+DR   PubMed; 24990792.
+DR   PubMed; 25097467.
+DR   PubMed; 25407473.
+DR   PubMed; 28186866.
+CC   PeptideAtlas sampleID(s): 6311; 6584; 8358; 8907; 8908; 8909; 9347; 9508; 9509; 9510.
+CC   File: peptide_list_Eye.tsv
+//
+ID   PeptideAtlas Heart
+AC   MDATA_0139
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Heart [TS-0445].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24669763.
+DR   PubMed; 29133944.
+CC   PeptideAtlas sampleID(s): 6436; 9360; 9361; 9362; 9363; 9364; 9365; 9366; 9367; 9368; 9369; 9370; 9371; 9372; 9373; 9374; 9375; 9376; 9377; 9378; 9476; 9477; 9478; 9479; 9521; 9522.
+CC   File: peptide_list_Heart.tsv
+//
+ID   PeptideAtlas Kidney
+AC   MDATA_0140
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Kidney [TS-0510].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24669763.
+DR   PubMed; 24870543.
+DR   PubMed; 25977788.
+CC   PeptideAtlas sampleID(s): 6755; 6756; 6757; 6758; 6759; 6760; 6761; 6762; 6763; 6764; 6765; 9480; 9481; 9482; 9544; 9714; 9715.
+CC   File: peptide_list_Kidney.tsv
+//
+ID   PeptideAtlas Liver
+AC   MDATA_0141
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   LOCAL. Liver [TS-0564].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 16815949.
+DR   PubMed; 24669763.
+DR   PubMed; 24870543.
+DR   PubMed; 28767254.
+CC   PeptideAtlas sampleID(s): 6663; 6664; 6665; 6666; 6667; 6668; 6669; 6670; 6671; 6672; 6673; 6674; 6675; 6676; 6677; 6678; 6679; 6680; 6681; 6682; 6683; 6684; 6685; 6686; 6687; 6688; 6689; 6690; 6691; 6692; 6693; 6694; 6695; 6696; 6697; 6698; 6699; 6700; 6701; 6702; 6703; 6704; 6705; 6706; 6707; 6708; 6709; 6710; 6711; 6712; 6713; 6714; 6715; 6716; 6717; 6718; 6719; 6720; 6721; 6722; 6723; 6724; 6725; 6726; 6727; 6728; 6729; 6730; 6731; 6732; 6733; 6734; 9341; 9346; 9483; 9484; 9485; 9486; 9523; 9524; 9545; 9546; 9547.
+CC   File: peptide_list_Liver.tsv
+//
+ID   PeptideAtlas Lung
+AC   MDATA_0142
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Lung [TS-0568].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24669763.
+DR   PubMed; 24702127.
+DR   PubMed; 24870543.
+DR   PubMed; 25977788.
+DR   PubMed; 27799870.
+DR   PubMed; 29191878.
+CC   PeptideAtlas sampleID(s): 6437; 9199; 9214; 9215; 9216; 9217; 9390; 9487; 9488; 9489; 9548; 9718.
+CC   File: peptide_list_Lung.tsv
+//
+ID   PeptideAtlas Non Cancer Cell Lines
+AC   MDATA_0143
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 19413330.
+DR   PubMed; 20363803.
+DR   PubMed; 21406692.
+DR   PubMed; 21586754.
+DR   PubMed; 21983960.
+DR   PubMed; 22108792.
+DR   PubMed; 22199227.
+DR   PubMed; 22496350.
+DR   PubMed; 23676674.
+DR   PubMed; 23756949.
+DR   PubMed; 24138474.
+DR   PubMed; 24501219.
+DR   PubMed; 24696503.
+DR   PubMed; 24870543.
+DR   PubMed; 25576301.
+DR   PubMed; 25977788.
+DR   PubMed; 26857143.
+DR   PubMed; 27025457.
+DR   PubMed; 27852650.
+DR   PubMed; 28126900.
+DR   PubMed; 30203655.
+DR   PubMed; 30284448.
+CC   PeptideAtlas sampleID(s): 6052; 6056; 6057; 6058; 6389; 6390; 6391; 6392; 6393; 6394; 6395; 6396; 6397; 6398; 6399; 6400; 6401; 6402; 6403; 6404; 6405; 6406; 6407; 6408; 6409; 6410; 6411; 6627; 6629; 6631; 6632; 6633; 6634; 6640; 6641; 6656; 6660; 6741; 6742; 7240; 7241; 8431; 8433; 8434; 8435; 8442; 8444; 8446; 8447; 8448; 8449; 8450; 8451; 8454; 8522; 8523; 8524; 8525; 8559; 8560; 8561; 8562; 8563; 8564; 8565; 8566; 8570; 8571; 8583; 8584; 8585; 8586; 8703; 9185; 9223; 9224; 9225; 9226; 9227; 9228; 9229; 9230; 9231; 9232; 9233; 9234; 9293; 9294; 9301; 9302; 9311; 9312; 9313; 9404; 9410; 9543; 9568; 9569; 9570; 9708; 9709; 9710; 9711; 9712; 9790; 9793; 9794; 9795; 9796; 9797; 9810; 9811; 9812; 9813; 9814; 9815; 9816.
+CC   File: peptide_list_Non-Cancer-Cell-Lines.tsv
+//
+ID   PeptideAtlas Oocyte
+AC   MDATA_0144
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Oocyte [TS-0711].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 27215607.
+CC   PeptideAtlas sampleID(s): 8897; 8898; 8899; 8900; 8901; 8902.
+CC   File: peptide_list_Oocyte.tsv
+//
+ID   PeptideAtlas Other Anatomical Entities
+AC   MDATA_0145
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 12837591.
+DR   PubMed; 14966291.
+DR   PubMed; 15085804.
+DR   PubMed; 15228325.
+DR   PubMed; 16816363.
+DR   PubMed; 17269739.
+DR   PubMed; 19691289.
+DR   PubMed; 20334419.
+DR   PubMed; 20939611.
+DR   PubMed; 22188163.
+DR   PubMed; 22322096.
+DR   PubMed; 23510160.
+DR   PubMed; 23921659.
+DR   PubMed; 24171499.
+DR   PubMed; 24313378.
+DR   PubMed; 24361865.
+DR   PubMed; 24669763.
+DR   PubMed; 24870543.
+DR   PubMed; 25977788.
+DR   PubMed; 26132440.
+DR   PubMed; 26258467.
+DR   PubMed; 26437602.
+DR   PubMed; 26655833.
+DR   PubMed; 27102203.
+DR   PubMed; 27601599.
+DR   PubMed; 29035686.
+CC   PeptideAtlas sampleID(s): 6201; 6208; 6209; 6210; 6211; 6212; 6213; 6214; 6215; 6216; 6217; 6218; 6219; 6221; 6224; 6225; 6226; 6227; 6228; 6250; 6251; 6252; 6253; 6256; 6257; 6258; 6262; 6264; 6266; 6267; 6268; 6281; 6282; 6283; 6284; 6290; 6291; 6308; 6309; 6310; 6312; 6313; 6365; 6432; 6433; 6594; 6595; 6596; 6612; 6613; 7237; 7238; 7259; 7260; 7263; 8432; 8500; 8501; 8598; 8910; 9117; 9118; 9119; 9122; 9209; 9210; 9211; 9212; 9213; 9308; 9319; 9392; 9511; 9512; 9533; 9539; 9542; 9549; 9552; 9571; 9572; 9574; 9584; 9585; 9720.
+CC   File: peptide_list_Other-Anatomical-Entities.tsv
+//
+ID   PeptideAtlas Other Female Reproductive Organ
+AC   MDATA_0146
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870543.
+CC   PeptideAtlas sampleID(s): 9537; 9586; 9587; 9588.
+CC   File: peptide_list_Other-Female-Reproductive-Organ.tsv
+//
+ID   PeptideAtlas Other Male Reproductive Organ
+AC   MDATA_0147
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24669763.
+DR   PubMed; 24870543.
+CC   PeptideAtlas sampleID(s): 6254; 9504; 9505; 9564; 9565; 9566; 9573.
+CC   File: peptide_list_Other-Male-Reproductive-Organ.tsv
+//
+ID   PeptideAtlas Other Respiratory Organ
+AC   MDATA_0148
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 19357784.
+DR   PubMed; 24870543.
+CC   PeptideAtlas sampleID(s): 6572; 6573; 6574; 6575; 6576; 6577; 6578; 6579; 6580; 6581; 6582; 6583; 9553.
+CC   File: peptide_list_Other-Respiratory-Organ.tsv
+//
+ID   PeptideAtlas Ovary
+AC   MDATA_0149
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Ovary [TS-0730].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24669763.
+DR   PubMed; 24870543.
+CC   PeptideAtlas sampleID(s): 6438; 9497; 9498; 9525; 9526; 9527; 9555; 9556; 9557.
+CC   File: peptide_list_Ovary.tsv
+//
+ID   PeptideAtlas Pancreas
+AC   MDATA_0150
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Pancreas [TS-0736].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24669763.
+DR   PubMed; 24870543.
+CC   PeptideAtlas sampleID(s): 6439; 7239; 9499; 9500; 9558.
+CC   File: peptide_list_Pancreas.tsv
+//
+ID   PeptideAtlas Pituitary Gland
+AC   MDATA_0151
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Pituitary gland [TS-0798]
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 28678506.
+CC   PeptideAtlas sampleID(s): 9108; 9109.
+CC   File: peptide_list_Pituitary-Gland.tsv
+//
+ID   PeptideAtlas Placenta
+AC   MDATA_0152
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Placenta [TS-0799]
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 19536202.
+DR   PubMed; 24669763.
+DR   PubMed; 24870543.
+DR   PubMed; 26947931.
+CC   PeptideAtlas sampleID(s): 6483; 6651; 9292; 9315; 9401; 9528; 9529; 9559; 9560; 9561; 9562.
+CC   File: peptide_list_Placenta.tsv
+//
+ID   PeptideAtlas Sperm cell
+AC   MDATA_0153
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Sperm cell [TS-2046]
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 26168773.
+DR   PubMed; 27444420.
+DR   PubMed; 28891297.
+CC   PeptideAtlas sampleID(s): 8591; 8928; 8929; 8930; 8931; 8932; 9239.
+CC   File: peptide_list_Sperm.tsv
+//
+ID   PeptideAtlas Spleen
+AC   MDATA_0154
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Spleen [TS-0956]
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870543.
+CC   PeptideAtlas sampleID(s): 9575; 9576; 9577.
+CC   File: peptide_list_Spleen.tsv
+//
+ID   PeptideAtlas Testis
+AC   MDATA_0155
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Testis [TS-1030].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24669763.
+DR   PubMed; 24870543.
+DR   PubMed; 26282447.
+DR   PubMed; 27535590.
+DR   PubMed; 28959888.
+DR   PubMed; 30277781.
+DR   PubMed; 30280576.
+CC   PeptideAtlas sampleID(s): 8596; 8597; 8888; 8889; 8890; 8891; 8892; 8893; 9192; 9194; 9195; 9309; 9310; 9321; 9322; 9323; 9513; 9514; 9530; 9531; 9579; 9580; 9581; 9582.
+CC   File: peptide_list_Testis.tsv
+//
+ID   PeptideAtlas Thyroid
+AC   MDATA_0156
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Thyroid [TS-1047].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870543.
+DR   PubMed; 28678506.
+CC   PeptideAtlas sampleID(s): 9110; 9111; 9583.
+CC   File: peptide_list_Thyroid-Gland.tsv
+//
+ID   PeptideAtlas Ureter
+AC   MDATA_0157
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Ureter [TS-1084].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 26442468.
+CC   PeptideAtlas sampleID(s): 9115.
+CC   File: peptide_list_Ureter.tsv
+//
+ID   PeptideAtlas Urinary Bladder
+AC   MDATA_0158
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Urinary bladder [TS-1090].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24669763.
+CC   PeptideAtlas sampleID(s): 9515; 9516.
+CC   File: peptide_list_Urinary-Bladder.tsv
+//
+ID   PeptideAtlas Urine
+AC   MDATA_0159
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Urine [TS-1092].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 20543976.
+DR   PubMed; 21127740.
+DR   PubMed; 21500864.
+DR   PubMed; 23281308.
+CC   PeptideAtlas sampleID(s): 6234; 6412; 6413; 6414; 6415; 6649; 6650; 6746; 6747; 6748; 6749; 6750; 6751; 6752; 6753; 6775; 6776; 6777; 6778; 7242; 7243; 7244.
+CC   File: peptide_list_Urine.tsv
+//
+ID   PeptideAtlas Cancer Cell Lines Pancreas
+AC   MDATA_0186
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 29358341.
+CC   PeptideAtlas sampleID(s): 9340.
+CC   File: peptide_list_Cancer_Cell_Lines_Pancreas.tsv
+//
+ID   PeptideAtlas Cancer Other Female Reproductive Organ
+AC   MDATA_0187
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 30284448.
+CC   PeptideAtlas sampleID(s): 9303.
+CC   File: peptide_list_Cancer_Other_Female_Reproductive_Organ.tsv
+//
+ID   PeptideAtlas Cancer Pancreas
+AC   MDATA_0188
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 30172883.
+CC   PeptideAtlas sampleID(s): 9314.
+CC   File: peptide_list_Cancer_Pancreas.tsv
+//
+ID   PeptideAtlas Olfactory System
+AC   MDATA_0189
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Olfactory system [TS-2542].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 28816642.
+DR   PubMed; 30113170.
+CC   PeptideAtlas sampleID(s): 9112; 9113; 9320.
+CC   File: peptide_list_Olfactory_System.tsv
+//
+ID   MassIVE Adrenal Gland
+AC   MDATA_0209
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Adrenal gland [TS-0016].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870542.
+DR   PubMed; 24870543.
+CC   File: peptide_list_Adrenal-Gland.tsv
+//
+ID   MassIVE Blood Cells
+AC   MDATA_0210
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Hematopoietic cell [TS-2017].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870542.
+DR   PubMed; 25347463.
+DR   PubMed; 27329341.
+DR   PubMed; 27486199.
+DR   PubMed; 27723984.
+DR   PubMed; 28123004.
+DR   PubMed; 28196878.
+CC   File: peptide_list_Blood-Cells.tsv
+//
+ID   MassIVE Blood Plasma
+AC   MDATA_0211
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Plasma [TS-0800].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 25624350.
+DR   PubMed; 26407992.
+DR   PubMed; 26688386.
+DR   PubMed; 26772903.
+DR   PubMed; 28007936.
+CC   File: peptide_list_Blood-Plasma.tsv
+//
+ID   MassIVE Blood vessel
+AC   MDATA_0301
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Blood vessel [TS-0080].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 26371159.
+DR   PubMed; 27068509.
+CC   File: peptide_list_Blood-Vessel.tsv
+//
+ID   MassIVE Brain
+AC   MDATA_0212
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Brain [TS-0095].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870542.
+DR   PubMed; 24870543.
+DR   PubMed; 26892330.
+CC   File: peptide_list_Brain.tsv
+//
+ID   MassIVE Breast
+AC   MDATA_0213
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Breast [TS-2083].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 25238572.
+DR   PubMed; 27135363.
+CC   File: peptide_list_Breast.tsv
+//
+ID   MassIVE Cerebrospinal Fluid
+AC   MDATA_0236
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Cerebrospinal fluid [TS-0130].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24769233.
+DR   PubMed; 25775479.
+CC   File: peptide_list_Cerebrospinal-Fluid.tsv
+//
+ID   MassIVE Digestive System
+AC   MDATA_0302
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Alimentary system [TS-1293].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870542.
+DR   PubMed; 24870543.
+DR   PubMed; 25993694.
+DR   PubMed; 26937473.
+DR   PubMed; 27102203.
+DR   PubMed; 27627584.
+DR   PubMed; 27672500.
+CC   File: peptide_list_Digestive-System.tsv
+//
+ID   MassIVE Eye
+AC   MDATA_0238
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Eye [TS-0309].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870542.
+DR   PubMed; 27193151.
+CC   File: peptide_list_Eye.tsv
+//
+ID   MassIVE Other gestational structure
+AC   MDATA_0303
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Gestational structure [TS-2092].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870542.
+DR   PubMed; 26092402.
+DR   PubMed; 27025457.
+DR   PubMed; 27452463.
+DR   PubMed; 28007913.
+CC   File: peptide_list_Other-Gestational-Structure.tsv
+//
+ID   MassIVE Heart
+AC   MDATA_0239
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Heart [TS-0445].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870542.
+CC   File: peptide_list_Heart.tsv
+//
+ID   MassIVE Kidney
+AC   MDATA_0240
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Kidney [TS-0510].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870542.
+DR   PubMed; 28062795.
+CC   File: peptide_list_Kidney.tsv
+//
+ID   MassIVE Liver
+AC   MDATA_0241
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   LOCAL. Liver [TS-0564].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870542.
+DR   PubMed; 24870543.
+DR   PubMed; 26825538.
+CC   File: peptide_list_Liver.tsv
+//
+ID   MassIVE Lung
+AC   MDATA_0242
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Lung [TS-0568].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870542.
+DR   PubMed; 27799870.
+DR   PubMed; 28195392.
+CC   File: peptide_list_Lung.tsv
+//
+ID   MassIVE Ovary
+AC   MDATA_0249
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Ovary [TS-0730].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870542.
+DR   PubMed; 24870543.
+CC   File: peptide_list_Ovary.tsv
+//
+ID   MassIVE Pancreas
+AC   MDATA_0250
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Pancreas [TS-0736].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870542.
+DR   PubMed; 24870543.
+CC   File: peptide_list_Pancreas.tsv
+//
+-- *** SEE IF WE KEEP OR MERGE WITH GESTATIONAL STRUCTURE ********
+ID   MassIVE Placenta
+AC   MDATA_0252
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Placenta [TS-0799]
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870543.
+CC   File: peptide_list_Placenta.tsv
+-- **************************************************************
+//
+ID   MassIVE Skin
+AC   MDATA_0304
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Skin [TS-0934]
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870543.
+DR   PubMed; 27025457.
+DR   PubMed; 28208246.
+CC   File: peptide_list_Skin.tsv
+//
+ID   MassIVE Sperm
+AC   MDATA_0305
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Sperm cell [TS-2046]
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 27444420.
+CC   File: peptide_list_Sperm.tsv
+//
+ID   MassIVE Spleen
+AC   MDATA_0254
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Spleen [TS-0956]
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870543.
+CC   File: peptide_list_Spleen.tsv
+//
+ID   MassIVE Testis
+AC   MDATA_0255
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Testis [TS-1030].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870542.
+DR   PubMed; 24870543.
+CC   File: peptide_list_Testis.tsv
+//
+ID   MassIVE Thyroid gland
+AC   MDATA_0306
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Thyroid [TS-1047].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870543.
+CC   File: peptide_list_Thyroid-Gland.tsv
+//
+ID   MassIVE Ureter
+AC   MDATA_0257
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Ureter [TS-1084].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 26442468.
+CC   File: peptide_list_Ureter.tsv
+//
+ID   MassIVE Urinary Bladder
+AC   MDATA_0258
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Urinary bladder [TS-1090].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870543.
+CC   File: peptide_list_Urinary-Bladder.tsv
+//
+ID   MassIVE Urine
+AC   MDATA_0259
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Urine [TS-1092].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 26223766.
+DR   PubMed; 26407992
+DR   PubMed; 26884507.
+DR   PubMed; 27394047.
+CC   File: peptide_list_Urine.tsv
+//
+ID   MassIVE Other Anatomical Entities
+AC   MDATA_0245
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870542.
+DR   PubMed; 24870543.
+DR   PubMed; 25429530.
+DR   PubMed; 26306861.
+DR   PubMed; 26767403.
+DR   PubMed; 26857143.
+DR   PubMed; 27075204.
+DR   PubMed; 27396729.
+CC   File: peptide_list_Other-Anatomical-Entities.tsv
+//
+ID   MassIVE Other Female Reproductive Organ
+AC   MDATA_0246
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870543.
+DR   PubMed; 26654049.
+DR   PubMed; 27561551.
+CC   File: peptide_list_Other-Female-Reproductive-Organ.tsv
+//
+ID   MassIVE Other Male Reproductive Organ
+AC   MDATA_0247
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870542.
+DR   PubMed; 24870543.
+CC   File: peptide_list_Other-Male-Reproductive-Organ.tsv
+//
+ID   MassIVE Other Respiratory Organ
+AC   MDATA_0248
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870543.
+CC   File: peptide_list_Other-Respiratory-Organ.tsv
+//
+ID   MassIVE Non Cancer Cell Lines
+AC   MDATA_0243
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24782567.
+DR   PubMed; 24791982.
+DR   PubMed; 24797263.
+DR   PubMed; 25271054.
+DR   PubMed; 25346955.
+DR   PubMed; 25502872.
+DR   PubMed; 25825992.
+DR   PubMed; 26076430.
+DR   PubMed; 26235616.
+DR   PubMed; 26604261.
+DR   PubMed; 26752685.
+DR   PubMed; 26857143.
+DR   PubMed; 26861875.
+DR   PubMed; 26947064.
+DR   PubMed; 26972000.
+DR   PubMed; 27120771.
+DR   PubMed; 27146306.
+DR   PubMed; 27233776.
+DR   PubMed; 27501389.
+DR   PubMed; 27561551.
+DR   PubMed; 27577262.
+DR   PubMed; 27604873.
+DR   PubMed; 27720452.
+DR   PubMed; 27794609.
+DR   PubMed; 28132834.
+DR   PubMed; 28258195.
+CC   File: peptide_list_Non-Cancer-Cell-Lines.tsv
+//
+ID   MassIVE Cancer, Blood cells
+AC   MDATA_0307
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Hematopoietic and Lymphoid Cell Neoplasm [NCIt; C27134].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 26311899.
+CC   File: peptide_list_Cancer-Blood-Cells.tsv
+//
+ID   MassIVE Cancer, Bone
+AC   MDATA_0308
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Malignant Bone Neoplasm [NCIt; C4016].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 26801919.
+CC   File: peptide_list_Cancer-Bone.tsv
+//
+ID   MassIVE Cancer, Breast
+AC   MDATA_0227
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Malignant Breast Neoplasm [NCIt; C9335].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 25238572.
+DR   PubMed; 26374642.
+DR   PubMed; 27135363.
+CC   File: peptide_list_Cancer-Breast.tsv
+//
+ID   MassIVE Cancer, Digestive system
+AC   MDATA_0309
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Digestive System Carcinoma [NCIt; C96963].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 27801565.
+CC   File: peptide_list_Cancer-Digestive-System.tsv
+//
+ID   MassIVE Cancer, Lung
+AC   MDATA_0231
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Malignant Lung Neoplasm [NCIt; C7377].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 27799870.
+DR   PubMed; 28195392.
+CC   File: peptide_list_Cancer-Lung.tsv
+//
+ID   MassIVE Cancer, Ovary
+AC   MDATA_0234
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Malignant Ovarian Neoplasm [NCIt; C7431].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 27561551.
+CC   File: peptide_list_Cancer-Ovary.tsv
+//
+ID   MassIVE Cancer, Skin
+AC   MDATA_0310
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Malignant Skin Neoplasm [NCIt; C2920].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 25874936.
+DR   PubMed; 27869121.
+CC   File: peptide_list_Cancer-Skin.tsv
+//
+ID   MassIVE Cancer, Other Male Reproductive Organ
+AC   MDATA_0233
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DI   GLOBAL. Malignant Neoplasm [NCIt; C9305].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 26651926.
+DR   PubMed; 27499020.
+CC   File: peptide_list_Cancer-Other-Male-Reproductive-Organ.tsv
+//
+ID   MassIVE Cancer Cell Lines, Blood
+AC   MDATA_0214
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 23266961.
+DR   PubMed; 24816145.
+DR   PubMed; 27067055.
+DR   PubMed; 28064214.
+CC   File: peptide_list_Cancer-Cell-Lines-Blood.tsv
+//
+ID   MassIVE Cancer Cell Lines, Bone
+AC   MDATA_0311
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 23242552.
+DR   PubMed; 25555159.
+DR   PubMed; 25755297.
+DR   PubMed; 26131937.
+DR   PubMed; 26572502.
+DR   PubMed; 26852163.
+DR   PubMed; 27040163.
+DR   PubMed; 27128805.
+DR   PubMed; 27494197.
+DR   PubMed; 28112733.
+CC   File: peptide_list_Cancer-Cell-Lines-Bone.tsv
+//
+ID   MassIVE Cancer Cell Lines, Brain
+AC   MDATA_0215
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 27412690.
+CC   File: peptide_list_Cancer-Cell-Lines-Brain.tsv
+//
+ID   MassIVE Cancer Cell Lines, Breast
+AC   MDATA_0216
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 25238572.
+DR   PubMed; 25825992.
+DR   PubMed; 26649326.
+DR   PubMed; 27135363.
+DR   PubMed; 27794609.
+DR   PubMed; 27976581.
+CC   File: peptide_list_Cancer-Cell-Lines-Breast.tsv
+//
+ID   MassIVE Cancer Cell Lines, Digestive System
+AC   MDATA_0312
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 25175731.
+DR   PubMed; 25913743.
+DR   PubMed; 27526785.
+DR   PubMed; 27987026.
+DR   PubMed; 28071820.
+CC   File: peptide_list_Cancer_Cell_Lines_Digestive_System.tsv
+//
+ID   MassIVE Cancer Cell Lines, Liver
+AC   MDATA_0219
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24328083.
+DR   PubMed; 25265333.
+DR   PubMed; 26825538.
+DR   PubMed; 27470094.
+CC   File: peptide_list_Cancer-Cell-Lines-Liver.tsv
+//
+ID   MassIVE Cancer Cell Lines, Lung
+AC   MDATA_0220
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 27477696.
+CC   File: peptide_list_Cancer-Cell-Lines-Lung.tsv
+//
+ID   MassIVE Cancer Cell Lines, Ovary
+AC   MDATA_0224
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24434149.
+DR   PubMed; 26388441.
+DR   PubMed; 27561551.
+CC   File: peptide_list_Cancer-Cell-Lines-Ovary.tsv
+//
+ID   MassIVE Cancer Cell Lines, Skin
+AC   MDATA_0313
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 25175731.
+DR   PubMed; 26742548.
+DR   PubMed; 27402257.
+CC   File: peptide_list_Cancer-Cell-Lines-Skin.tsv
+//
+ID   MassIVE Cancer Cell Lines, Other Anatomical Entities
+AC   MDATA_0221
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 25921289.
+CC   File: peptide_list_Cancer-Cell-Lines-Other-Anatomical-Entities.tsv
+//
+ID   MassIVE Cancer Cell Lines, Other Female Reproductive Organ
+AC   MDATA_0222
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 25100859.
+DR   PubMed; 25159151.
+DR   PubMed; 25218447.
+DR   PubMed; 25230287.
+DR   PubMed; 25257309.
+DR   PubMed; 25360005.
+DR   PubMed; 25827581.
+DR   PubMed; 26073453.
+DR   PubMed; 26259872.
+DR   PubMed; 26278961.
+DR   PubMed; 26439921.
+DR   PubMed; 27134283.
+DR   PubMed; 27267252.
+DR   PubMed; 27560450.
+DR   PubMed; 27561551.
+DR   PubMed; 27871366.
+DR   PubMed; 27913581.
+DR   PubMed; 28003343.
+DR   PubMed; 28112733.
+DR   PubMed; 28117667.
+DR   PubMed; 28134274.
+CC   File: peptide_list_Cancer-Cell-Lines-Other-Female-Reproductive-Organ.tsv
+//

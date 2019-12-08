@@ -1,0 +1,117 @@
+ID   Protein N-terminal acetylated sites in human erythrocytes.
+AC   MDATA_00XX
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+TS   GLOBAL. Blood [TS-0079].
+SP   GLOBAL. Erythrocytes enriched by density gradient centrifugation, lysed and separated
+SP   into three fractions: soluble, soluble with Hb depleted, membrane. Protein denatured,
+SP   reduced and alkylated. Modification of free amines at the whole protein level by
+SP   dimethylation with isotopically heavy formaldehyde (13CD2 in D2O) and sodium
+SP   cyanoborohydride. Protein digestion with either trypsin or GluC (preTAILS samples).
+SP   Internal and C-terminal peptides removal by coupling to a HPG-ALD polymer.
+SP   Purification of in vitro and naturally blocked N-terminal peptides (TAILS samples).
+SP   PreTAILS and TAILS peptides fractionation by Strong Cation eXchange column (SCX).
+IP   GLOBAL. Nanoscale C18 HPLC coupled to LTQ-Orbitrap XL
+IP   spectrometer equipped with a nanoelectrospray source (Thermo Scientific).
+DA   GLOBAL. Protein database: Human UniProt release 2013_04.
+DA   Software: Mascot version 2.3; X!Tandem version not available; MS-GF+ version not
+DA   available.
+DA   Maximum missed cleavages: 3.
+DA   Mass tolerance for parent ion: 15 ppm.
+DA   Mass tolerance for fragment ion: 0.5 Da.
+DA   Fixed modification: Cys carbamidomethylation; Lys heavy dimethylation.
+DA   Variable modifications: Met oxidation; N-terminal acetylation; N-terminal heavy
+DA   dimethylation; conversion of N-terminal Glu to pyroGlu; conversion of N-terminal Gln to
+DA   pyroGlu.
+DA   Peptide FDR <= 0.01. Protein FDR <= 0.007.
+DA   Minimum peptide length: 7.
+DA   Ion mode: Positive.
+DA   Spectra acquisition: 5 most intense precursor ions.
+DA   Spectra recalibration: Lock mass.
+DA   Peptide identifications from individual searches integrated by PeptideProphet and iProphet in Trans Proteomic Pipeline (TPP) version 4.6.
+DP   Alignment of peptides on the human proteome for exact matches.
+DP   Peptides that match more than one entry are tagged 'found in other entries'
+DP   and displayed on each relevant entry.
+DC   GLOBAL. Peptide identification. GOLD: iProphet score > 0.99; Mascot score >= 30.
+DC   GLOBAL. N-terminal acetylation. Within GOLD peptides, all protein N-terminal sites.
+DC   No SILVER.
+DC   GLOBAL. N-terminal Glu to pyroGlu. Within GOLD peptides, all protein N-terminal sites. No SILVER.
+DR   PubMed; 24555563.
+CC   Supplementary data: pr401191w_si_001.xlsx
+CC   Peptide identification. Supplementary Table 4.
+CC   Peptide sequence (Column D); iProphet probability score (Column C); Mascot score (Column U) .
+CC   Protein N-terminal acetylated sites. Supplementary Table 3.
+CC   Modified peptide sequence (Column F); N-terminal acetylation (Column M).
+CC   Protein N-terminal Glu to pyroGlu. Supplementary Table 3.
+CC   Modified peptide sequence (Column F); N-terminal Glu to pyroGlu (Column M).
+CC   Select N-terminal acetylation and Glu -> pyroGlu from Column M in Supplementary
+CC   Table 3.
+CC   Supplementary Table 3 shows N-termini identified by iProphet with FDR < 1% without
+CC   iProphet probability scores.
+//
+ID   N-myristoylation in human cervical cancer cells.
+AC   MDATA_00XX
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+CL   GLOBAL. HeLa [CVCL_0030].
+SP   GLOBAL. HeLa cells were labeled with YnMyr and incubated with NMT inhibitor.
+SP   Cells were then lysed and spiked with non-inhibited YnMyr and SILAC labeled HeLa cell lysates.
+SP   Labeled proteins were captured by CuAAC with AzTB and enriched by affinity beads.
+SP   Enriched protein beads were reduced with DTT, alkylated with iodoacetamide and digested with Trypsin.
+SP   Supernatant containing peptides was then recuperated and processed with reverse phase SPE tips prior to LC-MS/MS.
+IP   GLOBAL. Easy nLC-1000 (Thermo) coupled to Q Exactive (Thermo) with fragmentation by HCD.
+DA   GLOBAL. Protein database: human UniprotKB (July 2013).
+DA   Software: MaxQuant (v1.3.0.5) with Andromeda search engine.
+DA   Maximum missed cleavages: 2.
+DA   Mass tolerance for parent ion: not available.
+DA   Mass tolerance for fragment ion: not available.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modification: Met oxidation.
+DA   Minimum peptide length: 7.
+DA   Site, peptide and protein FDR were all set to 0.01.
+DP   GLOBAL. N-myristoylation sites on YnMyr-modified peptides captured with AzRTB or AzKTB and purified by affinity beads from HeLa cell lysates.
+DP   Exclusion of peptides with peptide score < 100, PEP > 0.01 and delta score < 10.
+DC   LOCAL. GOLD: MaxQuant (Andromeda) score >= 100.
+DC   LOCAL. GOLD: delta score >= 10.
+DR   PubMed; 25255805.
+CC   Minimum peptide length was deduced from supplementary data tables.
+CC   Few MS/MS spectra examples are available in supplementary files, but not deposited.
+CC   Data available in supplementary file "ncomms5919-s3.xlsx", sheet "Sheet2".
+CC   Peptide score (MaxQuant) = column AC and AG, PEP score = column AB and AF, delta score = column AD and AH, Sequence = column AA and AE.
+CC   Remove PTM localization duplicates.
+CC   Originally, data file contains 38 PTM identification peptides.
+CC   After filtration (without region coverage check), 14 GOLD PTM identification peptides remain (ncomms5919-s3_modDBI.xlsx).
+CC   By similarity to N-acetylation, N-myristoylation cannot be in a region covered by: SIGNAL / TRANSIT / TRANSMEM / INTRAMEM.
+//
+ID   Lys-acetylation in human uncapacitated sperm.
+AC   MDATA_00XX
+DM   GLOBAL. Mass spectrometry Nano LC-MS/MS.
+TS   GLOBAL. Sperm cells (TS-0949).
+SP   GLOBAL. Semen samples were treated to remove seminal plasma, immature germ cells and non-sperm cells. Purified sperm cells were then lysed.
+SP   Lysates were reduced with DTT, alkylated with iodoacetamide. The reaction was stopped by adding cysteine.
+SP   After a precipitation step, proteins were digested with Trypsin.
+SP   Peptide mixtures were then incubated with Sepharose beads conjugated with pan-anti-acetyllysine antibody.
+SP   Beads were then washed and enriched peptides eluted prior to nanoLC-MS/MS.
+IP   GLOBAL. Nanoflow LC coupled to Q Exactive MS (Thermo) via nanoelectrospray ion source.
+DA   GLOBAL. Protein database: human protein sequences in UniprotKB (June 2013; 88381 sequences).
+DA   Software: MaxQuant (version 1.3.0.5).
+DA   Maximum missed cleavages: 6.
+DA   Mass tolerance for parent ion: 7 ppm.
+DA   Mass tolerance for fragment ion: 20 ppm.
+DA   Fixed modification: Cys carbamidomethylation.
+DA   Variable modifications: Lys acetylation, Met oxidation and N-terminal acetylation.
+DA   Minimum peptide length: 7.
+DA   Peptide and protein FDR were all set to 0.01.
+DP   GLOBAL. Lys-acetylation sites on peptides purified by affinity beads from sperm cell lysates.
+DP   Exclusion of peptides with peptide score < 100, PEP >= 0.01 and PTM localization probability < 0.95.
+DC   LOCAL. GOLD: MaxQuant (Andromeda) score >= 100.
+DC   LOCAL. GOLD: PEP < 0.01.
+DC   LOCAL. GOLD: PTM localization probability >= 0.99.
+DC   LOCAL. SILVER: PTM localization probability >= 0.95.
+DR   PubMed; 25680958.
+CC   MS/MS spectra are not available.
+CC   Data available in supplementary file "mcp.M114.041384-3.xls", sheet "ac_sites".
+CC   Peptide score (MaxQuant) = column P, PEP = column O, PTM localization probability = column H and S, Sequence = column R.
+CC   Remove PTM localization duplicates.
+CC   Originally, data file contains 973 entries.
+CC   After filtration (without region coverage check), 420 peptides remain with PTM localization: 453 GOLD, 1 SILVER (mcp.M114.041384-3_modDBI.xls).
+CC   Lys-acetylation cannot be in a region covered by: SIGNAL / TRANSIT / TRANSMEM / INTRAMEM.
+//
