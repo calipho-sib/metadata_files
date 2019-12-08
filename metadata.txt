@@ -3018,7 +3018,6 @@ DR   PubMed; 24870542.
 DR   PubMed; 24870543.
 CC   File: peptide_list_Pancreas.tsv
 //
--- *** SEE IF WE KEEP OR MERGE WITH GESTATIONAL STRUCTURE ********
 ID   MassIVE Placenta
 AC   MDATA_0252
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
@@ -3026,7 +3025,6 @@ TS   GLOBAL. Placenta [TS-0799]
 DC   GLOBAL. GOLD: All peptides.
 DR   PubMed; 24870543.
 CC   File: peptide_list_Placenta.tsv
--- **************************************************************
 //
 ID   MassIVE Skin
 AC   MDATA_0304
