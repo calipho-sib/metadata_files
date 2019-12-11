@@ -2891,7 +2891,7 @@ DR   PubMed; 26772903.
 DR   PubMed; 28007936.
 CC   File: peptide_list_Blood-Plasma.tsv
 //
-ID   MassIVE Blood vessel
+ID   MassIVE Blood Vessel
 AC   MDATA_0301
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 TS   GLOBAL. Blood vessel [TS-0080].
@@ -2951,7 +2951,7 @@ DR   PubMed; 24870542.
 DR   PubMed; 27193151.
 CC   File: peptide_list_Eye.tsv
 //
-ID   MassIVE Other gestational structure
+ID   MassIVE Other Gestational Structure
 AC   MDATA_0303
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 TS   GLOBAL. Gestational structure [TS-2092].
@@ -3166,7 +3166,7 @@ DR   PubMed; 28132834.
 DR   PubMed; 28258195.
 CC   File: peptide_list_Non-Cancer-Cell-Lines.tsv
 //
-ID   MassIVE Cancer, Blood cells
+ID   MassIVE Cancer, Blood Cells
 AC   MDATA_0307
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 TS   GLOBAL. Hematopoietic and Lymphoid Cell Neoplasm [NCIt; C27134].
@@ -3192,7 +3192,7 @@ DR   PubMed; 26374642.
 DR   PubMed; 27135363.
 CC   File: peptide_list_Cancer-Breast.tsv
 //
-ID   MassIVE Cancer, Digestive system
+ID   MassIVE Cancer, Digestive System
 AC   MDATA_0309
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 TS   GLOBAL. Digestive System Carcinoma [NCIt; C96963].
