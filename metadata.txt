@@ -3061,7 +3061,7 @@ DR   PubMed; 24870542.
 DR   PubMed; 24870543.
 CC   File: peptide_list_Testis.tsv
 //
-ID   MassIVE Thyroid gland
+ID   MassIVE Thyroid Gland
 AC   MDATA_0306
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 TS   GLOBAL. Thyroid [TS-1047].
