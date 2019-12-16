@@ -2152,10 +2152,10 @@ DR   PubMed; 30777892.
 CC   PeptideAtlas sampleID(s): 9454; 9456; 9455; 9532; 10194.
 CC   File: peptide_list_Adrenal-Gland.tsv
 //
-ID   PeptideAtlas Alimentary System
+ID   PeptideAtlas Digestive System
 AC   MDATA_0137
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
-TS   GLOBAL. Alimentary system [TS-1293].
+TS   GLOBAL. Digestive system [TS-1293].
 DC   GLOBAL. GOLD: All peptides.
 DR   PubMed; 24669763.
 DR   PubMed; 24870543.
@@ -2262,7 +2262,7 @@ DR   PubMed; 27135363.
 CC   PeptideAtlas sampleID(s): 6434; 10086; 10087.
 CC   File: peptide_list_Breast.tsv
 //
-ID   PeptideAtlas Cancer Cell Lines, Alimentary System
+ID   PeptideAtlas Cancer Cell Lines, Digestive System
 AC   MDATA_0117
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
@@ -2458,7 +2458,7 @@ DR   PubMed; 27554326.
 CC   PeptideAtlas sampleID(s): 8915.
 CC   File: peptide_list_Cancer-Cell-Lines-Urinary-Bladder.tsv
 //
-ID   PeptideAtlas Cancer, Alimentary System
+ID   PeptideAtlas Cancer, Digestive System
 AC   MDATA_0128
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 TS   GLOBAL. Malignant Digestive System Neoplasm [NCIt; C4890].
@@ -2832,7 +2832,7 @@ DR   PubMed; 30777892.
 CC   PeptideAtlas sampleID(s): 8596; 8597; 8888; 8889; 8890; 8891; 8892; 8893; 9192; 9194; 9195; 9309; 9310; 9321; 9322; 9323; 9513; 9514; 9530; 9531; 9579; 9580; 9581; 9582; 10220.
 CC   File: peptide_list_Testis.tsv
 //
-ID   PeptideAtlas Thyroid
+ID   PeptideAtlas Thyroid Gland
 AC   MDATA_0156
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 TS   GLOBAL. Thyroid [TS-1047].
@@ -3032,7 +3032,7 @@ CC   File: peptide_list_Cerebrospinal-Fluid.tsv
 ID   MassIVE Digestive System
 AC   MDATA_0302
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
-TS   GLOBAL. Alimentary system [TS-1293].
+TS   GLOBAL. Digestive system [TS-1293].
 DC   GLOBAL. GOLD: All peptides.
 DR   PubMed; 24870542.
 DR   PubMed; 24870543.
