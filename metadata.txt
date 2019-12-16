@@ -2795,7 +2795,7 @@ DR   PubMed; 30777892.
 CC   PeptideAtlas sampleID(s): 6483; 6651; 9292; 9315; 9401; 9528; 9529; 9559; 9560; 9561; 9562; 10213.
 CC   File: peptide_list_Placenta.tsv
 //
-ID   PeptideAtlas Sperm cell
+ID   PeptideAtlas Sperm
 AC   MDATA_0153
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 TS   GLOBAL. Sperm cell [TS-2046]
