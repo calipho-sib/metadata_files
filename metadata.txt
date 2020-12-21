@@ -3484,7 +3484,7 @@ TS   GLOBAL. Olfactory system [TS-2542].
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
 DR   PubMed; 30113170.
-CC   File: peptide_list_Olfactory-System.tsv
+CC   File: peptide_list_Olfactory-system.tsv
 //
 ID   MassIVE Pituitary Gland
 AC   MDATA_0404
