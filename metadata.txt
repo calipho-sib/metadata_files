@@ -3390,7 +3390,7 @@ DR   PubMed; 25913743.
 DR   PubMed; 27526785.
 DR   PubMed; 27987026.
 DR   PubMed; 28071820.
-CC   File: peptide_list_Cancer_Cell_Lines_Digestive_System.tsv
+CC   File: peptide_list_Cancer-Cell-Lines-Digestive-System.tsv
 //
 ID   MassIVE Cancer Cell Lines, Liver
 AC   MDATA_0219
