@@ -57,7 +57,7 @@ DR   X-reference(s) to other database (PubMed, ...)
 CC   Comments
 //
 
-AN   Next free AC: MDATA_0401
+AN   Next free AC: MDATA_0405
 __________________________________________________________________________________________
 //
 ID   DKFZ GFP-cDNA localisation project.
@@ -3460,4 +3460,38 @@ DR   PubMed; 28112733.
 DR   PubMed; 28117667.
 DR   PubMed; 28134274.
 CC   File: peptide_list_Cancer-Cell-Lines-Other-Female-Reproductive-Organ.tsv
+//
+ID   MassIVE Bone
+AC   MDATA_0401
+TS   GLOBAL. Bone [TS-0088].
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 30777892.
+CC   File: peptide_list_Bone.tsv
+//
+ID   MassIVE Muscle
+AC   MDATA_0402
+TS   GLOBAL. Muscle organ [TS-2594].
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 30777892.
+DR   PubMed; 32916130. 
+CC   File: peptide_list_Muscle.tsv
+//
+ID   MassIVE Olfactory System
+AC   MDATA_0403
+TS   GLOBAL. Olfactory system [TS-2542].
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 30113170.
+CC   File: peptide_list_Olfactory-System.tsv
+//
+ID   MassIVE Pituitary Gland
+AC   MDATA_0404
+TS   GLOBAL. Pituitary gland [TS-0798].
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 30777892.
+DR   PubMed; 32916130.
+CC   File: peptide_list_Pituitary-Gland.tsv
 //
