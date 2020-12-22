@@ -3471,7 +3471,7 @@ CC   File: peptide_list_Bone.tsv
 //
 ID   MassIVE Muscle
 AC   MDATA_0402
-TS   GLOBAL. Muscle organ [TS-2594].
+TS   GLOBAL. Muscle tissue [TS-0642].
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
 DR   PubMed; 30777892.
