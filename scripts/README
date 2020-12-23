@@ -1,4 +1,30 @@
-This directory contains scripts for updating the metadata.txt records related to PeptideAtlas sets
+This directory contains scripts for updating the metadata.txt records related to PeptideAtlas and MassIVE sets
+
+--------------------
+For MassIVE
+--------------------
+1) get_massive_fnames_from_metadata.py
+
+This scripts reads ../metadata.txt and extracts the name of the files in CC lines of MassIVE sets.
+It is useful to use it to compare the files expected by metadata and those delivered by MassIVE in their new data folder
+Ti be used for adding / updating records in metadata.txt (add missing MDATA records / modify CC lines for MassIVE sets)
+
+2) rewrite_massive_metadata.py
+
+This script needs 2 input files in this folder:
+
+- metadata.txt    : a fresh copy of ../metadata.txt
+- experiments.tsv : the 6 columns file provided with the new data from MassIVE descibing samples and sets
+
+The script reads experiments.tsv to build a dictionary associating set name and its related pubmed ids.
+Based on this dictionary, the scripts writes a new file metadata.new by rewriting all the lines of the input file metadata.txt
+except the DR lines of MassIVE sets which are modified according to the dictionary associating data sets and pubmed ids.
+
+Output: metadata.new
+
+--------------------
+For PeptideAtlas
+--------------------
 
 The process will update 
 - DR lines : update the pubmed list of every PeptideAtlas set
