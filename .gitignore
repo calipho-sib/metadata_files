@@ -18,3 +18,7 @@ pam
 metadata-for-lydie_done.txt
 metadata-for-lydie.txt
 metadata-before-peptide-atlas.txt
+metadata.txt.20201221
+scripts/*.swp
+scripts/massive_experiments.txt
+scripts/metadata.new
