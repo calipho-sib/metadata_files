@@ -5,7 +5,7 @@
 
 Description: List of metadata
 Name:        METADATA.TXT
-Release:     23-Dec-2020
+Release:     05-Jan-2021
 
 ----------------------------------------------------------------------------
 
@@ -57,7 +57,7 @@ DR   X-reference(s) to other database (PubMed, ...)
 CC   Comments
 //
 
-AN   Next free AC: MDATA_0405
+AN   Next free AC: MDATA_0407
 __________________________________________________________________________________________
 //
 ID   DKFZ GFP-cDNA localisation project.
@@ -3576,4 +3576,21 @@ DC   GLOBAL. GOLD: All peptides.
 DR   PubMed; 30777892.
 DR   PubMed; 32916130.
 CC   File: peptide_list_Pituitary-Gland.tsv
+//
+ID   PeptideAtlas Cancer, Adrenal Gland
+AC   MDATA_0405
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Malignant Adrenal Gland Neoplasm [NCIt; C9338].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24248375.
+CC   PeptideAtlas sampleID(s): 10431.
+CC   File: peptide_list_Cancer-Adrenal-Gland.tsv
+//
+ID   PeptideAtlas Cancer and Non Cancer Cell Lines
+AC   MDATA_0406
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 32456206.
+CC   PeptideAtlas sampleID(s): 11047.
+CC   File: peptide_list_Cancer-and-Non-Cancer-Cell-Lines.tsv
 //
