@@ -101,9 +101,12 @@ sub getMdata {
     if (substr($el, 0, 2) eq 'AC') {
       my $key = substr($el,5);
       $key =~ s/\r\n//;     
+      print "looking for info about $key \n";
       if (exists $mdata_samples{$key}) {
+        print "returning $key \n";
         return $key;
       } else {
+        print "returning undef \n";
         return undef;
       }
     }
@@ -117,8 +120,9 @@ sub update_record {
   my @new_rec = (); 
  
   my $mdata = getMdata($rec_ref);
+  
   if (defined $mdata) {
-    print " ------ $mdata ------\n";
+    print " ------ found mdata for $mdata ------\n";
     my $DRtodo = 1;
     foreach my $el (@$rec_ref) {
       print $el;
@@ -134,7 +138,7 @@ sub update_record {
       }
     }
   } else {
-    print " ------ undefined mdata ------\n";
+    print " ------ undefined mdata  ------\n";
     foreach my $el (@$rec_ref) {
       print $el;
      push @new_rec, $el;
@@ -153,7 +157,7 @@ sub showRec {
 
 
 load_Mdata_Samples();
-#showMdataSamples();
+showMdataSamples();
 load_Mdata_Pmids();
 #showMdataPmids();
 readMetadata();

@@ -35,7 +35,7 @@ def rewrite_metadata():
   print('INFO', 'Rewriting metadata.txt in metadata.new') 
 
   f_in=open('metadata.txt')
-  f_out=open('metadata.new','w')
+  f_out=open('metadata.massive.new','w')
   massive_id = None
   massive_cc_line = None
   while True:
