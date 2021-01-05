@@ -25,3 +25,4 @@ scripts/metadata.new
 Hs_All_sample.tsv
 scripts/metadata.peptide_atlas.new
 scripts/metadata.txt
+samples.tsv
