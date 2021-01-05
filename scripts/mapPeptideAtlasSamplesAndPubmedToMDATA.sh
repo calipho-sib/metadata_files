@@ -1,6 +1,6 @@
 IFS=$'\n'       # make newlines the only separator, it is recomended to unset after
 
-cut -f1,3,5 Hs_All_sample_2019.tsv > samples.tsv
+cut -f1,3,5 Hs_All_sample.tsv > samples.tsv
 
 rm -f tmp_mdata_spl.tsv tmp_mdata_pmid.tsv
 rm -f mdata_spl.tsv mdata_pmid.tsv
@@ -11,8 +11,8 @@ for line in `cat  PeptideAtlas.mapinfo` ; do
   MDATA=$(echo $line|cut -d "=" -f 2)
   echo "building mdata - sample pairs for $MDATA - $samplename"
   pattern="$(printf '\t%s\t' $samplename)"
-  matches=$(grep "$pattern" samples.tsv | cut -f 1)
-  #echo "matches: $matches"
+  matches=$(grep -i "$pattern" samples.tsv | cut -f 1)
+  echo "$MDATA $samplename matches: $matches"
   for match in $matches; do
   	echo -e "$MDATA\t$match" >> tmp_mdata_spl.tsv
   done
@@ -29,7 +29,7 @@ for line in `cat  PeptideAtlas.mapinfo` ; do
   MDATA=$(echo $line|cut -d "=" -f 2)
   echo "building mdata - pmid  pairs for $MDATA - $samplename"
   pattern="$(printf '\t%s\t' $samplename)"
-  matches=$(grep "$pattern" samples.tsv | cut -f 3)
+  matches=$(grep -i "$pattern" samples.tsv | cut -f 3)
   #echo "matches: $matches"
   for match in $matches; do
         echo -e "$MDATA\t$match" >> tmp_mdata_pmid.tsv
