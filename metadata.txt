@@ -2480,7 +2480,7 @@ TS   GLOBAL. Malignant Brain Neoplasm [NCIt; C3568].
 DC   GLOBAL. GOLD: All peptides.
 DR   PubMed; 25325876.
 CC   PeptideAtlas sampleID(s): 8362.
-CC   File; peptide_list_Cancer-Brain.tsv
+CC   File: peptide_list_Cancer-Brain.tsv
 //
 ID   PeptideAtlas Cancer, Breast
 AC   MDATA_0127
