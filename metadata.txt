@@ -5,7 +5,7 @@
 
 Description: List of metadata
 Name:        METADATA.TXT
-Release:     05-Jan-2021
+Release:     17-Sep-2021
 
 ----------------------------------------------------------------------------
 
@@ -57,7 +57,7 @@ DR   X-reference(s) to other database (PubMed, ...)
 CC   Comments
 //
 
-AN   Next free AC: MDATA_0407
+AN   Next free AC: MDATA_0409
 __________________________________________________________________________________________
 //
 ID   DKFZ GFP-cDNA localisation project.
@@ -3671,4 +3671,14 @@ DC   GLOBAL. GOLD: All peptides.
 DR   PubMed; 32456206.
 CC   PeptideAtlas sampleID(s): 11047.
 CC   File: peptide_list_Cancer-and-Non-Cancer-Cell-Lines.tsv
+//
+ID   BioEditor
+AC   MDATA_0407
+DE   Annotations inserted into the BioEditor by Calipho curators
+CC   Defined to allow usage of experimental contexts
+//
+ID   Cellosausus
+AC   MDATA_0408
+DE   Annotations retrieved from the Cellosaurus knowledge base
+CC   Defined to allow usage of experimental contexts
 //
