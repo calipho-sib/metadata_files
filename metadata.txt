@@ -3785,15 +3785,6 @@ AC   MDATA_0408
 DE   Annotations retrieved from the Cellosaurus knowledge base
 CC   Defined to allow usage of experimental contexts
 //
-ID   PeptideAtlas Cancer, Other Female Reproductive Organ
-AC   MDATA_0409
-DM   GLOBAL. Mass spectrometry LC-MS/MS.
-DI   GLOBAL. Malignant Neoplasm [NCIt; C9305].
-DC   GLOBAL. GOLD: All peptides.
-DR   PubMed; 31848261.
-CC   PeptideAtlas sampleID(s): 11529; 11530; 11531; 11649.
-CC   File: peptide_list_Cancer-Other-Female-Reproductive-Organ.tsv
-//
 ID   PeptideAtlas Muscle
 AC   MDATA_0410
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
