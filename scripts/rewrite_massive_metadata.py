@@ -13,7 +13,7 @@ def build_name_pmids_dict():
     pmid  = fields[5].strip()
     # print(num, names, pmid)
     if not pmid.isdigit():
-      print('WARN', 'line', num, 'pmid is not a number', names, pmid)
+      print('WARN', 'line', num, 'pmid is not a number', 'names:',names, 'pmid:', pmid)
       continue
     for name in names:
       std_name = get_std_name(name)
