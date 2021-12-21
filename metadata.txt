@@ -3696,7 +3696,7 @@ CC   File: peptide_list_Muscle.tsv
 ID   MassIVE Cancer, Brain
 AC   MDATA_0411
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
-TS   GLOBAL. Malignant Bone Neoplasm [NCIt; C4016].
+TS   GLOBAL. Malignant Brain Neoplasm [NCIt; C3568].
 DC   GLOBAL. GOLD: All peptides.
 CC   File: peptide_list_Cancer-Brain.tsv
 //
@@ -3714,18 +3714,21 @@ CC   File: peptide_list_Cancer-Cell-Lines-Other-Gestational-Structure.tsv
 //
 ID   MassIVE Cancer, Kidney
 AC   MDATA_0414
+TS   GLOBAL. Malignant Kidney Neoplasm [NCIt; C7548].
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
 CC   File: peptide_list_Cancer-Kindey.tsv
 //
 ID   MassIVE Cancer, Liver
 AC   MDATA_0415
+TS   GLOBAL. Malignant Hepatobiliary Neoplasm [NCIt; C8609].
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
 CC   File: peptide_list_Cancer-Liver.tsv
 //
 ID   MassIVE Cancer, Urinary Bladder
 AC   MDATA_0416
+TS   GLOBAL. Malignant Bladder Neoplasm [NCIt; C9334].
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
 DR   PubMed; 28960076.
@@ -3733,6 +3736,7 @@ CC   File: peptide_list_Cancer-Urinary-Bladder.tsv
 //
 ID   MassIVE Oocyte
 AC   MDATA_0417
+TS   GLOBAL. Oocyte [TS-0711].
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
 CC   File: peptide_list_Oocyte.tsv
