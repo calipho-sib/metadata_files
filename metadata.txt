@@ -5,7 +5,7 @@
 
 Description: List of metadata
 Name:        METADATA.TXT
-Release:     15-Dec-2021
+Release:     19-Dec-2022
 
 ----------------------------------------------------------------------------
 
@@ -57,7 +57,7 @@ DR   X-reference(s) to other database (PubMed, ...)
 CC   Comments
 //
 
-AN   Next free AC: MDATA_0418
+AN   Next free AC: MDATA_0420
 __________________________________________________________________________________________
 //
 ID   DKFZ GFP-cDNA localisation project.
@@ -3740,4 +3740,25 @@ TS   GLOBAL. Oocyte [TS-0711].
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
 CC   File: peptide_list_Oocyte.tsv
+//
+ID   PeptideAtlas Blood Vessel
+AC   MDATA_0418
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Blood Vessel [TS-0080].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24870543.
+DR   PubMed; 27025457.
+DR   PubMed; 32602849.
+DR   PubMed; 33154365.
+CC   PeptideAtlas sampleID(s): 9229; 9230; 9231; 9232; 9233; 9234; 9574; 11656; 11663; 11664.
+CC   File: peptide_list_Blood_Vessel.tsv
+//
+ID   PeptideAtlas Cancer, Blood Cells
+AC   MDATA_0419
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+TS   GLOBAL. Malignant Adrenal Gland Neoplasm [NCIt; C9338].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24248375.
+CC   PeptideAtlas sampleID(s): 10431.
+CC   File: peptide_list_Cancer-Blood-Cells.tsv
 //
