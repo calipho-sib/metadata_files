@@ -5,7 +5,7 @@
 
 Description: List of metadata
 Name:        METADATA.TXT
-Release:     19-Dec-2022
+Release:     20-Dec-2022
 
 ----------------------------------------------------------------------------
 
@@ -57,7 +57,7 @@ DR   X-reference(s) to other database (PubMed, ...)
 CC   Comments
 //
 
-AN   Next free AC: MDATA_0420
+AN   Next free AC: MDATA_0422
 __________________________________________________________________________________________
 //
 ID   DKFZ GFP-cDNA localisation project.
@@ -3756,9 +3756,26 @@ CC   File: peptide_list_Blood_Vessel.tsv
 ID   PeptideAtlas Cancer, Blood Cells
 AC   MDATA_0419
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
-TS   GLOBAL. Malignant Adrenal Gland Neoplasm [NCIt; C9338].
+DI   GLOBAL. B Acute Lymphoblastic Leukemia [NCIt; C8644].
 DC   GLOBAL. GOLD: All peptides.
 DR   PubMed; 24248375.
 CC   PeptideAtlas sampleID(s): 10431.
 CC   File: peptide_list_Cancer-Blood-Cells.tsv
+//
+ID   PeptideAtlas Cancer Cell Lines, Breast or Non Cancer Cell Lines
+AC   MDATA_0420
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 34010456.
+CC   PeptideAtlas sampleID(s): 8491; 8883; 8884; 8885; 8886; 8911; 9202; 9295; 9296; 9326; 9327; 9391; 9550; 9551; 9707; 9729; 9731; 9733; 9735; 9737; 9741; 9817; 9818; 9819; 9820; 9821; 9822; 9823; 10080; 10081; 10082; 10088; 10163; 10179; 10404; 10405; 10406; 10407; 10428; 11063; 11584; 11585; 11609; 11610; 11611; 11667.
+CC   File: peptide_list_Cancer-Cell-Lines-Breast.tsv
+//
+ID   PeptideAtlas Cancer Cell Lines, Other Anatomical Entities or Cancer Blood Cells
+AC   MDATA_0421
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DI   GLOBAL. Mantle Cell Lymphoma [NCIt; C4337].
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 31519768.
+CC   PeptideAtlas sampleID(s): 6462; 6465; 8492; 9306; 9339; 9379; 9380; 9381; 9382; 9383; 9384; 9385; 9402; 9721; 9722; 9727; 9739; 10180; 10181; 10182; 10183; 10184; 10185; 10186; 10187; 10188; 10189; 10190; 10191; 10192; 10349; 11071; 11513; 11514; 11515; 11594; 11595; 11618; 11619; 11631.
+CC   File: peptide_list_Cancer-Cell-Lines-Other-Anatomical-Entities.tsv
 //
