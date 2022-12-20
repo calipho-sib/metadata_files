@@ -3756,7 +3756,7 @@ CC   File: peptide_list_Blood_Vessel.tsv
 ID   PeptideAtlas Cancer, Blood Cells
 AC   MDATA_0419
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
-TS   GLOBAL. Malignant Adrenal Gland Neoplasm [NCIt; C9338].
+DI   GLOBAL. B Acute Lymphoblastic Leukemia [NCIt; C8644].
 DC   GLOBAL. GOLD: All peptides.
 DR   PubMed; 24248375.
 CC   PeptideAtlas sampleID(s): 10431.
