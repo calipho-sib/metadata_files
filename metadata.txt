@@ -5,7 +5,7 @@
 
 Description: List of metadata
 Name:        METADATA.TXT
-Release:     20-Dec-2022
+Release:     21-Dec-2022
 
 ----------------------------------------------------------------------------
 
@@ -3862,13 +3862,14 @@ DR   PubMed; 33858848.
 CC   PeptideAtlas sampleID(s): 14506.
 CC   File: peptide_list_Blood_Vessel.tsv
 //
-ID   PeptideAtlas Cancer, Blood Cells
+ID   PeptideAtlas Cancer, Hematopoietic and Immune System
 AC   MDATA_0419
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DI   GLOBAL. B Acute Lymphoblastic Leukemia [NCIt; C8644].
 DC   GLOBAL. GOLD: All peptides.
 DR   PubMed; 29508533.
-CC   PeptideAtlas sampleID(s): 14507; 14535.
+DR   PubMed; 28329770.
+CC   PeptideAtlas sampleID(s): 14507; 14535; 14524; 14551.
 CC   File: peptide_list_Cancer-Blood-Cells.tsv
 //
 ID   PeptideAtlas Cancer Cell Lines, Breast or Non Cancer Cell Lines
@@ -3876,11 +3877,4 @@ AC   MDATA_0420
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
 CC   File: peptide_list_Cancer-Cell-Lines-Breast.tsv
-//
-ID   PeptideAtlas Cancer Cell Lines, Other Anatomical Entities or Cancer Blood Cells
-AC   MDATA_0421
-DM   GLOBAL. Mass spectrometry LC-MS/MS.
-DI   GLOBAL. Mantle Cell Lymphoma [NCIt; C4337].
-DC   GLOBAL. GOLD: All peptides.
-CC   File: peptide_list_Cancer-Cell-Lines-Other-Anatomical-Entities.tsv
 //
