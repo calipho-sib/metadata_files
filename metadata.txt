@@ -57,7 +57,7 @@ DR   X-reference(s) to other database (PubMed, ...)
 CC   Comments
 //
 
-AN   Next free AC: MDATA_0422
+AN   Next free AC: MDATA_0423
 __________________________________________________________________________________________
 //
 ID   DKFZ GFP-cDNA localisation project.
@@ -3877,4 +3877,11 @@ AC   MDATA_0420
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
 CC   File: peptide_list_Cancer-Cell-Lines-Breast.tsv
+//
+ID   MassIVE Cancer Cell Lines, Other Male Reproductive Organ
+AC   MDATA_0422
+DM   GLOBAL. Mass spectrometry LC-MS/MS.
+DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 27561551.
+CC   File: peptide_list_Cancer-Cell-Lines-Other-Male-Reproductive-Organ.tsv
 //
