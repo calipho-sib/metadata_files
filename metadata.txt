@@ -3872,9 +3872,3 @@ DR   PubMed; 28329770.
 CC   PeptideAtlas sampleID(s): 14507; 14535; 14524; 14551.
 CC   File: peptide_list_Cancer-Blood-Cells.tsv
 //
-ID   PeptideAtlas Cancer Cell Lines, Breast or Non Cancer Cell Lines
-AC   MDATA_0420
-DM   GLOBAL. Mass spectrometry LC-MS/MS.
-DC   GLOBAL. GOLD: All peptides.
-CC   File: peptide_list_Cancer-Cell-Lines-Breast.tsv
-//
