@@ -3273,6 +3273,7 @@ DR   PubMed; 27723984.
 DR   PubMed; 28117396.
 DR   PubMed; 28123004.
 DR   PubMed; 28196878.
+DR   PubMed; 33154365.
 CC   File: peptide_list_Blood-Cells.tsv
 //
 ID   MassIVE Blood Plasma
@@ -3309,8 +3310,10 @@ DR   PubMed; 24669763.
 DR   PubMed; 24870543.
 DR   PubMed; 26892330.
 DR   PubMed; 28949146.
+DR   PubMed; 30735395.
 DR   PubMed; 30777892.
 DR   PubMed; 32916130.
+DR   PubMed; 33188775.
 CC   File: peptide_list_Brain.tsv
 //
 ID   MassIVE Breast
@@ -3400,6 +3403,7 @@ TS   LOCAL. Liver [TS-0564].
 DC   GLOBAL. GOLD: All peptides.
 DR   PubMed; 24669763.
 DR   PubMed; 24870543.
+DR   PubMed; 26825538.
 DR   PubMed; 28601559.
 DR   PubMed; 30777892.
 DR   PubMed; 32916130.
@@ -3410,7 +3414,10 @@ AC   MDATA_0242
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 TS   GLOBAL. Lung [TS-0568].
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24274035.
 DR   PubMed; 24669763.
+DR   PubMed; 27799870.
+DR   PubMed; 28195392.
 DR   PubMed; 30777892.
 DR   PubMed; 32916130.
 CC   File: peptide_list_Lung.tsv
@@ -3457,6 +3464,7 @@ DR   PubMed; 24870543.
 DR   PubMed; 27025457.
 DR   PubMed; 28208246.
 DR   PubMed; 32916130.
+DR   PubMed; 33154365.
 CC   File: peptide_list_Skin.tsv
 //
 ID   MassIVE Sperm
@@ -3554,6 +3562,7 @@ DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
 DR   PubMed; 24870543.
 DR   PubMed; 26654049.
+DR   PubMed; 27561551.
 DR   PubMed; 30777892.
 DR   PubMed; 32916130.
 CC   File: peptide_list_Other-Female-Reproductive-Organ.tsv
@@ -3564,6 +3573,7 @@ DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
 DR   PubMed; 24669763.
 DR   PubMed; 24870543.
+DR   PubMed; 26651926.
 DR   PubMed; 28601559.
 DR   PubMed; 30777892.
 DR   PubMed; 32916130.
@@ -3603,9 +3613,11 @@ DR   PubMed; 27561551.
 DR   PubMed; 27577262.
 DR   PubMed; 27604873.
 DR   PubMed; 27720452.
+DR   PubMed; 27794609.
 DR   PubMed; 28132834.
 DR   PubMed; 28258195.
 DR   PubMed; 28601559.
+DR   PubMed; 30172843.
 CC   File: peptide_list_Non-Cancer-Cell-Lines.tsv
 //
 ID   MassIVE Cancer, Blood Cells
@@ -3613,6 +3625,8 @@ AC   MDATA_0307
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 TS   GLOBAL. Hematopoietic and Lymphoid Cell Neoplasm [NCIt; C27134].
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 26311899.
+DR   PubMed; 26801919.
 CC   File: peptide_list_Cancer-Blood-Cells.tsv
 //
 ID   MassIVE Cancer, Bone
@@ -3627,7 +3641,11 @@ AC   MDATA_0227
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 TS   GLOBAL. Malignant Breast Neoplasm [NCIt; C9335].
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 23000897.
+DR   PubMed; 25238572.
+DR   PubMed; 26374642.
 DR   PubMed; 27135363.
+DR   PubMed; 27251275.
 CC   File: peptide_list_Cancer-Breast.tsv
 //
 ID   MassIVE Cancer, Digestive System
@@ -3635,7 +3653,10 @@ AC   MDATA_0309
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 TS   GLOBAL. Digestive System Carcinoma [NCIt; C96963].
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 26245529.
+DR   PubMed; 27801565.
 DR   PubMed; 28960076.
+DR   PubMed; 29101300.
 CC   File: peptide_list_Cancer-Digestive-System.tsv
 //
 ID   MassIVE Cancer, Lung
@@ -3643,6 +3664,9 @@ AC   MDATA_0231
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 TS   GLOBAL. Malignant Lung Neoplasm [NCIt; C7377].
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24274035.
+DR   PubMed; 27799870.
+DR   PubMed; 28195392.
 CC   File: peptide_list_Cancer-Lung.tsv
 //
 ID   MassIVE Cancer, Ovary
@@ -3658,6 +3682,8 @@ AC   MDATA_0310
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 TS   GLOBAL. Malignant Skin Neoplasm [NCIt; C2920].
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 25874936.
+DR   PubMed; 27869121.
 CC   File: peptide_list_Cancer-Skin.tsv
 //
 ID   MassIVE Cancer, Other Male Reproductive Organ
@@ -3665,73 +3691,157 @@ AC   MDATA_0233
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DI   GLOBAL. Malignant Neoplasm [NCIt; C9305].
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 26651926.
+DR   PubMed; 27499020.
 CC   File: peptide_list_Cancer-Other-Male-Reproductive-Organ.tsv
 //
 ID   MassIVE Cancer Cell Lines, Blood
 AC   MDATA_0214
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 23266961.
+DR   PubMed; 24138474.
+DR   PubMed; 24816145.
+DR   PubMed; 25142963.
+DR   PubMed; 26216070.
+DR   PubMed; 27067055.
+DR   PubMed; 28064214.
+DR   PubMed; 29474001.
+DR   PubMed; 31959955.
 CC   File: peptide_list_Cancer-Cell-Lines-Blood.tsv
 //
 ID   MassIVE Cancer Cell Lines, Bone
 AC   MDATA_0311
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 23242552.
+DR   PubMed; 25555159.
+DR   PubMed; 25755297.
+DR   PubMed; 26572502.
+DR   PubMed; 26852163.
+DR   PubMed; 27040163.
+DR   PubMed; 27128805.
+DR   PubMed; 27494197.
+DR   PubMed; 28112733.
+DR   PubMed; 30659192.
 CC   File: peptide_list_Cancer-Cell-Lines-Bone.tsv
 //
 ID   MassIVE Cancer Cell Lines, Brain
 AC   MDATA_0215
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 25890253.
+DR   PubMed; 27412690.
+DR   PubMed; 30609389.
 CC   File: peptide_list_Cancer-Cell-Lines-Brain.tsv
 //
 ID   MassIVE Cancer Cell Lines, Breast
 AC   MDATA_0216
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24138474.
+DR   PubMed; 25238572.
+DR   PubMed; 25825992.
+DR   PubMed; 26017313.
+DR   PubMed; 27135363.
+DR   PubMed; 27794609.
+DR   PubMed; 27976581.
+DR   PubMed; 28601559.
+DR   PubMed; 30609389.
+DR   PubMed; 31959955.
 CC   File: peptide_list_Cancer-Cell-Lines-Breast.tsv
 //
 ID   MassIVE Cancer Cell Lines, Digestive System
 AC   MDATA_0312
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 25841592.
+DR   PubMed; 25890253.
+DR   PubMed; 25913743.
+DR   PubMed; 27526785.
+DR   PubMed; 27987026.
+DR   PubMed; 28071820.
+DR   PubMed; 28601559.
+DR   PubMed; 29101300.
+DR   PubMed; 31773964.
 CC   File: peptide_list_Cancer-Cell-Lines-Digestive-System.tsv
 //
 ID   MassIVE Cancer Cell Lines, Liver
 AC   MDATA_0219
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24328083.
+DR   PubMed; 25265333.
+DR   PubMed; 26108252.
+DR   PubMed; 26144840.
+DR   PubMed; 26825538.
+DR   PubMed; 27470094.
+DR   PubMed; 31773964.
 CC   File: peptide_list_Cancer-Cell-Lines-Liver.tsv
 //
 ID   MassIVE Cancer Cell Lines, Lung
 AC   MDATA_0220
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 26108252.
+DR   PubMed; 27477696.
+DR   PubMed; 28601559.
+DR   PubMed; 30609389.
 CC   File: peptide_list_Cancer-Cell-Lines-Lung.tsv
 //
 ID   MassIVE Cancer Cell Lines, Ovary
 AC   MDATA_0224
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24434149.
+DR   PubMed; 26388441.
+DR   PubMed; 27561551.
 CC   File: peptide_list_Cancer-Cell-Lines-Ovary.tsv
 //
 ID   MassIVE Cancer Cell Lines, Skin
 AC   MDATA_0313
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 26742548.
+DR   PubMed; 27402257.
+DR   PubMed; 30609389.
 CC   File: peptide_list_Cancer-Cell-Lines-Skin.tsv
 //
 ID   MassIVE Cancer Cell Lines, Other Anatomical Entities
 AC   MDATA_0221
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 25921289.
+DR   PubMed; 28601559.
 CC   File: peptide_list_Cancer-Cell-Lines-Other-Anatomical-Entities.tsv
 //
 ID   MassIVE Cancer Cell Lines, Other Female Reproductive Organ
 AC   MDATA_0222
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 24696503.
+DR   PubMed; 25100859.
+DR   PubMed; 25159151.
+DR   PubMed; 25218447.
+DR   PubMed; 25230287.
+DR   PubMed; 25257309.
+DR   PubMed; 25360005.
+DR   PubMed; 25827581.
+DR   PubMed; 26073453.
+DR   PubMed; 26259872.
+DR   PubMed; 26278961.
+DR   PubMed; 26439921.
+DR   PubMed; 27267252.
+DR   PubMed; 27560450.
 DR   PubMed; 27561551.
+DR   PubMed; 27871366.
+DR   PubMed; 27913581.
+DR   PubMed; 28003343.
+DR   PubMed; 28112733.
+DR   PubMed; 28117667.
+DR   PubMed; 28134274.
+DR   PubMed; 28601559.
+DR   PubMed; 31773964.
 CC   File: peptide_list_Cancer-Cell-Lines-Other-Female-Reproductive-Organ.tsv
 //
 ID   MassIVE Bone
@@ -3816,12 +3926,15 @@ ID   MassIVE Cancer Cell Lines, Colon
 AC   MDATA_0412
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 28861940.
+DR   PubMed; 31959955.
 CC   File: peptide_list_Cancer-Cell-Lines-Colon.tsv
 //
 ID   MassIVE Cancer Cell Lines, Other Gestational Structure
 AC   MDATA_0413
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 26144214.
 CC   File: peptide_list_Cancer-Cell-Lines-Other-Gestational-Structure.tsv
 //
 ID   MassIVE Cancer, Kidney
@@ -3829,6 +3942,7 @@ AC   MDATA_0414
 TS   GLOBAL. Malignant Kidney Neoplasm [NCIt; C7548].
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 28960076.
 CC   File: peptide_list_Cancer-Kindey.tsv
 //
 ID   MassIVE Cancer, Liver
@@ -3836,6 +3950,7 @@ AC   MDATA_0415
 TS   GLOBAL. Malignant Hepatobiliary Neoplasm [NCIt; C8609].
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 28960076.
 CC   File: peptide_list_Cancer-Liver.tsv
 //
 ID   MassIVE Cancer, Urinary Bladder
@@ -3851,6 +3966,7 @@ AC   MDATA_0417
 TS   GLOBAL. Oocyte [TS-0711].
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
+DR   PubMed; 27215607.
 CC   File: peptide_list_Oocyte.tsv
 //
 ID   PeptideAtlas Blood Vessel
@@ -3876,6 +3992,6 @@ ID   MassIVE Cancer Cell Lines, Other Male Reproductive Organ
 AC   MDATA_0422
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
 DC   GLOBAL. GOLD: All peptides.
-DR   PubMed; 27561551.
+DR   PubMed; 31959955.
 CC   File: peptide_list_Cancer-Cell-Lines-Other-Male-Reproductive-Organ.tsv
 //
