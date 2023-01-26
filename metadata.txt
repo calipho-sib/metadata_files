@@ -3981,7 +3981,7 @@ CC   File: peptide_list_Blood_Vessel.tsv
 ID   PeptideAtlas Cancer, Hematopoietic and Immune System
 AC   MDATA_0419
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
-TS   GLOBAL. Hematopoietic and immune systems [TS-0449]
+TS   GLOBAL. Hematopoietic and immune systems [TS-0449].
 DI   GLOBAL. B-Cell Malignant Neoplasm [NCIt; C188021].
 DC   GLOBAL. GOLD: All peptides.
 DR   PubMed; 29508533.
@@ -3992,7 +3992,7 @@ CC   File: peptide_list_Cancer-Blood-Cells.tsv
 ID   MassIVE Cancer Cell Lines, Other Male Reproductive Organ
 AC   MDATA_0422
 DM   GLOBAL. Mass spectrometry LC-MS/MS.
-TS   GLOBAL. Male reproductive system [TS-1310]
+TS   GLOBAL. Male reproductive system [TS-1310].
 DI   GLOBAL. Malignant Neoplasm [NCIt; C9305].
 DC   GLOBAL. GOLD: All peptides.
 DR   PubMed; 31959955.
