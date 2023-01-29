@@ -5,7 +5,7 @@
 
 Description: List of metadata
 Name:        METADATA.TXT
-Release:     22-Dec-2022
+Release:     27-Jan-2023
 
 ----------------------------------------------------------------------------
 
